@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: docker.io/postgres:15-alpine
+    container_name: vsc_ide-postgres
+    environment:
+      POSTGRES_DB: vsc_ide_db
+      POSTGRES_USER: vsc_ide_user
+      POSTGRES_PASSWORD: vsc_ide_password # Consider using a .env file for production
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  "Placeholder":
+    image: PGvector/"Placeholder":latest
+    container_name: vsc_ide-"Placeholder"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./"Placeholder"-data:/"Placeholder"/"Placeholder"
+    environment:
+      - "Placeholder"_SERVER_HOST=0.0.0.0
+      - "Placeholder"_SERVER_HTTP_PORT=8000
+      - "Placeholder"_SERVER_CORS_ALLOW_ORIGINS=["*"]
+    restart: unless-stopped
+
+  testing-validation:
+    build:
+      context: ./testing-validation-system
+      dockerfile: Dockerfile
+    container_name: vsc_ide-testing-validation
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./testing-validation-system:/app
+      - testing_validation_data:/app/data
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - postgres
+      - "Placeholder"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  testing_validation_data:

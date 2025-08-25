@@ -1,0 +1,96 @@
+{
+    "database": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "assessment_store",
+        "username": "assessment_user",
+        "password": "assessment_password",
+        "ssl": {
+            "enabled": false,
+            "rejectUnauthorized": false,
+            "ca": null,
+            "cert": null,
+            "key": null
+        },
+        "connectionTimeoutMillis": 10000,
+        "idleTimeoutMillis": 30000,
+        "max": 20,
+        "min": 2
+    },
+    "pool": {
+        "min": 2,
+        "max": 20,
+        "idleTimeoutMillis": 30000,
+        "acquireTimeoutMillis": 10000,
+        "createTimeoutMillis": 30000,
+        "destroyTimeoutMillis": 5000,
+        "reapIntervalMillis": 1000,
+        "createRetryIntervalMillis": 200,
+        "log": false
+    },
+    "schema": {
+        "assessmentStatesTable": "assessment_states",
+        "auditTrailTable": "assessment_state_audit",
+        "cacheTable": "assessment_state_cache",
+        "metricsTable": "assessment_metrics",
+        "queueTable": "assessment_queue"
+    },
+    "migrations": {
+        "table": "schema_migrations",
+        "enabled": true,
+        "autoRun": true,
+        "path": "./src/database/migrations"
+    },
+    "backup": {
+        "enabled": true,
+        "schedule": "0 2 * * *",
+        "retentionDays": 30,
+        "compression": true,
+        "encryption": false
+    },
+    "monitoring": {
+        "enabled": true,
+        "metricsInterval": 60000,
+        "healthCheckInterval": 30000,
+        "alertThresholds": {
+            "connectionPoolUsage": 0.8,
+            "queryTime": 5000,
+            "errorRate": 0.1,
+            "retryRate": 0.05
+        }
+    },
+    "logging": {
+        "level": "info",
+        "file": "./logs/assessment-store-database.log",
+        "maxSize": "10m",
+        "maxFiles": 5,
+        "format": "json"
+    },
+    "performance": {
+        "queryTimeout": 30000,
+        "retryAttempts": 3,
+        "retryDelay": 1000,
+        "backoffMultiplier": 2,
+        "batchSize": 100,
+        "cacheTTL": 300000
+    },
+    "security": {
+        "enableEncryption": false,
+        "encryptionKey": null,
+        "auditSensitiveData": true,
+        "accessControl": {
+            "enabled": true,
+            "roles": {
+                "read": [
+                    "assessment_reader"
+                ],
+                "write": [
+                    "assessment_writer"
+                ],
+                "admin": [
+                    "assessment_admin"
+                ]
+            }
+        }
+    }
+}

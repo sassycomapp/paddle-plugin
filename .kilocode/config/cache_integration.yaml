@@ -1,0 +1,629 @@
+# KiloCode Configuration for Cache Management System Integration
+# This file configures the cache MCP server integration with the KiloCode orchestrator
+
+# Global KiloCode Configuration
+global:
+  # Orchestrator settings
+  orchestrator:
+    host: "localhost"
+    port: 8080
+    protocol: "http"
+    max_connections: 100
+    request_timeout: 30
+    enable_ssl: false
+  
+  # Routing configuration
+  routing:
+    enabled: true
+    default_timeout: 30
+    max_retries: 3
+    retry_delay: 1
+    circuit_breaker_threshold: 0.1
+  
+  # Load balancing
+  load_balancer:
+    enabled: true
+    strategy: "round_robin"
+    health_check_interval: 300
+    health_check_timeout: 10
+
+# Cache MCP Server Configuration
+cache_mcp_server:
+  enabled: true
+  name: "Cache MCP Server"
+  description: "Intelligent cache management system with multiple cache layers"
+  
+  # Server settings
+  host: "localhost"
+  port: 8080
+  protocol: "http"
+  
+  # Connection settings
+  connection_pool:
+    max_connections: 50
+    min_connections: 5
+    connection_timeout: 30
+    idle_timeout: 300
+    max_retries: 3
+    retry_delay: 1
+  
+  # Authentication
+  authentication:
+    enabled: false
+    api_key: null
+    jwt_secret: null
+    token_expiry: 3600
+  
+  # Tool exposure configuration
+  tools:
+    # Core cache operations
+    - name: "cache_get"
+      description: "Get a value from the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key to retrieve"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use (predictive, semantic, vector, global, vector_diary)"
+          enum: ["predictive", "semantic", "vector", "global", "vector_diary"]
+      routing:
+        enabled: true
+        priority: 1
+        timeout: 10
+        retry_policy: "exponential_backoff"
+    
+    - name: "cache_set"
+      description: "Store a value in the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key"
+        - name: "value"
+          type: "any"
+          required: true
+          description: "Value to store"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use"
+          enum: ["predictive", "semantic", "vector", "global", "vector_diary"]
+        - name: "ttl_seconds"
+          type: "integer"
+          required: false
+          description: "Time-to-live in seconds"
+          min: 0
+        - name: "metadata"
+          type: "object"
+          required: false
+          description: "Optional metadata dictionary"
+      routing:
+        enabled: true
+        priority: 1
+        timeout: 15
+        retry_policy: "exponential_backoff"
+    
+    - name: "cache_delete"
+      description: "Delete a value from the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key to delete"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use"
+          enum: ["predictive", "semantic", "vector", "global", "vector_diary"]
+      routing:
+        enabled: true
+        priority: 1
+        timeout: 10
+        retry_policy: "exponential_backoff"
+    
+    - name: "cache_stats"
+      description: "Get overall cache statistics"
+      parameters: []
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 5
+        retry_policy: "none"
+    
+    - name: "cache_clear"
+      description: "Clear the cache"
+      parameters:
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to clear"
+          enum: ["predictive", "semantic", "vector", "global", "vector_diary", "all"]
+      routing:
+        enabled: true
+        priority: 3
+        timeout: 30
+        retry_policy: "exponential_backoff"
+    
+    # Predictive cache operations
+    - name: "predictive_cache_predict"
+      description: "Get predictions from the predictive cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for prediction"
+        - name: "n_predictions"
+          type: "integer"
+          required: false
+          default: 3
+          description: "Number of predictions to return"
+          min: 1
+          max: 10
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 15
+        retry_policy: "exponential_backoff"
+    
+    # Semantic cache operations
+    - name: "semantic_cache_similar"
+      description: "Find similar entries in the semantic cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for similarity search"
+        - name: "n_results"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of results to return"
+          min: 1
+          max: 20
+        - name: "min_similarity"
+          type: "number"
+          required: false
+          default: 0.7
+          description: "Minimum similarity threshold"
+          min: 0.0
+          max: 1.0
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 20
+        retry_policy: "exponential_backoff"
+    
+    # Vector cache operations
+    - name: "vector_cache_select_context"
+      description: "Select context from the vector cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for context selection"
+        - name: "n_context"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of context elements to return"
+          min: 1
+          max: 10
+        - name: "min_similarity"
+          type: "number"
+          required: false
+          default: 0.6
+          description: "Minimum similarity threshold"
+          min: 0.0
+          max: 1.0
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 25
+        retry_policy: "exponential_backoff"
+    
+    # Global cache operations
+    - name: "global_cache_search_knowledge"
+      description: "Search the global knowledge cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for knowledge search"
+        - name: "n_results"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of results to return"
+          min: 1
+          max: 20
+        - name: "min_relevance"
+          type: "number"
+          required: false
+          default: 0.5
+          description: "Minimum relevance threshold"
+          min: 0.0
+          max: 1.0
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 20
+        retry_policy: "exponential_backoff"
+    
+    # Vector diary operations
+    - name: "vector_diary_get_session_memories"
+      description: "Get session memories from the vector diary"
+      parameters:
+        - name: "session_id"
+          type: "string"
+          required: true
+          description: "Session ID to retrieve memories for"
+        - name: "context_type"
+          type: "string"
+          required: false
+          description: "Optional context type filter"
+        - name: "limit"
+          type: "integer"
+          required: false
+          default: 50
+          description: "Maximum number of memories to return"
+          min: 1
+          max: 100
+      routing:
+        enabled: true
+        priority: 2
+        timeout: 15
+        retry_policy: "exponential_backoff"
+    
+    - name: "vector_diary_generate_insights"
+      description: "Generate longitudinal insights from the vector diary"
+      parameters:
+        - name: "session_id"
+          type: "string"
+          required: false
+          description: "Optional session ID to focus analysis on"
+        - name: "category"
+          type: "string"
+          required: false
+          description: "Optional insight category filter"
+      routing:
+        enabled: true
+        priority: 3
+        timeout: 30
+        retry_policy: "exponential_backoff"
+    
+    # Performance monitoring
+    - name: "cache_performance"
+      description: "Get cache performance metrics"
+      parameters: []
+      routing:
+        enabled: true
+        priority: 4
+        timeout: 5
+        retry_policy: "none"
+
+# Integration Configuration
+integration:
+  # MCP RAG Server integration
+  mcp_rag_server:
+    enabled: true
+    endpoint: "http://localhost:8001"
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 1
+    circuit_breaker_threshold: 0.2
+    
+    # Integration settings
+    fallback_enabled: true
+    cache_fallback: true
+    sync_interval: 300  # 5 minutes
+    batch_size: 100
+    
+    # Tool mapping
+    tool_mapping:
+      - cache_tool: "global_cache_search_knowledge"
+        rag_tool: "rag_search"
+        mapping_type: "direct"
+    
+    # Event handling
+    event_handlers:
+      - event: "rag_result_updated"
+        handler: "update_global_cache"
+        enabled: true
+        priority: 1
+  
+  # Vector Store MCP integration
+  vector_store_mcp:
+    enabled: true
+    endpoint: "http://localhost:8002"
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 1
+    circuit_breaker_threshold: 0.2
+    
+    # Integration settings
+    fallback_enabled: true
+    cache_fallback: true
+    sync_interval: 600  # 10 minutes
+    batch_size: 50
+    
+    # Tool mapping
+    tool_mapping:
+      - cache_tool: "vector_cache_select_context"
+        vector_tool: "vector_search"
+        mapping_type: "direct"
+      - cache_tool: "semantic_cache_similar"
+        vector_tool: "semantic_search"
+        mapping_type: "direct"
+    
+    # Event handling
+    event_handlers:
+      - event: "vector_index_updated"
+        handler: "update_vector_cache"
+        enabled: true
+        priority: 1
+  
+  # Memory Bank integration
+  memory_bank_sync:
+    enabled: true
+    endpoint: "file://./memorybank"
+    sync_interval: 300  # 5 minutes
+    batch_size: 100
+    retry_attempts: 3
+    retry_delay: 5
+    
+    # Integration settings
+    sync_direction: "bidirectional"
+    conflict_resolution: "timestamp"
+    file_format: "json"
+    
+    # Event handling
+    event_handlers:
+      - event: "memory_file_updated"
+        handler: "sync_with_vector_diary"
+        enabled: true
+        priority: 1
+      - event: "vector_diary_updated"
+        handler: "sync_with_memory_bank"
+        enabled: true
+        priority: 1
+  
+  # KiloCode routing configuration
+  kilocode_routing:
+    enabled: true
+    routing_logic: "smart"
+    fallback_order: ["predictive", "semantic", "vector", "global"]
+    
+    # Routing rules
+    routing_rules:
+      - pattern: "predict.*"
+        layer: "predictive"
+        priority: 1
+        enabled: true
+      
+      - pattern: "semantic.*|similar.*|context.*"
+        layer: "semantic"
+        priority: 2
+        enabled: true
+      
+      - pattern: "vector.*|embedding.*"
+        layer: "vector"
+        priority: 3
+        enabled: true
+      
+      - pattern: "knowledge.*|fact.*|information.*"
+        layer: "global"
+        priority: 4
+        enabled: true
+      
+      - pattern: "memory.*|session.*|diary.*"
+        layer: "vector_diary"
+        priority: 5
+        enabled: true
+    
+    # Cache hit tracking
+    cache_hit_tracking:
+      enabled: true
+      track_hit_rate: true
+      track_response_times: true
+      track_memory_usage: true
+      track_layer_performance: true
+      
+      # Analytics
+      analytics_enabled: true
+      analytics_interval: 3600  # 1 hour
+      retention_days: 30
+
+# Performance Configuration
+performance:
+  # Cache settings
+  cache_settings:
+    predictive_cache:
+      max_size: 1000
+      ttl: 3600  # 1 hour
+      cleanup_interval: 300  # 5 minutes
+    
+    semantic_cache:
+      max_size: 5000
+      ttl: 86400  # 24 hours
+      cleanup_interval: 600  # 10 minutes
+    
+    vector_cache:
+      max_size: 2000
+      ttl: 7200  # 2 hours
+      cleanup_interval: 300  # 5 minutes
+    
+    vector_diary:
+      max_size: 10000
+      ttl: 2592000  # 30 days
+      cleanup_interval: 86400  # 24 hours
+  
+  # Performance monitoring
+  monitoring:
+    enabled: true
+    metrics_interval: 60  # seconds
+    health_check_interval: 300  # 5 minutes
+    
+    # Metrics collection
+    metrics:
+      - "cache_hit_rate"
+      - "cache_miss_rate"
+      - "response_time"
+      - "memory_usage"
+      - "error_rate"
+      - "throughput"
+    
+    # Alerting thresholds
+    alert_thresholds:
+      response_time: 1000  # ms
+      error_rate: 0.05     # 5%
+      memory_usage: 0.8    # 80%
+      cache_hit_rate: 0.7  # 70%
+  
+  # Optimization settings
+  optimization:
+    enabled: true
+    auto_tune: true
+    optimization_interval: 3600  # 1 hour
+    
+    # Optimization strategies
+    strategies:
+      - "adaptive_ttl"
+      - "size_based_eviction"
+      - "access_pattern_analysis"
+      - "predictive_preloading"
+
+# Security Configuration
+security:
+  # Authentication
+  authentication:
+    enabled: false
+    api_key: null
+    jwt_secret: null
+    token_expiry: 3600  # 1 hour
+    refresh_token_expiry: 86400  # 24 hours
+  
+  # Authorization
+  authorization:
+    enabled: false
+    role_based_access: true
+    roles:
+      - name: "admin"
+        permissions: ["*"]
+      - name: "user"
+        permissions: ["cache_get", "cache_set", "cache_stats"]
+      - name: "readonly"
+        permissions: ["cache_get", "cache_stats"]
+  
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst_limit: 20
+    window_size: 60  # seconds
+    
+    # Rate limiting by IP
+    ip_based_limiting: true
+    ip_limit_per_minute: 50
+  
+  # Input validation
+  input_validation:
+    enabled: true
+    max_key_length: 255
+    max_value_size: 10485760  # 10MB
+    allowed_content_types: ["application/json", "text/plain"]
+    
+    # Validation rules
+    validation_rules:
+      - name: "key_format"
+        pattern: "^[a-zA-Z0-9_\\-\\.]+$"
+        message: "Key must contain only alphanumeric characters, underscores, hyphens, and dots"
+      
+      - name: "value_size"
+        max_size: 10485760  # 10MB
+        message: "Value size exceeds maximum limit"
+      
+      - name: "ttl_range"
+        min: 0
+        max: 2592000  # 30 days
+        message: "TTL must be between 0 and 30 days"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # File logging
+  file:
+    enabled: true
+    path: "./logs/kilocode_cache_integration.log"
+    max_size: 10485760  # 10MB
+    backup_count: 5
+    encoding: "utf-8"
+  
+  # Console logging
+  console:
+    enabled: true
+    level: "INFO"
+    format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+  # Structured logging
+  structured:
+    enabled: true
+    include_timestamp: true
+    include_request_id: true
+    include_user_id: false
+    include_session_id: true
+  
+  # Audit logging
+  audit:
+    enabled: true
+    log_file: "./logs/kilocode_cache_audit.log"
+    log_operations: ["cache_get", "cache_set", "cache_delete", "cache_clear"]
+    log_parameters: false  # Set to true to log parameters (sensitive data)
+  
+  # Error tracking
+  error_tracking:
+    enabled: true
+    error_log_file: "./logs/kilocode_cache_errors.log"
+    track_stack_trace: true
+    track_request_context: true
+
+# Development Configuration
+development:
+  debug_mode: false
+  test_mode: false
+  mock_data: false
+  
+  # Development database
+  dev_database_url: "sqlite:///./cache_dev_kilocode.db"
+  
+  # Testing
+  testing:
+    test_timeout: 30
+    test_parallelism: 4
+    coverage_threshold: 0.8
+    integration_tests: true
+    performance_tests: true
+  
+  # Mock data settings
+  mock_data_settings:
+    num_mock_entries: 100
+    mock_data_path: "./data/mock_data_kilocode.json"
+  
+  # Profiling
+  profiling:
+    enabled: false
+    output_dir: "./profiles_kilocode"
+    interval: 300  # seconds
+    memory_profiling: true
+    cpu_profiling: true
+  
+  # Debug tools
+  debug_tools:
+    enabled: false
+    debug_endpoint: "http://localhost:8081/debug"
+    health_check_endpoint: "http://localhost:8081/health"
+    metrics_endpoint: "http://localhost:8081/metrics"

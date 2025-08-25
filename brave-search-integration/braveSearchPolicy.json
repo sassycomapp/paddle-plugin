@@ -1,0 +1,33 @@
+{
+  "braveSearchConfig": {
+    "apiName": "vsc_ide_dev_brave",
+    "apiKey": "YOUR_BRAVE_API_KEY_HERE"
+  },
+  "requestManagement": {
+    "minDelayMs": 1000,
+    "queueRequests": true,
+    "rateLimitMonitoring": true
+  },
+  "queryOptimization": {
+    "enableLocalCache": true,
+    "cacheStorage": "file",
+    "checkSimilarityBeforeRequest": true,
+    "reuseCachedResults": true
+  },
+  "usagePatterns": {
+    "maxRequestsPerMinute": 2,
+    "useOnlyWhenLocalFails": true,
+    "stepByStepIntegration": true,
+    "noRapidFireCalls": true
+  },
+  "planSettings": {
+    "preferredPlan": "Data for AI",
+    "useRicherMetadata": true,
+    "reduceRedundantLookups": true
+  },
+  "enforcement": {
+    "strictMode": true,
+    "logViolations": true,
+    "haltOnViolation": false
+  }
+}

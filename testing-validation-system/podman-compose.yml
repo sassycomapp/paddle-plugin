@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: docker.io/postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_DB: test_db
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U test_user -d test_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  test:
+    build:
+      context: .
+    dockerfile: Dockerfile.test
+    container_name: testing-validation
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://test_user:test_password@postgres:5432/test_db
+      NODE_ENV: test
+    volumes:
+      - .:/app
+      - ./src:/app/src:ro # This is now redundant but can be kept for explicitness if needed
+      - ./reports:/app/reports # This is now redundant but can be kept for explicitness if needed
+    command: npm test
+
+  security-scanner:
+    image: docker.io/returntocorp/semgrep:latest
+    volumes:
+      - .:/src
+    command: semgrep --config=auto /src
+
+volumes:
+  postgres_data:

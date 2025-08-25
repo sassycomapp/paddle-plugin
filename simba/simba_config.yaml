@@ -1,0 +1,62 @@
+# Simba KMS Configuration
+
+# Database Configuration
+database:
+  # PostgreSQL connection string
+  # Replace with your actual database credentials
+  # Format: postgresql://user:password@host:port/database
+  connection_string: "postgresql://postgres:2001@localhost:5432/postgres"
+
+  # Optional: Table names for Simba's data
+  # If not specified, Simba will use default names
+  # tables:
+  #   documents: "simba_documents"
+  #   embeddings: "simba_embeddings"
+  #   metadata: "simba_metadata"
+
+# Embedding Model Configuration
+# Simba will use this model for generating document embeddings
+embedding_model:
+  # Example: Using a sentence-transformers model
+  # You can specify any model available from sentence-transformers
+  name: "all-MiniLM-L6-v2"
+  # If using a model from Hugging Face Hub, specify the revision
+  # revision: "v1.0.0"
+
+# Vector Store Configuration
+# Simba can use different vector backends
+vector_store:
+  # Options: "faiss", ""Placeholder"", "postgres" (pgvector)
+  # For now, we'll use "postgres" as we have it set up
+  backend: "postgres"
+  # If using FAISS, specify the path to save/load the index
+  # faiss_index_path: "./simba_faiss.index"
+
+# Document Processing Configuration
+document_processing:
+  # Chunk size for splitting documents
+  chunk_size: 1000
+  # Chunk overlap between consecutive chunks
+  chunk_overlap: 200
+  # Supported file formats
+  supported_formats:
+    - ".txt"
+    - ".md"
+    - ".pdf"
+    - ".docx"
+    - ".html"
+    - ".htm"
+
+# API Configuration (if running Simba as a service)
+api:
+  # Host and port for the Simba API server
+  host: "0.0.0.0"
+  port: 8000
+  # API key for securing the API (optional but recommended)
+  # api_key: "your-super-secret-api-key"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  # Path to the log file (optional)
+  # file: "simba_kms.log"

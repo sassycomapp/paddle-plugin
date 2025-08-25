@@ -1,0 +1,382 @@
+# KiloCode Environment Configuration
+# This file defines environment-specific settings for MCP servers
+
+# Environment detection
+environment:
+  # Current environment (development, staging, production)
+  current: "development"
+  
+  # Environment-specific overrides
+  overrides:
+    development:
+      debug: true
+      logging_level: "DEBUG"
+      cache_ttl: 300  # 5 minutes
+      database_connection_pool: 10
+      
+    staging:
+      debug: false
+      logging_level: "INFO"
+      cache_ttl: 1800  # 30 minutes
+      database_connection_pool: 20
+      
+    production:
+      debug: false
+      logging_level: "WARN"
+      cache_ttl: 3600  # 1 hour
+      database_connection_pool: 50
+
+# Database Configuration
+database:
+  # Primary database (PostgreSQL)
+  primary:
+    host: "localhost"
+    port: 5432
+    name: "postgres"
+    user: "postgres"
+    password: "DeeCee@2001"
+    ssl_mode: "disable"
+    max_connections: 20
+    connection_timeout: 30
+    idle_timeout: 300
+    
+  # Connection pool settings
+  pool:
+    min_connections: 5
+    max_connections: 20
+    acquire_timeout: 30
+    idle_timeout: 300
+    max_lifetime: 3600
+    
+  # Health check
+  health_check:
+    enabled: true
+    interval: 30
+    timeout: 10
+    threshold: 3
+
+# Vector Database Configuration
+vector_db:
+  # ChromaDB configuration
+  chroma:
+    host: "localhost"
+    port: 8000
+    collection_name: "kilocode_vectors"
+    distance_metric: "cosine"
+    collection_metadata:
+      description: "KiloCode vector embeddings for RAG and memory systems"
+      
+  # Vector operations settings
+  operations:
+    batch_size: 100
+    similarity_threshold: 0.7
+    max_results: 10
+    embedding_dimension: 384
+    
+  # Health check
+  health_check:
+    enabled: true
+    interval: 60
+    timeout: 15
+
+# Cache Configuration
+cache:
+  # Redis configuration (if available)
+  redis:
+    host: "localhost"
+    port: 6379
+    password: null
+    db: 0
+    max_connections: 10
+    
+  # In-memory cache settings
+  memory:
+    max_size: 1000
+    ttl: 300
+    cleanup_interval: 60
+    
+  # Cache layers configuration
+  layers:
+    predictive:
+      enabled: true
+      max_size: 500
+      ttl: 3600
+      cleanup_interval: 300
+      
+    semantic:
+      enabled: true
+      max_size: 2000
+      ttl: 7200
+      cleanup_interval: 600
+      
+    vector:
+      enabled: true
+      max_size: 1000
+      ttl: 1800
+      cleanup_interval: 300
+      
+    global:
+      enabled: true
+      max_size: 5000
+      ttl: 86400
+      cleanup_interval: 1200
+
+# File System Configuration
+filesystem:
+  # Base paths
+  base_path: "c:\\_1mybizz\\paddle-plugin"
+  temp_path: "c:\\_1mybizz\\paddle-plugin\\temp"
+  logs_path: "c:\\_1mybizz\\paddle-plugin\\logs"
+  data_path: "c:\\_1mybizz\\paddle-plugin\\data"
+  backups_path: "c:\\_1mybizz\\paddle-plugin\\backups"
+  
+  # File operations settings
+  operations:
+    max_file_size: 104857600  # 100MB
+    allowed_extensions: [".txt", ".json", ".md", ".yaml", ".js", ".ts", ".py"]
+    max_concurrent_uploads: 5
+    
+  # Security
+  security:
+    enable_encryption: false
+    encryption_key: null
+    access_control:
+      read_only: false
+      require_authentication: false
+
+# API Configuration
+api:
+  # REST API settings
+  rest:
+    host: "localhost"
+    port: 8080
+    cors_enabled: true
+    cors_origins: ["*"]
+    rate_limiting:
+      enabled: true
+      requests_per_minute: 100
+      burst_limit: 20
+      
+  # WebSocket settings
+  websocket:
+    enabled: true
+    host: "localhost"
+    port: 8081
+    max_connections: 100
+    heartbeat_interval: 30
+    
+  # GraphQL settings
+  graphql:
+    enabled: true
+    host: "localhost"
+    port: 8082
+    playground_enabled: true
+    introspection_enabled: true
+
+# Security Configuration
+security:
+  # Authentication
+  authentication:
+    enabled: false
+    provider: "jwt"
+    jwt_secret: "your-secret-key-here"
+    jwt_expiry: 3600
+    refresh_token_expiry: 86400
+    
+  # Authorization
+  authorization:
+    enabled: false
+    role_based_access: true
+    default_role: "user"
+    
+  # Encryption
+  encryption:
+    enabled: false
+    algorithm: "AES-256-GCM"
+    key_rotation_interval: 86400  # 24 hours
+    
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst_limit: 20
+    window_size: 60
+
+# Monitoring and Logging
+monitoring:
+  # Logging configuration
+  logging:
+    level: "INFO"
+    format: "json"
+    file_path: "c:\\_1mybizz\\paddle-plugin\\logs\\kilocode.log"
+    max_file_size: 10485760  # 10MB
+    backup_count: 5
+    enable_console: true
+    
+  # Metrics collection
+  metrics:
+    enabled: true
+    port: 9090
+    metrics_path: "/metrics"
+    collect_system_metrics: true
+    collect_application_metrics: true
+    
+  # Tracing
+  tracing:
+    enabled: false
+    jaeger_endpoint: null
+    sample_rate: 0.1
+    
+  # Health checks
+  health:
+    enabled: true
+    port: 8083
+    health_path: "/health"
+    metrics_path: "/metrics"
+
+# External Services Configuration
+external_services:
+  # GitHub integration
+  github:
+    enabled: false
+    api_token: null
+    webhook_secret: null
+    repositories: []
+    
+  # Brave Search API
+  brave_search:
+    enabled: false
+    api_key: null
+    rate_limit: 1000  # requests per day
+    
+  # OpenAI/Anthropic APIs
+  llm:
+    enabled: false
+    provider: "openai"  # openai, anthropic
+    api_key: null
+    model: "gpt-4"
+    max_tokens: 4000
+    temperature: 0.7
+    
+  # Email service
+  email:
+    enabled: false
+    provider: "smtp"  # smtp, sendgrid
+    host: "smtp.gmail.com"
+    port: 587
+    username: null
+    password: null
+    use_tls: true
+
+# Development Configuration
+development:
+  # Debug settings
+  debug:
+    enabled: true
+    debug_level: "verbose"
+    hot_reload: true
+    auto_reload: true
+    
+  # Testing
+  testing:
+    enabled: true
+    test_timeout: 30
+    parallel_tests: 4
+    coverage_threshold: 0.8
+    
+  # Mock data
+  mock_data:
+    enabled: true
+    data_path: "c:\\_1mybizz\\paddle-plugin\\data\\mock"
+    seed_data: true
+    
+  # Development databases
+  databases:
+    sqlite:
+      enabled: true
+      path: "c:\\_1mybizz\\paddle-plugin\\data\\dev\\kilocode_dev.db"
+      
+    mongodb:
+      enabled: false
+      connection_string: "mongodb://localhost:27017/kilocode_dev"
+
+# Performance Configuration
+performance:
+  # Performance tuning
+  optimization:
+    enabled: true
+    auto_tune: true
+    optimization_interval: 3600  # 1 hour
+    
+  # Caching strategies
+  caching:
+    enabled: true
+    strategy: "multi_level"
+    preloading: true
+    compression: true
+    
+  # Connection pooling
+  connection_pooling:
+    enabled: true
+    min_connections: 5
+    max_connections: 20
+    acquire_timeout: 30
+    idle_timeout: 300
+    
+  # Load balancing
+  load_balancing:
+    enabled: false
+    strategy: "round_robin"
+    health_check_interval: 30
+    health_check_timeout: 10
+
+# Backup and Recovery
+backup:
+  # Backup settings
+  enabled: true
+  interval: 86400  # 24 hours
+  retention: 30  # days
+  compression: true
+  
+  # Backup locations
+  locations:
+    - type: "local"
+      path: "c:\\_1mybizz\\paddle-plugin\\backups"
+    - type: "s3"
+      bucket: null
+      region: null
+      access_key: null
+      secret_key: null
+      
+  # Recovery settings
+  recovery:
+    enabled: true
+    auto_recovery: false
+    test_backups: true
+    encryption: false
+
+# Integration Configuration
+integration:
+  # MCP Server integration
+  mcp_servers:
+    enabled: true
+    auto_discovery: true
+    health_check_interval: 60
+    connection_timeout: 30
+    request_timeout: 60
+    
+  # Event system
+  events:
+    enabled: true
+    broker: "memory"  # memory, redis, rabbitmq
+    event_retention: 86400  # 24 hours
+    max_event_size: 1048576  # 1MB
+    
+  # Message queue
+  message_queue:
+    enabled: false
+    provider: "redis"  # redis, rabbitmq, sqs
+    host: "localhost"
+    port: 6379
+    max_retries: 3
+    retry_delay: 5

@@ -1,0 +1,1903 @@
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='mkdir -p .ops && touch .ops/run.log   && (set -o posix; set | sort) >> .ops/run.log 2>&1   && (podman ps 2>&1 || docker ps 2>&1) >> .ops/run.log 2>&1   && pm2 list >> .ops/run.log 2>&1'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=7b24561f-5c46-4d34-b1df-c942e043abaf
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=2
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='mkdir -p .ops'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=79
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=9
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+bash: pm2: command not found
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='mkdir -p .ops && touch .ops/run.log && (set -o posix; set | sort) >> .ops/run.log 2>&1 && (podman ps 2>&1 || docker ps 2>&1) >> .ops/run.log 2>&1 && npx pm2 list >> .ops/run.log 2>&1'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=96fa12df-c953-42d1-963b-b051a476d2d8
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=2
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='mkdir -p .ops'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=79
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=9
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+Need to install the following packages:
+pm2@6.0.8
+Ok to proceed? (y) '
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='mkdir -p .ops && touch .ops/run.log   && (set -o posix; set | sort) >> .ops/run.log 2>&1   && (podman ps 2>&1 || docker ps 2>&1) >> .ops/run.log 2>&1   && npx pm2 list >> .ops/run.log 2>&1'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=96fa12df-c953-42d1-963b-b051a476d2d8
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=1
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='mkdir -p .ops'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=79
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=15
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='mkdir -p .ops && touch .ops/run.log   && (set -o posix; set | sort) >> .ops/run.log 2>&1   && (podman ps 2>&1 || docker ps 2>&1) >> .ops/run.log 2>&1   && npx pm2 list >> .ops/run.log 2>&1'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=96fa12df-c953-42d1-963b-b051a476d2d8
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=1
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='mkdir -p .ops'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=79
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=15
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+Need to install the following packages:
+pm2@6.0.8
+Ok to proceed? (y) 
+[32m[PM2] [39mSpawning PM2 daemon with pm2_home=C:\Users\salib\.pm2
+[32m[PM2] [39mPM2 Successfully daemonized
+┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+└────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='mkdir -p .ops && touch .ops/run.log   && (set -o posix; set | sort) >> .ops/run.log 2>&1   && (podman ps 2>&1 || docker ps 2>&1) >> .ops/run.log 2>&1   && npx pm2 list >> .ops/run.log 2>&1'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=96fa12df-c953-42d1-963b-b051a476d2d8
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=1
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='mkdir -p .ops'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=79
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=15
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+CONTAINER ID  IMAGE       COMMAND     CREATED     STATUS      PORTS       NAMES
+┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+└────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+'
+			--anchored= --compact-summary --ignore-matching-lines=
+			--anchored= --compact-summary --ignore-matching-lines=
+			--base --ours --theirs --no-index --merge-base
+			bc codecompare smerge
+			--color-moved --color-moved= --no-color-moved
+			--color-moved --color-moved= --no-color-moved
+			--color-moved-ws= --no-color-moved-ws
+			--color-moved-ws= --no-color-moved-ws
+			--diff-algorithm= --default-prefix
+			--diff-algorithm= --default-prefix
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat --dirstat= --dirstat-by-file
+			--dirstat-by-file= --cumulative
+			--dirstat-by-file= --cumulative
+			--find-copies --find-object --find-renames
+			--find-copies --find-object --find-renames
+			--find-copies-harder --ignore-cr-at-eol
+			--find-copies-harder --ignore-cr-at-eol
+			--full-index --binary --abbrev --diff-filter=
+			--full-index --binary --abbrev --diff-filter=
+			ignore-all-space allow-indentation-change'
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--ignore-all-space --ignore-blank-lines --exit-code
+			--indent-heuristic --no-indent-heuristic
+			--indent-heuristic --no-indent-heuristic
+			--inter-hunk-context= --function-context
+			--inter-hunk-context= --function-context
+			--irreversible-delete --line-prefix --no-stat
+			--irreversible-delete --line-prefix --no-stat
+			--ita-invisible-in-index --ita-visible-in-index
+			--no-color --color-words --no-renames --check
+			--no-color --color-words --no-renames --check
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-prefix --src-prefix= --dst-prefix=
+			--no-relative --relative
+			--no-relative --relative
+			--output= --output-indicator-context=
+			--output= --output-indicator-context=
+			--output-indicator-new= --output-indicator-old=
+			--output-indicator-new= --output-indicator-old=
+			--patch --no-patch --cc --combined-all-paths
+			--patch --no-patch --cc --combined-all-paths
+			--patch-with-stat --name-only --name-status --color
+			--patch-with-stat --name-only --name-status --color
+			--patience --histogram --minimal
+			--patience --histogram --minimal
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--pickaxe-all --pickaxe-regex --patch-with-raw
+			--quiet --ext-diff --no-ext-diff --unified=
+			--quiet --ext-diff --no-ext-diff --unified=
+			--raw --word-diff --word-diff-regex=
+			--raw --word-diff --word-diff-regex=
+			--stat --numstat --shortstat --summary
+			--submodule --submodule= --ignore-submodules
+			--submodule --submodule= --ignore-submodules
+			--text --ignore-space-at-eol --ignore-space-change
+			--text --ignore-space-at-eol --ignore-space-change
+			--textconv --no-textconv --break-rewrites
+			--textconv --no-textconv --break-rewrites
+			tkdiff vimdiff nvimdiff gvimdiff xxdiff araxis p4merge
+			--ws-error-highlight=
+			--ws-error-highlight=
+	--all-match --invert-grep
+	--alternate-refs --ancestry-path
+	--author= --committer= --grep=
+	--author-date-order --basic-regexp
+	--bisect --boundary --exclude-first-parent-only
+	--branches --tags --remotes
+	--dense --sparse --full-history
+	--diff-merges --diff-merges= --no-diff-merges --dd --remerge-diff
+	--dst-prefix= --notes
+	--encoding=
+	--exclude-hidden --extended-regexp
+	find-renames find-renames= rename-threshold='
+	--first-parent --merges --no-merges
+	--fixed-strings --grep-reflog
+	--full-index --not --all --no-prefix --src-prefix=
+	histogram diff-algorithm= ignore-space-change ignore-all-space
+	--ignore-missing --left-only --perl-regexp
+	ignore-space-at-eol renormalize no-renormalize no-renames
+	--left-right --notes --no-notes
+	--max-age= --since= --after=
+	--max-count=
+	--min-age= --until= --before=
+	--min-parents= --max-parents=
+	--no-min-parents --no-max-parents
+	--not --all
+	--reflog --regexp-ignore-case --remove-empty
+	--right-only --show-linear-break
+	--show-notes-by-default --show-pulls
+	--simplify-merges --simplify-by-decoration
+	--since-as-filter --single-worktree
+"'\''@><=;|&(:'
+__git_all_commands=
+__git_am_inprogress_options='--skip --continue --resolved --abort --quit --show-current-patch'
+__git_cherry_pick_inprogress_options='--continue --quit --abort --skip'
+__git_cmds_with_parseopt_helper=
+__git_color_moved_opts='no default plain blocks zebra dimmed-zebra'
+__git_color_moved_ws_opts='no ignore-space-at-eol ignore-space-change
+__git_config_sections=
+__git_config_vars_all=
+__git_config_vars=
+__git_CRLF='
+__git_diff_algorithms='myers minimal patience histogram'
+__git_diff_common_options='--stat --numstat --shortstat --summary
+__git_diff_difftool_options='--cached --staged
+__git_diff_merges_opts='off none on first-parent 1 separate m combined c dense-combined cc remerge r'
+__git_diff_submodule_formats='diff log short'
+__git_ESC=
+__git_fetch_recurse_submodules='yes on-demand no'
+__git_format_patch_extra_options='
+__git_LF='
+__git_log_common_options='
+__git_log_date_formats='relative iso8601 iso8601-strict rfc2822 short local default human raw unix auto: format:'
+__git_log_gitk_options='
+__git_log_pretty_formats='oneline short medium full fuller reference email raw format: tformat: mboxrd'
+__git_log_shortlog_options='
+__git_log_show_options='
+__git_merge_strategies=
+__git_merge_strategy_options='ours theirs subtree subtree= patience
+__git_mergetools_common='diffuse diffmerge ecmerge emerge kdiff3 meld opendiff
+__git_patchformat='mbox stgit stgit-series hg mboxrd'
+__git_printf_supports_v=yes
+__git_push_recurse_submodules='check on-demand only'
+__git_quoted_cr='nowarn warn strip'
+__git_rebase_inprogress_options='--continue --skip --abort --quit --show-current-patch'
+__git_rebase_interactive_inprogress_options='--continue --skip --abort --quit --show-current-patch --edit-todo'
+__git_ref_fieldlist='refname objecttype objectsize objectname upstream push HEAD symref'
+__git_revert_inprogress_options='--continue --quit --abort --skip'
+__git_send_email_confirm_options='always never auto cc compose'
+__git_send_email_suppresscc_options='author self cc bodycc sob cccmd body all'
+__git_sequencer_inprogress_options='--continue --quit --abort --skip'
+__git_showcurrentpatch='diff raw'
+__git_SOH=
+__git_STX=
+__git_untracked_file_modes='all no normal'
+__git_whitespacelist='nowarn warn error error-all fix'
+__git_ws_error_highlight_opts='context old new all default'
+__vsc_current_command='set -o posix ; set | sort | tee -a .ops/run.log'
+__vsc_custom_PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+__vsc_custom_PS2='\[]633;F\]> \[]633;G\]'
+__vsc_cwd=C:/_1mybizz/paddle-plugin
+__vsc_dbg_trap=
+__vsc_first_prompt=1
+__vsc_history_verify=1
+__vsc_in_command_execution=1
+__vsc_initialized=1
+__vsc_is_windows=1
+__vsc_nonce=d8b6fe5f-e87f-408d-8b19-d25346ab10ae
+__vsc_original_prompt_command=
+__vsc_original_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+__vsc_original_PS2='> '
+__vsc_stable=1
+__vsc_status=0
+__vscode_shell_env_reporting=
+_=posix
+ACLOCAL_PATH=/mingw64/share/aclocal:/usr/share/aclocal
+ALLUSERSPROFILE='C:\ProgramData'
+APPDATA='C:\Users\salib\AppData\Roaming'
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMMAND='set -o posix'
+BASH_LINENO=()
+BASH_LOADABLES_PATH=/usr/local/lib/bash:/usr/lib/bash:/opt/local/lib/bash:/usr/pkg/lib/bash:/opt/pkg/lib/bash:.
+bash_major_version=5
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="2" [2]="37" [3]="1" [4]="release" [5]="x86_64-pc-msys")
+BASH_VERSION='5.2.37(1)-release'
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:globasciiranges:globskipdots:hostcomplete:interactive_comments:patsub_replacement:progcomp:promptvars:sourcepath
+BUNDLED_DEBUGPY_PATH='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\libs\debugpy'
+c='/c/Users/salib/bash_completion.d/*.bash'
+ChocolateyInstall='C:\ProgramData\chocolatey'
+ChocolateyLastPathUpdate=133992266575285057
+CHROME_CRASHPAD_PIPE_NAME='\\.\pipe\crashpad_12824_RATNQSWYWICNSVYB'
+CLINE_ACTIVE=true
+COLORTERM=truecolor
+COLUMNS=161
+COMMONPROGRAMFILES='C:\Program Files\Common Files'
+CommonProgramW6432='C:\Program Files\Common Files'
+COMP_WORDBREAKS=' 	
+COMPLETION_PATH='C:/Program Files/Git/mingw64/share/git/completion'
+COMPUTERNAME=SA2309
+COMSPEC='C:\WINDOWS\system32\cmd.exe'
+CONFIG_SITE=/etc/config.site
+DIRSTACK=()
+DISPLAY=needs-to-be-defined
+DriverData='C:\Windows\System32\Drivers\DriverData'
+EFC_3636_1592913036=1
+envVarsToReport=()
+EUID=197609
+EXEPATH='C:\Program Files\Git\bin'
+GIT_ASKPASS='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh'
+GIT_EXEC_PATH='C:/Program Files/Git/mingw64/libexec/git-core'
+GROUPS=()
+HISTFILE=/c/Users/salib/.bash_history
+HISTFILESIZE=500
+HISTSIZE=500
+HOME=/c/Users/salib
+HOMEDRIVE=C:
+HOMEPATH='\Users\salib'
+HOSTNAME=SA2309
+HOSTTYPE=x86_64
+IFS=' 	
+INFOPATH=/mingw64/local/info:/mingw64/share/info:/usr/local/info:/usr/share/info:/usr/info:/share/info
+LANG=en_US.UTF-8
+LINES=7
+LOCALAPPDATA='C:\Users\salib\AppData\Local'
+LOGONSERVER='\\SA2309'
+MACHTYPE=x86_64-pc-msys
+MAILCHECK=60
+MANPATH=/mingw64/local/man:/mingw64/share/man:/usr/local/man:/usr/share/man:/usr/man:/share/man
+MINGW_CHOST=x86_64-w64-mingw32
+MINGW_MOUNT_POINT=/mingw64
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+MINGW_PREFIX=/mingw64
+MSYS2_PATH=/usr/local/bin:/usr/bin:/bin
+MSYS2_PS1='\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+MSYSTEM_CARCH=x86_64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MSYSTEM_PREFIX=/mingw64
+MSYSTEM=MINGW64
+name=winget
+NUMBER_OF_PROCESSORS=4
+OneDrive='C:\Users\salib\OneDrive'
+OneDriveConsumer='C:\Users\salib\OneDrive'
+OPENAI_API_KEY=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
+OPENROUTER_API_KEY=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
+OpenSSL='C:\Program Files\OpenSSL-Win64\bin\'
+OPTERR=1
+OPTIND=1
+ORIGINAL_PATH='/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts'
+ORIGINAL_TEMP=/tmp
+ORIGINAL_TMP=/tmp
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+OS=Windows_NT
+OSTYPE=msys
+PATH='/c/Users/salib/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/salib/bin:/c/Python313/Scripts:/c/Python313:/c/Program Files/Python38/Scripts:/c/Program Files/Python38:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/PuTTY:/c/Program Files/OpenSSL-Win64/bin:/c/terraform/terraform_1.11.0:/c/Program Files (x86)/Microsoft Office/Office12:/c/Program Files (x86)/cloudflared:/c/Users/salib/AppData/Roaming/npm:/c/ProgramData/chocolatey/bin:/c/Program Files/nodejs:/c/Users/salib/AppData/Roaming/npm/node_modules/.bin:/c/Users/salib/AppData/Roaming/npm:/cmd:/c/Program Files/RedHat/Podman:/c/Users/salib/AppData/Local/Programs/Python/Python311/Scripts:/c/Users/salib/AppData/Local/Programs/Python/Python311:/c/Users/salib/.cargo/bin:/c/Program Files/Oracle:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Microsoft/WindowsApps:/c/Users/salib/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/salib/AppData/Roaming/npm:/c/Program Files/PostgreSQL/17/bin:/c/Users/salib/.vscode/extensions/ms-python.debugpy-2025.10.0-win32-x64/bundled/scripts/noConfigScripts:/usr/bin/vendor_perl:/usr/bin/core_perl'
+PATHEXT='.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW'
+PIPESTATUS=([0]="0")
+PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=/mingw64/include
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=/mingw64/lib
+PLINK_PROTOCOL=ssh
+POSIXLY_CORRECT=y
+postinst='/etc/post-install/*.post'
+PPID=1
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER='Intel64 Family 6 Model 140 Stepping 1, GenuineIntel'
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8c01
+ProgramData='C:\ProgramData'
+PROGRAMFILES='C:\Program Files'
+ProgramW6432='C:\Program Files'
+PROMPT_COMMAND=__vsc_prompt_cmd
+PS1='\[]633;A\]\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ \[]633;B\]'
+PS2='\[]633;F\]> \[]633;G\]'
+PS4='+ '
+PSModulePath='C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules'
+PUBLIC='C:\Users\Public'
+PWD=/c/_1mybizz/paddle-plugin
+PYDEVD_DISABLE_FILE_VALIDATION=1
+python38='C:\Program Files\Python38'
+PYTHONNOUSERSITE=1
+SESSIONNAME=Console
+SHELL=/usr/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor:posix
+SHLVL=1
+SSH_ASKPASS=/mingw64/bin/git-askpass.exe
+SYSCONFDIR=/etc
+SYSTEMDRIVE=C:
+SYSTEMROOT='C:\WINDOWS'
+TEMP=/tmp
+TERM_PROGRAM_VERSION=1.103.1
+TERM_PROGRAM=vscode
+TERM=xterm-256color
+terraform='C:\terraform\terraform_1.11.0'
+TITLEPREFIX=MINGW64
+TMP=/tmp
+TMPDIR=/tmp
+UID=197609
+use_associative_array=1
+USERDOMAIN_ROAMINGPROFILE=SA2309
+USERDOMAIN=SA2309
+USERNAME=salib
+USERPROFILE='C:\Users\salib'
+VS140COMNTOOLS='C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\'
+vsc_env_keys=()
+vsc_env_values=()
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS='c:\Users\salib\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-f6dbc33c93fb5c8c.txt'
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+VSCODE_GIT_ASKPASS_MAIN='c:\Users\salib\AppData\Local\Programs\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js'
+VSCODE_GIT_ASKPASS_NODE='C:\Users\salib\AppData\Local\Programs\Microsoft VS Code\Code.exe'
+VSCODE_GIT_IPC_HANDLE='\\.\pipe\vscode-git-b362b7a54b-sock'
+VSCODE_SHELL_INTEGRATION=1
+WINDIR='C:\WINDOWS'
+ZES_ENABLE_SYSMAN=1
+AsusSoftwareManagerAgent.    13736 Console                    1      8�576 K
+node.exe                     11308 Console                    1        648 K
+node.exe                      6804 Console                    1        676 K
+node.exe                      7348 Console                    1        616 K
+node.exe                      3672 Console                    1        804 K
+node.exe                     15020 Console                    1      1�336 K
+node.exe                     12256 Console                    1     13�152 K
+node.exe                     18120 Console                    1     16�752 K
+node.exe                     17748 Console                    1     16�720 K
+node.exe                      1068 Console                    1     16�252 K
+node.exe                     17272 Console                    1     15�736 K
+node.exe                      3696 Console                    1     32�596 K
+node.exe                     16620 Console                    1     30�340 K
+node.exe                     19420 Console                    1     32�400 K
+node.exe                     17484 Console                    1     29�040 K
+     1368    1248    1368      15020  cons7     197609 16:44:28 /c/Program Files/nodejs/node
+stdout is not a tty
+stdout is not a tty

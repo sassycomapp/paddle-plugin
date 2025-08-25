@@ -1,0 +1,48 @@
+mcpServers:
+  cache-mcp-server:
+    command: "node"
+    args:
+      - "../../mcp_servers/cache-mcp-server/src/mcp/server.js"
+    env:
+      NODE_ENV: production
+      CACHE_CONFIG_PATH: "../../mcp_servers/cache-mcp-server/config/cache_config.yaml"
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: paddle_plugin_cache
+      DB_USER: postgres
+      DB_PASSWORD: 2001
+      PERSIST_DIR: "./cache_storage"
+    transport: "stdio"
+    tools:
+      - predictive_cache_query
+      - semantic_cache_query
+      - vector_cache_query
+      - global_cache_query
+      - vector_diary_query
+      - cache_stats
+      - cache_cleanup
+    
+  rag:
+    command: "node"
+    args:
+      - "../../mcp_servers/rag-mcp-server.js"
+    env:
+      "Placeholder"_URL: "http://localhost:8000"
+    transport: "stdio"
+    
+  agent-memory:
+    command: "node"
+    args:
+      - "../../mcp_servers/agent-memory/index.js"
+    env:
+      DATABASE_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+      MEMORY_BANK_PATH: "../../memorybank"
+    transport: "stdio"
+    
+  brave-search:
+    command: "node"
+    args:
+      - "../../mcp_servers/brave-search-mcp-server.js"
+    env:
+      BRAVE_API_KEY: "BSAAv74Y9k4vO7sKj7Qc6m3z4w2x1y0z"
+    transport: "stdio"

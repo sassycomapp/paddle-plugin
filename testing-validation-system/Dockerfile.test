@@ -1,0 +1,19 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files first to leverage Docker cache for layers
+COPY package*.json ./
+
+# Install dependencies
+RUN npm ci
+
+# Copy the rest of the application source code
+# .dockerignore will prevent node_modules from being copied here
+COPY . .
+
+# Expose port for debugging (if needed for the MCP server in the future)
+EXPOSE 3000
+
+# Default command - runs all tests using jest.config.js
+CMD ["npm", "test"]

@@ -1,0 +1,104 @@
+{
+  "basic_extraction": {
+    "status": "failed",
+    "error": "Dependencies not available",
+    "extracted_text": "",
+    "timestamp": "2025-08-21T12:12:46.204911"
+  },
+  "confidence_extraction": {
+    "status": "failed",
+    "error": "Dependencies not available",
+    "extracted_text": "",
+    "detailed_results": [],
+    "average_confidence": 0,
+    "timestamp": "2025-08-21T12:12:46.204986"
+  },
+  "different_configurations": {
+    "Default Configuration": {
+      "status": "failed",
+      "error": "Dependencies or Tesseract not available",
+      "timestamp": "2025-08-21T12:12:46.205131"
+    },
+    "High Confidence Threshold (80)": {
+      "status": "failed",
+      "error": "Dependencies or Tesseract not available",
+      "timestamp": "2025-08-21T12:12:46.205190"
+    },
+    "Single Block Text": {
+      "status": "failed",
+      "error": "Dependencies or Tesseract not available",
+      "timestamp": "2025-08-21T12:12:46.205248"
+    },
+    "Sparse Text": {
+      "status": "failed",
+      "error": "Dependencies or Tesseract not available",
+      "timestamp": "2025-08-21T12:12:46.205320"
+    }
+  },
+  "summary": {
+    "total_tests": 6,
+    "passed_tests": 0,
+    "failed_tests": 6,
+    "dependencies_available": false,
+    "test_details": [
+      {
+        "test_name": "Basic Text Extraction",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies not available",
+          "extracted_text": "",
+          "timestamp": "2025-08-21T12:12:46.204911"
+        }
+      },
+      {
+        "test_name": "Confidence-Based Extraction",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies not available",
+          "extracted_text": "",
+          "detailed_results": [],
+          "average_confidence": 0,
+          "timestamp": "2025-08-21T12:12:46.204986"
+        }
+      },
+      {
+        "test_name": "Configuration Test: Default Configuration",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies or Tesseract not available",
+          "timestamp": "2025-08-21T12:12:46.205131"
+        }
+      },
+      {
+        "test_name": "Configuration Test: High Confidence Threshold (80)",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies or Tesseract not available",
+          "timestamp": "2025-08-21T12:12:46.205190"
+        }
+      },
+      {
+        "test_name": "Configuration Test: Single Block Text",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies or Tesseract not available",
+          "timestamp": "2025-08-21T12:12:46.205248"
+        }
+      },
+      {
+        "test_name": "Configuration Test: Sparse Text",
+        "status": "failed",
+        "details": {
+          "status": "failed",
+          "error": "Dependencies or Tesseract not available",
+          "timestamp": "2025-08-21T12:12:46.205320"
+        }
+      }
+    ]
+  }
+}

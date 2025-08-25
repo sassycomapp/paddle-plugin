@@ -1,1 +1,19 @@
-ÿþ
+# safety
+.kilocode/local_data/
+.env
+*.env
+# noise
+node_modules/
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+.vscode/
+.DS_Store
+
+nul
+
+
+**/.git
+

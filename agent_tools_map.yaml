@@ -1,0 +1,19 @@
+# Agent Tools Mapping
+orchestrator:
+  tools:
+    - "file-mcp"
+    - "vscode-mcp"
+    - "rag-mcp"
+
+memory_agent:
+  tools:
+    - "file-mcp"
+    - "rag-mcp"
+
+secret_agent:
+  tools:
+    - "secrets-manager-mcp"
+
+logger_agent:
+  tools:
+    - "logging-telemetry-mcp"

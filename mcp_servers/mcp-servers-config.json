@@ -1,0 +1,44 @@
+{
+  "apps": [
+    {
+      "name": "brave-search-mcp",
+      "script": "./brave-search-mcp-server.js",
+      "env": {
+        "BRAVE_API_KEY": "BSAk3We2xKQFoOgoQJVObWmYGrCd-J0",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "logging-telemetry-mcp",
+      "script": "./logging-telemetry-mcp-server.js",
+      "env": {
+        "LOGS_DIR": "../Logs",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "mcp-scheduler",
+      "script": "./mcp-scheduler-server.js",
+      "env": {
+        "POSTGRES_URL": "postgresql://postgres:2001@localhost:5432/postgres",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "agent-memory",
+      "script": "./agent-memory/index.js",
+      "env": {
+        "POSTGRES_URL": "postgresql://postgres:2001@localhost:5432/postgres",
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "everything-search-mcp",
+      "script": "./everything-search-mcp/mcp_everything_search_fixed.py",
+      "env": {
+        "EVERYTHING_SDK_PATH": "C:\\Users\\salib\\Everything64.dll",
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

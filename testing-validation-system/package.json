@@ -1,0 +1,61 @@
+{
+  "name": "testing-validation-system",
+  "version": "1.0.0",
+  "description": "Comprehensive testing and validation system for paddle-plugin",
+  "main": "src/mcp/test-mcp-server.js",
+  "scripts": {
+    "start": "node src/mcp/test-mcp-server.js",
+    "dev": "nodemon src/mcp/test-mcp-server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:e2e": "jest --testPathPattern=e2e",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "db:init": "psql postgresql://postgres:2001@localhost:5432/postgres -f sql/init-test-db.sql",
+    "db:migrate": "node scripts/migrate.js",
+    "podman:up": "podman-compose up -d",
+    "podman:down": "podman-compose down",
+    "podman:test": "podman-compose run --rm test",
+    "report:generate": "node scripts/generate-report.js",
+    "security-scan": "semgrep --config=auto src/",
+    "ci": "npm run lint && npm run test && npm run test:integration"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "table": "^6.8.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.50.0",
+    "@types/jest": "^29.5.5",
+    "js-yaml": "^4.1.0",
+    "semgrep": "^1.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/mcp/**"
+    ],
+    "coverageReporters": ["text", "lcov", "html"],
+    "coverageDirectory": "coverage"
+  },
+  "keywords": [
+    "testing",
+    "validation",
+    "mcp",
+    "postgresql",
+    "security",
+    "ci-cd"
+  ],
+  "author": "vsc_ide Team",
+  "license": "MIT"
+}

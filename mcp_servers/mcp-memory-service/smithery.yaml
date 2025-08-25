@@ -1,0 +1,30 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - PGvectorPath
+      - backupsPath
+    properties:
+      PGvectorPath:
+        type: string
+        description: Path to PGvector storage.
+      backupsPath:
+        type: string
+        description: Path for backups.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ 
+      command: 'python', 
+      args: ['-m', 'mcp_memory_service.server'], 
+      env: { 
+        MCP_MEMORY_"Placeholder"_PATH: config.PGvectorPath, 
+        MCP_MEMORY_BACKUPS_PATH: config.backupsPath,
+        PYTHONUNBUFFERED: '1',
+        PYTORCH_ENABLE_MPS_FALLBACK: '1'
+      } 
+    })

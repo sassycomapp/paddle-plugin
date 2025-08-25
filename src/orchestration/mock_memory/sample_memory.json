@@ -1,0 +1,39 @@
+{
+  "agents": {
+    "researcher": {
+      "conversations": [],
+      "context": {
+        "expertise": [
+          "research",
+          "analysis",
+          "information gathering"
+        ],
+        "preferences": {
+          "search_depth": "comprehensive",
+          "source_reliability": "high"
+        }
+      }
+    },
+    "coordinator": {
+      "conversations": [],
+      "context": {
+        "expertise": [
+          "task management",
+          "coordination",
+          "workflow"
+        ],
+        "preferences": {
+          "parallel_processing": true,
+          "timeout": 30
+        }
+      }
+    },
+    "memory": {
+      "conversations": [],
+      "context": {
+        "storage_type": "ephemeral",
+        "retention_policy": "session_based"
+      }
+    }
+  }
+}

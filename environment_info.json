@@ -1,0 +1,17 @@
+{
+  "environment_type": "global",
+  "is_virtual": false,
+  "environment_name": "global",
+  "python_executable": "C:\\Python313\\python.exe",
+  "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "environment_path": null,
+  "site_packages": [
+    "C:\\Python313\\Lib\\site-packages"
+  ],
+  "has_tesseract": true,
+  "tesseract_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe",
+  "missing_dependencies": [
+    "pytesseract",
+    "PIL"
+  ]
+}

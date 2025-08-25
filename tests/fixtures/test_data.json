@@ -1,0 +1,391 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "created_at": "2024-01-15T10:00:00Z",
+      "last_login": "2024-01-20T14:30:00Z",
+      "status": "active",
+      "token_limit": 10000,
+      "priority_level": "high"
+    },
+    {
+      "id": "user-2", 
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "created_at": "2024-01-16T11:00:00Z",
+      "last_login": "2024-01-20T15:45:00Z",
+      "status": "active",
+      "token_limit": 5000,
+      "priority_level": "medium"
+    },
+    {
+      "id": "user-3",
+      "name": "Charlie Brown", 
+      "email": "charlie@example.com",
+      "created_at": "2024-01-17T12:00:00Z",
+      "last_login": "2024-01-19T09:20:00Z",
+      "status": "inactive",
+      "token_limit": 2000,
+      "priority_level": "low"
+    }
+  ],
+  "api_endpoints": [
+    {
+      "path": "/api/chat/completions",
+      "method": "POST",
+      "description": "Chat completion endpoint",
+      "token_cost_per_request": 100,
+      "rate_limit": 60,
+      "requires_auth": true
+    },
+    {
+      "path": "/api/embeddings",
+      "method": "POST", 
+      "description": "Text embeddings endpoint",
+      "token_cost_per_request": 50,
+      "rate_limit": 120,
+      "requires_auth": true
+    },
+    {
+      "path": "/api/models/list",
+      "method": "GET",
+      "description": "List available models",
+      "token_cost_per_request": 10,
+      "rate_limit": 300,
+      "requires_auth": false
+    },
+    {
+      "path": "/api/usage",
+      "method": "GET",
+      "description": "Get usage statistics",
+      "token_cost_per_request": 5,
+      "rate_limit": 180,
+      "requires_auth": true
+    },
+    {
+      "path": "/api/admin/users",
+      "method": "GET",
+      "description": "Admin user management",
+      "token_cost_per_request": 20,
+      "rate_limit": 30,
+      "requires_auth": true,
+      "admin_only": true
+    }
+  ],
+  "token_usage_records": [
+    {
+      "id": "usage-1",
+      "user_id": "user-1",
+      "session_id": "session-1",
+      "tokens_used": 150,
+      "api_endpoint": "/api/chat/completions",
+      "priority_level": "high",
+      "timestamp": "2024-01-20T14:30:15Z",
+      "processing_time_ms": 120,
+      "success": true
+    },
+    {
+      "id": "usage-2",
+      "user_id": "user-2", 
+      "session_id": "session-2",
+      "tokens_used": 75,
+      "api_endpoint": "/api/embeddings",
+      "priority_level": "medium",
+      "timestamp": "2024-01-20T15:45:30Z",
+      "processing_time_ms": 85,
+      "success": true
+    },
+    {
+      "id": "usage-3",
+      "user_id": "user-3",
+      "session_id": "session-3", 
+      "tokens_used": 200,
+      "api_endpoint": "/api/chat/completions",
+      "priority_level": "low",
+      "timestamp": "2024-01-19T09:25:00Z",
+      "processing_time_ms": 200,
+      "success": true
+    },
+    {
+      "id": "usage-4",
+      "user_id": "user-1",
+      "session_id": "session-4",
+      "tokens_used": 50,
+      "api_endpoint": "/api/models/list",
+      "priority_level": "medium",
+      "timestamp": "2024-01-20T14:35:00Z",
+      "processing_time_ms": 45,
+      "success": true
+    },
+    {
+      "id": "usage-5",
+      "user_id": "user-2",
+      "session_id": "session-5",
+      "tokens_used": 25,
+      "api_endpoint": "/api/usage",
+      "priority_level": "low",
+      "timestamp": "2024-01-20T15:50:00Z",
+      "processing_time_ms": 30,
+      "success": true
+    }
+  ],
+  "rate_limits": [
+    {
+      "user_id": "user-1",
+      "window": "day",
+      "limit": 1000,
+      "remaining": 850,
+      "reset_time": "2024-01-21T00:00:00Z"
+    },
+    {
+      "user_id": "user-2",
+      "window": "hour", 
+      "limit": 100,
+      "remaining": 25,
+      "reset_time": "2024-01-20T16:00:00Z"
+    },
+    {
+      "user_id": "user-3",
+      "window": "week",
+      "limit": 5000,
+      "remaining": 4800,
+      "reset_time": "2024-01-27T00:00:00Z"
+    }
+  ],
+  "security_events": [
+    {
+      "id": "sec-1",
+      "event_type": "token_access",
+      "user_id": "user-1",
+      "severity": "info",
+      "description": "User accessed chat completion API",
+      "timestamp": "2024-01-20T14:30:15Z",
+      "ip_address": "192.168.1.100",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    {
+      "id": "sec-2",
+      "event_type": "rate_limit_exceeded",
+      "user_id": "user-2",
+      "severity": "warning", 
+      "description": "User exceeded rate limit for embeddings API",
+      "timestamp": "2024-01-20T15:45:30Z",
+      "ip_address": "192.168.1.101",
+      "user_agent": "curl/7.68.0"
+    },
+    {
+      "id": "sec-3",
+      "event_type": "suspicious_activity",
+      "user_id": "user-3",
+      "severity": "critical",
+      "description": "Multiple failed login attempts detected",
+      "timestamp": "2024-01-19T09:25:00Z",
+      "ip_address": "192.168.1.102",
+      "user_agent": "Python/3.9 requests/2.25.1"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-1",
+      "type": "usage_threshold",
+      "severity": "high",
+      "title": "High Token Usage Alert",
+      "message": "User user-1 has used 85% of their daily token limit",
+      "user_id": "user-1",
+      "timestamp": "2024-01-20T14:30:15Z",
+      "status": "active",
+      "resolved": false
+    },
+    {
+      "id": "alert-2",
+      "type": "system_health",
+      "severity": "critical",
+      "title": "System Health Critical",
+      "message": "CPU usage exceeded 90% threshold",
+      "user_id": null,
+      "timestamp": "2024-01-20T15:45:30Z",
+      "status": "active",
+      "resolved": false
+    },
+    {
+      "id": "alert-3",
+      "type": "security_breach",
+      "severity": "critical",
+      "title": "Security Breach Detected",
+      "message": "Multiple failed login attempts from suspicious IP",
+      "user_id": "user-3",
+      "timestamp": "2024-01-19T09:25:00Z",
+      "status": "resolved",
+      "resolved": true
+    }
+  ],
+  "vault_secrets": [
+    {
+      "path": "secret/database/credentials",
+      "data": {
+        "host": "localhost",
+        "port": 5432,
+        "username": "token_manager",
+        "password": "secure_password_123",
+        "database": "token_management"
+      },
+      "metadata": {
+        "created_at": "2024-01-01T00:00:00Z",
+        "updated_at": "2024-01-15T10:00:00Z",
+        "version": 3
+      }
+    },
+    {
+      "path": "secret/api_keys/openai",
+      "data": {
+        "api_key": "sk-test-key-1234567890",
+        "description": "OpenAI API key for testing",
+        "environment": "development"
+      },
+      "metadata": {
+        "created_at": "2024-01-02T00:00:00Z",
+        "updated_at": "2024-01-16T11:00:00Z",
+        "version": 2
+      }
+    },
+    {
+      "path": "secret/api_keys/anthropic",
+      "data": {
+        "api_key": "sk-ant-test-key-0987654321",
+        "description": "Anthropic API key for testing",
+        "environment": "development"
+      },
+      "metadata": {
+        "created_at": "2024-01-03T00:00:00Z",
+        "updated_at": "2024-01-17T12:00:00Z",
+        "version": 1
+      }
+    }
+  ],
+  "performance_baselines": {
+    "token_counting": {
+      "avg_time_ms": 50,
+      "p95_time_ms": 100,
+      "p99_time_ms": 200,
+      "success_rate": 0.999
+    },
+    "rate_limit_check": {
+      "avg_time_ms": 10,
+      "p95_time_ms": 25,
+      "p99_time_ms": 50,
+      "success_rate": 1.0
+    },
+    "database_query": {
+      "avg_time_ms": 20,
+      "p95_time_ms": 50,
+      "p99_time_ms": 100,
+      "success_rate": 0.999
+    },
+    "api_call": {
+      "avg_time_ms": 500,
+      "p95_time_ms": 1000,
+      "p99_time_ms": 2000,
+      "success_rate": 0.99
+    },
+    "memory_operation": {
+      "avg_time_ms": 100,
+      "p95_time_ms": 200,
+      "p99_time_ms": 500,
+      "success_rate": 0.999
+    },
+    "alert_processing": {
+      "avg_time_ms": 20,
+      "p95_time_ms": 50,
+      "p99_time_ms": 100,
+      "success_rate": 1.0
+    }
+  },
+  "test_scenarios": [
+    {
+      "name": "Basic Token Counting",
+      "description": "Test basic token counting functionality",
+      "steps": [
+        "Initialize TokenCounter",
+        "Count tokens for simple text",
+        "Count tokens for complex text",
+        "Verify caching works",
+        "Check performance metrics"
+      ],
+      "expected_outcomes": [
+        "Token counts are accurate",
+        "Caching improves performance",
+        "Performance metrics are collected"
+      ]
+    },
+    {
+      "name": "Rate Limiting",
+      "description": "Test rate limiting functionality",
+      "steps": [
+        "Set up rate limits for users",
+        "Make requests within limits",
+        "Verify rate limiting works",
+        "Test retry logic",
+        "Check rate limit metrics"
+      ],
+      "expected_outcomes": [
+        "Requests within limits succeed",
+        "Requests beyond limits are rejected",
+        "Retry logic works correctly",
+        "Rate limit metrics are accurate"
+      ]
+    },
+    {
+      "name": "Token Usage Logging",
+      "description": "Test token usage logging functionality",
+      "steps": [
+        "Initialize TokenUsageLogger",
+        "Log token usage records",
+        "Verify database storage",
+        "Test batch processing",
+        "Check logging performance"
+      ],
+      "expected_outcomes": [
+        "Usage records are logged correctly",
+        "Database storage works",
+        "Batch processing improves performance",
+        "Logging metrics are collected"
+      ]
+    },
+    {
+      "name": "Security Management",
+      "description": "Test security management functionality",
+      "steps": [
+        "Initialize TokenSecurityManager",
+        "Store tokens securely",
+        "Retrieve tokens",
+        "Test revocation",
+        "Check security events"
+      ],
+      "expected_outcomes": [
+        "Tokens are stored securely",
+        "Tokens can be retrieved correctly",
+        "Revocation works properly",
+        "Security events are logged"
+      ]
+    },
+    {
+      "name": "Monitoring and Alerting",
+      "description": "Test monitoring and alerting functionality",
+      "steps": [
+        "Initialize TokenMonitoringSystem",
+        "Start monitoring",
+        "Generate alerts",
+        "Export metrics",
+        "Check system health"
+      ],
+      "expected_outcomes": [
+        "Monitoring starts correctly",
+        "Alerts are generated when thresholds are exceeded",
+        "Metrics can be exported",
+        "System health is monitored"
+      ]
+    }
+  ]
+}

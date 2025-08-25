@@ -1,0 +1,256 @@
+# Prometheus configuration for Cache MCP Server
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093
+
+# Rule files
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Cache MCP Server
+  - job_name: 'cache-mcp-server'
+    static_configs:
+      - targets: ['cache-mcp-server:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    scheme: http
+    
+    # Custom labels
+    labels:
+      service: 'cache-mcp-server'
+      environment: 'production'
+    
+    # Relabeling
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __address__
+        regex: '(.*):8080'
+        replacement: '${1}:8080'
+    
+    # Metric relabeling
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: 'go_.*'
+        action: drop
+      - source_labels: [__name__]
+        regex: 'process_.*'
+        action: drop
+
+  # PostgreSQL Database
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:5432']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    scheme: http
+    
+    # Custom labels
+    labels:
+      service: 'postgres'
+      environment: 'production'
+    
+    # Relabeling
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __address__
+        regex: '(.*):5432'
+        replacement: '${1}:532'
+
+  # Redis (if enabled)
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    scheme: http
+    
+    # Custom labels
+    labels:
+      service: 'redis'
+      environment: 'production'
+    
+    # Relabeling
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __address__
+        regex: '(.*):6379'
+        replacement: '${1}:6379'
+
+  # Node Exporter (for system metrics)
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    scheme: http
+    
+    # Custom labels
+    labels:
+      service: 'node-exporter'
+      environment: 'production'
+    
+    # Relabeling
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __address__
+        regex: '(.*):9100'
+        replacement: '${1}:9100'
+
+  # Docker Exporter (for container metrics)
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['cadvisor:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+    scrape_timeout: 10s
+    scheme: http
+    
+    # Custom labels
+    labels:
+      service: 'cadvisor'
+      environment: 'production'
+    
+    # Relabeling
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __address__
+        regex: '(.*):8080'
+        replacement: '${1}:8080'
+
+# Storage configuration
+storage:
+  tsdb:
+    retention.time: 200h
+    retention.size: 10GB
+
+# Remote write configuration
+remote_write:
+  - url: "http://prometheus-write:9090/api/v1/write"
+    queue_config:
+      max_samples_per_send: 1000
+      max_shards: 10
+      min_shards: 1
+
+# Remote read configuration
+remote_read:
+  - url: "http://prometheus-read:9090/api/v1/read"
+    read_recent: true
+
+# Alerting rules
+groups:
+  - name: cache_alerts
+    rules:
+      # High error rate
+      - alert: HighErrorRate
+        expr: rate(cache_errors_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error rate on {{ $labels.service }}"
+          description: "Error rate is {{ $value }} errors per second"
+      
+      # High response time
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(cache_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High response time on {{ $labels.service }}"
+          description: "95th percentile response time is {{ $value }} seconds"
+      
+      # Low cache hit rate
+      - alert: LowCacheHitRate
+        expr: rate(cache_hits_total[5m]) / (rate(cache_hits_total[5m]) + rate(cache_misses_total[5m])) < 0.7
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low cache hit rate on {{ $labels.service }}"
+          description: "Cache hit rate is {{ $value }}"
+      
+      # High memory usage
+      - alert: HighMemoryUsage
+        expr: (process_resident_memory_bytes / process_virtual_memory_bytes) > 0.8
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High memory usage on {{ $labels.service }}"
+          description: "Memory usage is {{ $value | humanizePercentage }}"
+      
+      # High CPU usage
+      - alert: HighCPUUsage
+        expr: rate(process_cpu_seconds_total[5m]) > 0.8
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage on {{ $labels.service }}"
+          description: "CPU usage is {{ $value | humanizePercentage }}"
+      
+      # Database connection issues
+      - alert: DatabaseConnectionIssues
+        expr: up{job="postgres"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection issues"
+          description: "PostgreSQL database is down"
+      
+      # Redis connection issues (if enabled)
+      - alert: RedisConnectionIssues
+        expr: up{job="redis"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Redis connection issues"
+          description: "Redis cache is down"
+      
+      # Disk space issues
+      - alert: DiskSpaceLow
+        expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100 < 10
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Low disk space on {{ $labels.instance }}"
+          description: "Disk space is {{ $value | humanizePercentage }} available"
+      
+      # High request rate
+      - alert: HighRequestRate
+        expr: rate(cache_requests_total[5m]) > 1000
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High request rate on {{ $labels.service }}"
+          description: "Request rate is {{ $value }} requests per second"
+      
+      # Cache size exceeded
+      - alert: CacheSizeExceeded
+        expr: cache_size_bytes > cache_max_size_bytes
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Cache size exceeded on {{ $labels.service }}"
+          description: "Cache size is {{ $value | humanizeBytes }} (max: {{ $labels.cache_max_size_bytes | humanizeBytes }})"

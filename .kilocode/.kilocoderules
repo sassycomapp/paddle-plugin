@@ -1,0 +1,16 @@
+{
+    "rules": [
+        {
+            "path": "./Rules/rules.md",
+            "applyTo": [
+                "code",
+                "debug",
+                "orchestrator",
+                "ask",
+                "architect",
+                "write"
+            ]
+        }
+    ],
+    "enforcement": "strict"
+}

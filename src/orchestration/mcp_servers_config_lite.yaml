@@ -1,0 +1,53 @@
+# Lite configuration - works without external services
+mcpServers:
+  # Cache MCP server - lite version with simplified configuration
+  cache-mcp-server-lite:
+    command: "node"
+    args:
+      - "../../mcp_servers/cache-mcp-server/src/mcp/server.js"
+    env:
+      NODE_ENV: development
+      CACHE_CONFIG_PATH: "../../mcp_servers/cache-mcp-server/config/cache_config.yaml"
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: paddle_plugin_cache_lite
+      DB_USER: postgres
+      DB_PASSWORD: 2001
+      PERSIST_DIR: "./cache_storage_lite"
+      LITE_MODE: "true"
+    transport: "stdio"
+    tools:
+      - predictive_cache_query
+      - semantic_cache_query
+      - vector_cache_query
+      - global_cache_query
+      - vector_diary_query
+      - cache_stats
+      - cache_cleanup
+    
+  # Mock RAG service - uses local file system instead of PGvector
+  rag-lite:
+    command: "node"
+    args:
+      - "../../mcp_servers/rag-mcp-server-lite.js"
+    env:
+      DATA_DIR: "./mock_data"
+    transport: "stdio"
+    
+  # Mock agent memory - uses JSON files instead of PostgreSQL
+  agent-memory-lite:
+    command: "node"
+    args:
+      - "../../mcp_servers/agent-memory-lite.js"
+    env:
+      MEMORY_DIR: "./mock_memory"
+    transport: "stdio"
+    
+  # Mock brave search - returns sample data
+  brave-search-lite:
+    command: "node"
+    args:
+      - "../../mcp_servers/brave-search-mcp-server-lite.js"
+    env:
+      MOCK_MODE: "true"
+    transport: "stdio"

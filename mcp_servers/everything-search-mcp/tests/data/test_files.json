@@ -1,0 +1,408 @@
+[
+    {
+        "name": "document.txt",
+        "path": "C:\\Users\\Test\\Documents\\document.txt",
+        "size": 1024,
+        "modified": "2023-01-15T10:30:00",
+        "extension": "txt",
+        "is_directory": false,
+        "type": "text/plain",
+        "content": "This is a test document file."
+    },
+    {
+        "name": "presentation.pptx",
+        "path": "C:\\Users\\Test\\Documents\\presentation.pptx",
+        "size": 5120,
+        "modified": "2023-01-20T14:45:00",
+        "extension": "pptx",
+        "is_directory": false,
+        "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    },
+    {
+        "name": "spreadsheet.xlsx",
+        "path": "C:\\Users\\Test\\Documents\\spreadsheet.xlsx",
+        "size": 3072,
+        "modified": "2023-01-25T09:15:00",
+        "extension": "xlsx",
+        "is_directory": false,
+        "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+        "name": "image.jpg",
+        "path": "C:\\Users\\Test\\Pictures\\image.jpg",
+        "size": 2048,
+        "modified": "2023-02-01T16:20:00",
+        "extension": "jpg",
+        "is_directory": false,
+        "type": "image/jpeg"
+    },
+    {
+        "name": "image.png",
+        "path": "C:\\Users\\Test\\Pictures\\image.png",
+        "size": 4096,
+        "modified": "2023-02-05T11:10:00",
+        "extension": "png",
+        "is_directory": false,
+        "type": "image/png"
+    },
+    {
+        "name": "video.mp4",
+        "path": "C:\\Users\\Test\\Videos\\video.mp4",
+        "size": 102400,
+        "modified": "2023-02-10T13:25:00",
+        "extension": "mp4",
+        "is_directory": false,
+        "type": "video/mp4"
+    },
+    {
+        "name": "audio.mp3",
+        "path": "C:\\Users\\Test\\Music\\audio.mp3",
+        "size": 5120,
+        "modified": "2023-02-15T08:40:00",
+        "extension": "mp3",
+        "is_directory": false,
+        "type": "audio/mpeg"
+    },
+    {
+        "name": "archive.zip",
+        "path": "C:\\Users\\Test\\Downloads\\archive.zip",
+        "size": 8192,
+        "modified": "2023-02-20T15:55:00",
+        "extension": "zip",
+        "is_directory": false,
+        "type": "application/zip"
+    },
+    {
+        "name": "code.py",
+        "path": "C:\\Users\\Test\\Projects\\code.py",
+        "size": 1536,
+        "modified": "2023-02-25T12:30:00",
+        "extension": "py",
+        "is_directory": false,
+        "type": "text/x-python"
+    },
+    {
+        "name": "config.json",
+        "path": "C:\\Users\\Test\\Projects\\config.json",
+        "size": 768,
+        "modified": "2023-03-01T17:45:00",
+        "extension": "json",
+        "is_directory": false,
+        "type": "application/json"
+    },
+    {
+        "name": "webpage.html",
+        "path": "C:\\Users\\Test\\Projects\\webpage.html",
+        "size": 2048,
+        "modified": "2023-03-05T10:20:00",
+        "extension": "html",
+        "is_directory": false,
+        "type": "text/html"
+    },
+    {
+        "name": "stylesheet.css",
+        "path": "C:\\Users\\Test\\Projects\\stylesheet.css",
+        "size": 1024,
+        "modified": "2023-03-10T14:35:00",
+        "extension": "css",
+        "is_directory": false,
+        "type": "text/css"
+    },
+    {
+        "name": "database.db",
+        "path": "C:\\Users\\Test\\Projects\\database.db",
+        "size": 4096,
+        "modified": "2023-03-15T09:50:00",
+        "extension": "db",
+        "is_directory": false,
+        "type": "application/x-sqlite3"
+    },
+    {
+        "name": "executable.exe",
+        "path": "C:\\Users\\Test\\Downloads\\executable.exe",
+        "size": 10240,
+        "modified": "2023-03-20T16:15:00",
+        "extension": "exe",
+        "is_directory": false,
+        "type": "application/x-msdownload"
+    },
+    {
+        "name": "installer.msi",
+        "path": "C:\\Users\\Test\\Downloads\\installer.msi",
+        "size": 20480,
+        "modified": "2023-03-25T11:40:00",
+        "extension": "msi",
+        "is_directory": false,
+        "type": "application/x-msi"
+    },
+    {
+        "name": "document.pdf",
+        "path": "C:\\Users\\Test\\Documents\\document.pdf",
+        "size": 3072,
+        "modified": "2023-04-01T13:25:00",
+        "extension": "pdf",
+        "is_directory": false,
+        "type": "application/pdf"
+    },
+    {
+        "name": "document.doc",
+        "path": "C:\\Users\\Test\\Documents\\document.doc",
+        "size": 2560,
+        "modified": "2023-04-05T08:30:00",
+        "extension": "doc",
+        "is_directory": false,
+        "type": "application/msword"
+    },
+    {
+        "name": "document.docx",
+        "path": "C:\\Users\\Test\\Documents\\document.docx",
+        "size": 3584,
+        "modified": "2023-04-10T15:45:00",
+        "extension": "docx",
+        "is_directory": false,
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+        "name": "image.gif",
+        "path": "C:\\Users\\Test\\Pictures\\image.gif",
+        "size": 1536,
+        "modified": "2023-04-15T10:10:00",
+        "extension": "gif",
+        "is_directory": false,
+        "type": "image/gif"
+    },
+    {
+        "name": "image.bmp",
+        "path": "C:\\Users\\Test\\Pictures\\image.bmp",
+        "size": 3072,
+        "modified": "2023-04-20T12:20:00",
+        "extension": "bmp",
+        "is_directory": false,
+        "type": "image/bmp"
+    },
+    {
+        "name": "image.tiff",
+        "path": "C:\\Users\\Test\\Pictures\\image.tiff",
+        "size": 5120,
+        "modified": "2023-04-25T14:30:00",
+        "extension": "tiff",
+        "is_directory": false,
+        "type": "image/tiff"
+    },
+    {
+        "name": "audio.wav",
+        "path": "C:\\Users\\Test\\Music\\audio.wav",
+        "size": 8192,
+        "modified": "2023-05-01T09:15:00",
+        "extension": "wav",
+        "is_directory": false,
+        "type": "audio/wav"
+    },
+    {
+        "name": "video.avi",
+        "path": "C:\\Users\\Test\\Videos\\video.avi",
+        "size": 20480,
+        "modified": "2023-05-05T16:40:00",
+        "extension": "avi",
+        "is_directory": false,
+        "type": "video/x-msvideo"
+    },
+    {
+        "name": "video.mov",
+        "path": "C:\\Users\\Test\\Videos\\video.mov",
+        "size": 25600,
+        "modified": "2023-05-10T11:25:00",
+        "extension": "mov",
+        "is_directory": false,
+        "type": "video/quicktime"
+    },
+    {
+        "name": "video.wmv",
+        "path": "C:\\Users\\Test\\Videos\\video.wmv",
+        "size": 30720,
+        "modified": "2023-05-15T13:50:00",
+        "extension": "wmv",
+        "is_directory": false,
+        "type": "video/x-ms-wmv"
+    },
+    {
+        "name": "video.flv",
+        "path": "C:\\Users\\Test\\Videos\\video.flv",
+        "size": 35840,
+        "modified": "2023-05-20T08:35:00",
+        "extension": "flv",
+        "is_directory": false,
+        "type": "video/x-flv"
+    },
+    {
+        "name": "video.mkv",
+        "path": "C:\\Users\\Test\\Videos\\video.mkv",
+        "size": 40960,
+        "modified": "2023-05-25T15:20:00",
+        "extension": "mkv",
+        "is_directory": false,
+        "type": "video/x-matroska"
+    },
+    {
+        "name": "archive.rar",
+        "path": "C:\\Users\\Test\\Downloads\\archive.rar",
+        "size": 6144,
+        "modified": "2023-06-01T10:45:00",
+        "extension": "rar",
+        "is_directory": false,
+        "type": "application/x-rar-compressed"
+    },
+    {
+        "name": "archive.7z",
+        "path": "C:\\Users\\Test\\Downloads\\archive.7z",
+        "size": 7168,
+        "modified": "2023-06-05T12:30:00",
+        "extension": "7z",
+        "is_directory": false,
+        "type": "application/x-7z-compressed"
+    },
+    {
+        "name": "archive.tar",
+        "path": "C:\\Users\\Test\\Downloads\\archive.tar",
+        "size": 8192,
+        "modified": "2023-06-10T14:15:00",
+        "extension": "tar",
+        "is_directory": false,
+        "type": "application/x-tar"
+    },
+    {
+        "name": "archive.gz",
+        "path": "C:\\Users\\Test\\Downloads\\archive.gz",
+        "size": 1024,
+        "modified": "2023-06-15T09:40:00",
+        "extension": "gz",
+        "is_directory": false,
+        "type": "application/gzip"
+    },
+    {
+        "name": "code.js",
+        "path": "C:\\Users\\Test\\Projects\\code.js",
+        "size": 2048,
+        "modified": "2023-06-20T16:25:00",
+        "extension": "js",
+        "is_directory": false,
+        "type": "application/javascript"
+    },
+    {
+        "name": "code.xml",
+        "path": "C:\\Users\\Test\\Projects\\code.xml",
+        "size": 1536,
+        "modified": "2023-06-25T11:10:00",
+        "extension": "xml",
+        "is_directory": false,
+        "type": "application/xml"
+    },
+    {
+        "name": "code.yaml",
+        "path": "C:\\Users\\Test\\Projects\\code.yaml",
+        "size": 1024,
+        "modified": "2023-06-30T13:35:00",
+        "extension": "yaml",
+        "is_directory": false,
+        "type": "application/x-yaml"
+    },
+    {
+        "name": "code.yml",
+        "path": "C:\\Users\\Test\\Projects\\code.yml",
+        "size": 1024,
+        "modified": "2023-07-01T08:20:00",
+        "extension": "yml",
+        "is_directory": false,
+        "type": "application/x-yaml"
+    },
+    {
+        "name": "data.csv",
+        "path": "C:\\Users\\Test\\Projects\\data.csv",
+        "size": 2048,
+        "modified": "2023-07-05T15:45:00",
+        "extension": "csv",
+        "is_directory": false,
+        "type": "text/csv"
+    },
+    {
+        "name": "data.xlsx",
+        "path": "C:\\Users\\Test\\Projects\\data.xlsx",
+        "size": 4096,
+        "modified": "2023-07-10T10:30:00",
+        "extension": "xlsx",
+        "is_directory": false,
+        "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+        "name": "data.xls",
+        "path": "C:\\Users\\Test\\Projects\\data.xls",
+        "size": 3072,
+        "modified": "2023-07-15T12:15:00",
+        "extension": "xls",
+        "is_directory": false,
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "name": "presentation.ppt",
+        "path": "C:\\Users\\Test\\Documents\\presentation.ppt",
+        "size": 4096,
+        "modified": "2023-07-20T14:40:00",
+        "extension": "ppt",
+        "is_directory": false,
+        "type": "application/vnd.ms-powerpoint"
+    },
+    {
+        "name": "presentation.pptx",
+        "path": "C:\\Users\\Test\\Documents\\presentation.pptx",
+        "size": 5120,
+        "modified": "2023-07-25T09:25:00",
+        "extension": "pptx",
+        "is_directory": false,
+        "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    },
+    {
+        "name": "system.dll",
+        "path": "C:\\Windows\\System32\\system.dll",
+        "size": 10240,
+        "modified": "2023-07-30T16:50:00",
+        "extension": "dll",
+        "is_directory": false,
+        "type": "application/x-msdownload"
+    },
+    {
+        "name": "system.sys",
+        "path": "C:\\Windows\\System32\\system.sys",
+        "size": 15360,
+        "modified": "2023-08-01T11:35:00",
+        "extension": "sys",
+        "is_directory": false,
+        "type": "application/octet-stream"
+    },
+    {
+        "name": "script.bat",
+        "path": "C:\\Users\\Test\\Scripts\\script.bat",
+        "size": 512,
+        "modified": "2023-08-05T13:20:00",
+        "extension": "bat",
+        "is_directory": false,
+        "type": "text/plain"
+    },
+    {
+        "name": "script.cmd",
+        "path": "C:\\Users\\Test\\Scripts\\script.cmd",
+        "size": 512,
+        "modified": "2023-08-10T08:45:00",
+        "extension": "cmd",
+        "is_directory": false,
+        "type": "text/plain"
+    },
+    {
+        "name": "script.ps1",
+        "path": "C:\\Users\\Test\\Scripts\\script.ps1",
+        "size": 1024,
+        "modified": "2023-08-15T15:30:00",
+        "extension": "ps1",
+        "is_directory": false,
+        "type": "text/plain"
+    }
+]

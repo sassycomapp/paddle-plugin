@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "agent-memory": {
+      "command": "node",
+      "args": ["mcp_servers/agent-memory/index.js"],
+      "env": {
+"DATABASE_URL": "postgresql://postgres:2001@localhost:5432/postgres",
+        "MEMORY_BANK_PATH": "./memorybank"
+      }
+    }
+  }
+}

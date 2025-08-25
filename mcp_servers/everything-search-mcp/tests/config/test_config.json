@@ -1,0 +1,186 @@
+{
+    "_description": "Test Configuration for Everything Search MCP Server",
+    "_version": "1.0.0",
+    "_generated_by": "Test Suite",
+    "_timestamp": "2025-01-01T00:00:00Z",
+    "everything_search": {
+        "sdk_path": "${EVERYTHING_SDK_PATH}",
+        "max_search_results": 1000,
+        "default_search_timeout": 30,
+        "enable_regex_search": true,
+        "enable_case_sensitive_search": false,
+        "enable_whole_word_search": false,
+        "cache_enabled": true,
+        "cache_ttl": 300,
+        "cache_size": 1000
+    },
+    "search": {
+        "default_max_results": 100,
+        "max_max_results": 10000,
+        "min_max_results": 1,
+        "size_units": [
+            "bytes",
+            "KB",
+            "MB",
+            "GB"
+        ],
+        "date_formats": [
+            "%Y-%m-%d",
+            "%Y-%m-%d %H:%M:%S",
+            "%m/%d/%Y",
+            "%d/%m/%Y"
+        ],
+        "supported_extensions": [
+            "txt",
+            "doc",
+            "docx",
+            "pdf",
+            "jpg",
+            "jpeg",
+            "png",
+            "gif",
+            "bmp",
+            "tiff",
+            "mp3",
+            "wav",
+            "mp4",
+            "avi",
+            "mov",
+            "wmv",
+            "flv",
+            "mkv",
+            "zip",
+            "rar",
+            "7z",
+            "tar",
+            "gz",
+            "exe",
+            "msi",
+            "dll",
+            "sys",
+            "bat",
+            "cmd",
+            "ps1",
+            "py",
+            "js",
+            "html",
+            "css",
+            "json",
+            "xml",
+            "yaml",
+            "yml",
+            "csv",
+            "xlsx",
+            "xls",
+            "pptx",
+            "ppt"
+        ]
+    },
+    "performance": {
+        "enable_async_search": true,
+        "max_concurrent_searches": 10,
+        "search_timeout": 30,
+        "result_processing_timeout": 10,
+        "memory_limit": "1024MB",
+        "enable_result_caching": true,
+        "cache_cleanup_interval": 3600
+    },
+    "output": {
+        "include_full_path": true,
+        "include_file_size": true,
+        "include_modification_date": true,
+        "include_file_extension": true,
+        "include_file_type": true,
+        "include_hidden_files": false,
+        "include_system_files": false,
+        "include_readonly_files": true,
+        "result_format": "detailed",
+        "sort_by": "name",
+        "sort_order": "ascending"
+    },
+    "logging": {
+        "level": "DEBUG",
+        "file": "./logs/test_everything_search_mcp.log",
+        "max_size": "50MB",
+        "backup_count": 10,
+        "encoding": "utf-8",
+        "enable_file_logging": true,
+        "enable_console_logging": true,
+        "log_search_queries": true,
+        "log_search_results": true,
+        "log_performance_metrics": true
+    },
+    "security": {
+        "allow_network_paths": true,
+        "allow_hidden_searches": true,
+        "max_search_depth": 10,
+        "allowed_search_patterns": [
+            "*.*"
+        ],
+        "blocked_search_patterns": [],
+        "enable_path_validation": true,
+        "max_path_length": 260
+    },
+    "monitoring": {
+        "enabled": true,
+        "metrics_interval": 10,
+        "performance_tracking": true,
+        "error_tracking": true,
+        "resource_monitoring": true,
+        "search_metrics": {
+            "total_searches": 0,
+            "successful_searches": 0,
+            "failed_searches": 0,
+            "average_search_time": 0,
+            "max_search_time": 0,
+            "min_search_time": 0
+        },
+        "system_metrics": {
+            "cpu_usage": 0,
+            "memory_usage": 0,
+            "disk_usage": 0,
+            "sdk_available": false
+        }
+    },
+    "validation": {
+        "max_file_size": 1073741824,
+        "min_file_size": 0,
+        "max_path_length": 260,
+        "allowed_drive_types": [
+            "fixed",
+            "removable",
+            "network"
+        ],
+        "blocked_extensions": [],
+        "required_permissions": [
+            "read"
+        ]
+    },
+    "ui": {
+        "enable_progress_indicators": true,
+        "enable_result_preview": true,
+        "max_preview_size": 1024,
+        "enable_quick_actions": true,
+        "default_view_mode": "list"
+    },
+    "integration": {
+        "enable_mcp_protocol": true,
+        "enable_stdio_transport": true,
+        "enable_http_transport": false,
+        "enable_websocket_transport": false,
+        "protocol_version": "2024-11-05",
+        "enable_tool_discovery": true,
+        "enable_capability_negotiation": true
+    },
+    "advanced": {
+        "enable_wildcard_search": true,
+        "enable_fuzzy_search": false,
+        "enable_phonetic_search": false,
+        "enable_stemming": false,
+        "enable_stop_words": false,
+        "enable_synonym_search": false,
+        "enable_context_search": false,
+        "enable_semantic_search": false,
+        "enable_machine_learning": false
+    }
+}

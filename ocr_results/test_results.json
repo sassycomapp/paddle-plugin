@@ -1,0 +1,1074 @@
+{
+  "timestamp": "2025-08-21T12:22:17.960205",
+  "target_image": "Docs/_My Todo/A.0 Mybizz system.png",
+  "basic_text": "",
+  "confidence_results": [
+    {
+      "text": "MyBizz",
+      "confidence": 91
+    },
+    {
+      "text": "System",
+      "confidence": 96
+    },
+    {
+      "text": "last",
+      "confidence": 83
+    },
+    {
+      "text": "Updated:",
+      "confidence": 96
+    },
+    {
+      "text": "Sunday,",
+      "confidence": 65
+    },
+    {
+      "text": "01",
+      "confidence": 92
+    },
+    {
+      "text": "June",
+      "confidence": 96
+    },
+    {
+      "text": "2025",
+      "confidence": 96
+    },
+    {
+      "text": "system.",
+      "confidence": 43
+    },
+    {
+      "text": "Process",
+      "confidence": 88
+    },
+    {
+      "text": "‘Sub",
+      "confidence": 87
+    },
+    {
+      "text": "Process",
+      "confidence": 89
+    },
+    {
+      "text": "|.",
+      "confidence": 66
+    },
+    {
+      "text": "User",
+      "confidence": 95
+    },
+    {
+      "text": "Authentication",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Authorization",
+      "confidence": 94
+    },
+    {
+      "text": "System",
+      "confidence": 93
+    },
+    {
+      "text": "User",
+      "confidence": 96
+    },
+    {
+      "text": "Login",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Session",
+      "confidence": 88
+    },
+    {
+      "text": "Management",
+      "confidence": 93
+    },
+    {
+      "text": "Role-Based",
+      "confidence": 93
+    },
+    {
+      "text": "Access",
+      "confidence": 96
+    },
+    {
+      "text": "Control",
+      "confidence": 93
+    },
+    {
+      "text": "(RBAC)",
+      "confidence": 93
+    },
+    {
+      "text": "Core",
+      "confidence": 93
+    },
+    {
+      "text": "‘Owner",
+      "confidence": 84
+    },
+    {
+      "text": "Account",
+      "confidence": 96
+    },
+    {
+      "text": "Bootstrap",
+      "confidence": 86
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Security",
+      "confidence": 96
+    },
+    {
+      "text": "‘Temporary",
+      "confidence": 87
+    },
+    {
+      "text": "Admin",
+      "confidence": 94
+    },
+    {
+      "text": "Session",
+      "confidence": 91
+    },
+    {
+      "text": "Elevation",
+      "confidence": 96
+    },
+    {
+      "text": "ization",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Configuration",
+      "confidence": 91
+    },
+    {
+      "text": "System",
+      "confidence": 88
+    },
+    {
+      "text": "New",
+      "confidence": 96
+    },
+    {
+      "text": "Tenant",
+      "confidence": 93
+    },
+    {
+      "text": "Application",
+      "confidence": 94
+    },
+    {
+      "text": "Setup",
+      "confidence": 93
+    },
+    {
+      "text": "(IMyBizz",
+      "confidence": 77
+    },
+    {
+      "text": "Provider)",
+      "confidence": 96
+    },
+    {
+      "text": "‘Tenant",
+      "confidence": 91
+    },
+    {
+      "text": "Owner",
+      "confidence": 96
+    },
+    {
+      "text": "Initial",
+      "confidence": 93
+    },
+    {
+      "text": "Configuration",
+      "confidence": 96
+    },
+    {
+      "text": "(Tenant",
+      "confidence": 96
+    },
+    {
+      "text": "Owner)",
+      "confidence": 88
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Integration",
+      "confidence": 91
+    },
+    {
+      "text": "Setup",
+      "confidence": 96
+    },
+    {
+      "text": "(Provider",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Tenant",
+      "confidence": 90
+    },
+    {
+      "text": "Coordination)",
+      "confidence": 91
+    },
+    {
+      "text": "Il.",
+      "confidence": 73
+    },
+    {
+      "text": "Core",
+      "confidence": 96
+    },
+    {
+      "text": "Application",
+      "confidence": 92
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "UI",
+      "confidence": 83
+    },
+    {
+      "text": "Management",
+      "confidence": 93
+    },
+    {
+      "text": "System",
+      "confidence": 94
+    },
+    {
+      "text": "Main",
+      "confidence": 85
+    },
+    {
+      "text": "Application",
+      "confidence": 96
+    },
+    {
+      "text": "Navigation",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Structure",
+      "confidence": 95
+    },
+    {
+      "text": "U.",
+      "confidence": 43
+    },
+    {
+      "text": "Tenant",
+      "confidence": 76
+    },
+    {
+      "text": "IV,",
+      "confidence": 89
+    },
+    {
+      "text": "Product",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Service",
+      "confidence": 96
+    },
+    {
+      "text": "Catalog",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 94
+    },
+    {
+      "text": "System",
+      "confidence": 92
+    },
+    {
+      "text": "(MyBizz",
+      "confidence": 92
+    },
+    {
+      "text": "Items)",
+      "confidence": 91
+    },
+    {
+      "text": "Unified",
+      "confidence": 96
+    },
+    {
+      "text": "Item",
+      "confidence": 94
+    },
+    {
+      "text": "Management",
+      "confidence": 96
+    },
+    {
+      "text": "(Products,",
+      "confidence": 96
+    },
+    {
+      "text": "Services,",
+      "confidence": 87
+    },
+    {
+      "text": "Subscription",
+      "confidence": 94
+    },
+    {
+      "text": "Plans)",
+      "confidence": 96
+    },
+    {
+      "text": "Paddle",
+      "confidence": 94
+    },
+    {
+      "text": "Product",
+      "confidence": 95
+    },
+    {
+      "text": "Synchronization",
+      "confidence": 96
+    },
+    {
+      "text": "(for",
+      "confidence": 96
+    },
+    {
+      "text": "Products,",
+      "confidence": 96
+    },
+    {
+      "text": "Services,",
+      "confidence": 96
+    },
+    {
+      "text": "Subscription",
+      "confidence": 96
+    },
+    {
+      "text": "Groups)",
+      "confidence": 96
+    },
+    {
+      "text": "Subscription",
+      "confidence": 74
+    },
+    {
+      "text": "Group",
+      "confidence": 92
+    },
+    {
+      "text": "Management",
+      "confidence": 91
+    },
+    {
+      "text": "Price",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 96
+    },
+    {
+      "text": "(for",
+      "confidence": 96
+    },
+    {
+      "text": "all",
+      "confidence": 96
+    },
+    {
+      "text": "Item",
+      "confidence": 77
+    },
+    {
+      "text": "Types)",
+      "confidence": 96
+    },
+    {
+      "text": "Paddle",
+      "confidence": 94
+    },
+    {
+      "text": "Price",
+      "confidence": 96
+    },
+    {
+      "text": "Synchronization",
+      "confidence": 86
+    },
+    {
+      "text": "V.",
+      "confidence": 92
+    },
+    {
+      "text": "Discount",
+      "confidence": 94
+    },
+    {
+      "text": "Management",
+      "confidence": 93
+    },
+    {
+      "text": "System",
+      "confidence": 85
+    },
+    {
+      "text": "MyBizz",
+      "confidence": 85
+    },
+    {
+      "text": "Discount",
+      "confidence": 96
+    },
+    {
+      "text": "Configuration",
+      "confidence": 86
+    },
+    {
+      "text": "Paddle",
+      "confidence": 92
+    },
+    {
+      "text": "Discount",
+      "confidence": 96
+    },
+    {
+      "text": "Synchronization",
+      "confidence": 94
+    },
+    {
+      "text": "VI.",
+      "confidence": 84
+    },
+    {
+      "text": "Subscription",
+      "confidence": 92
+    },
+    {
+      "text": "Lifecycle",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 96
+    },
+    {
+      "text": "System",
+      "confidence": 95
+    },
+    {
+      "text": "(Primarily",
+      "confidence": 96
+    },
+    {
+      "text": "Paddle",
+      "confidence": 95
+    },
+    {
+      "text": "Driven)",
+      "confidence": 91
+    },
+    {
+      "text": "(via",
+      "confidence": 92
+    },
+    {
+      "text": "Webhooks)",
+      "confidence": 88
+    },
+    {
+      "text": "ion",
+      "confidence": 80
+    },
+    {
+      "text": "(Pre-Checkout)",
+      "confidence": 91
+    },
+    {
+      "text": "ing",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 96
+    },
+    {
+      "text": "System",
+      "confidence": 96
+    },
+    {
+      "text": "(Primarily",
+      "confidence": 96
+    },
+    {
+      "text": "Paddle",
+      "confidence": 96
+    },
+    {
+      "text": "Driven)",
+      "confidence": 94
+    },
+    {
+      "text": "‘Transaction",
+      "confidence": 89
+    },
+    {
+      "text": "Event",
+      "confidence": 96
+    },
+    {
+      "text": "Processing",
+      "confidence": 96
+    },
+    {
+      "text": "(via",
+      "confidence": 93
+    },
+    {
+      "text": "Webhooks)",
+      "confidence": 80
+    },
+    {
+      "text": "Failed",
+      "confidence": 96
+    },
+    {
+      "text": "Transaction",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 96
+    },
+    {
+      "text": "Refund",
+      "confidence": 96
+    },
+    {
+      "text": "Event",
+      "confidence": 96
+    },
+    {
+      "text": "Processing",
+      "confidence": 93
+    },
+    {
+      "text": "(via",
+      "confidence": 89
+    },
+    {
+      "text": "Webhooks)",
+      "confidence": 80
+    },
+    {
+      "text": "Customer",
+      "confidence": 71
+    },
+    {
+      "text": "Data",
+      "confidence": 96
+    },
+    {
+      "text": "Synchronization",
+      "confidence": 96
+    },
+    {
+      "text": "(from",
+      "confidence": 96
+    },
+    {
+      "text": "Paddle",
+      "confidence": 93
+    },
+    {
+      "text": "Events)",
+      "confidence": 94
+    },
+    {
+      "text": "Vill.",
+      "confidence": 49
+    },
+    {
+      "text": "Webhook",
+      "confidence": 84
+    },
+    {
+      "text": "Handling",
+      "confidence": 96
+    },
+    {
+      "text": "System",
+      "confidence": 95
+    },
+    {
+      "text": "(Paddle",
+      "confidence": 91
+    },
+    {
+      "text": "->",
+      "confidence": 87
+    },
+    {
+      "text": "MyBizz)",
+      "confidence": 72
+    },
+    {
+      "text": "Incoming",
+      "confidence": 93
+    },
+    {
+      "text": "Webhook",
+      "confidence": 88
+    },
+    {
+      "text": "Reception",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 92
+    },
+    {
+      "text": "Verification",
+      "confidence": 96
+    },
+    {
+      "text": "‘Webhook",
+      "confidence": 20
+    },
+    {
+      "text": "Event",
+      "confidence": 96
+    },
+    {
+      "text": "Logging",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Initial",
+      "confidence": 92
+    },
+    {
+      "text": "Processing",
+      "confidence": 94
+    },
+    {
+      "text": "Core",
+      "confidence": 95
+    },
+    {
+      "text": "Event",
+      "confidence": 96
+    },
+    {
+      "text": "Data",
+      "confidence": 96
+    },
+    {
+      "text": "Processing",
+      "confidence": 87
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "MyBizz",
+      "confidence": 80
+    },
+    {
+      "text": "State",
+      "confidence": 96
+    },
+    {
+      "text": "Update",
+      "confidence": 96
+    },
+    {
+      "text": "Raw",
+      "confidence": 96
+    },
+    {
+      "text": "Payload",
+      "confidence": 95
+    },
+    {
+      "text": "Archival",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Retrieval",
+      "confidence": 91
+    },
+    {
+      "text": "(via",
+      "confidence": 91
+    },
+    {
+      "text": "R2Hub)",
+      "confidence": 90
+    },
+    {
+      "text": "Webhook",
+      "confidence": 61
+    },
+    {
+      "text": "Retry",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Monitoring",
+      "confidence": 92
+    },
+    {
+      "text": "IX.",
+      "confidence": 77
+    },
+    {
+      "text": "Reporting",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Analytics",
+      "confidence": 96
+    },
+    {
+      "text": "System,",
+      "confidence": 40
+    },
+    {
+      "text": "Data",
+      "confidence": 96
+    },
+    {
+      "text": "Aggregation",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "Calculation",
+      "confidence": 96
+    },
+    {
+      "text": "(Server-side)",
+      "confidence": 84
+    },
+    {
+      "text": "Report",
+      "confidence": 95
+    },
+    {
+      "text": "Display",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "User",
+      "confidence": 96
+    },
+    {
+      "text": "Interaction",
+      "confidence": 95
+    },
+    {
+      "text": "(Client-Side)",
+      "confidence": 76
+    },
+    {
+      "text": "VII.",
+      "confidence": 53
+    },
+    {
+      "text": "Transaction",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 90
+    },
+    {
+      "text": "Application",
+      "confidence": 96
+    },
+    {
+      "text": "Logging",
+      "confidence": 93
+    },
+    {
+      "text": "(MyBizz",
+      "confidence": 88
+    },
+    {
+      "text": "Internal)",
+      "confidence": 90
+    },
+    {
+      "text": "Application",
+      "confidence": 96
+    },
+    {
+      "text": "Settings",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 95
+    },
+    {
+      "text": "‘Secure",
+      "confidence": 85
+    },
+    {
+      "text": "Credential",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 93
+    },
+    {
+      "text": "(MyBizz",
+      "confidence": 89
+    },
+    {
+      "text": "Vault)",
+      "confidence": 96
+    },
+    {
+      "text": "‘System",
+      "confidence": 91
+    },
+    {
+      "text": "Diagnostics",
+      "confidence": 87
+    },
+    {
+      "text": "XI.",
+      "confidence": 75
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 86
+    },
+    {
+      "text": "Application",
+      "confidence": 92
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "MyBizz",
+      "confidence": 92
+    },
+    {
+      "text": "Integration",
+      "confidence": 96
+    },
+    {
+      "text": "(External",
+      "confidence": 96
+    },
+    {
+      "text": "System",
+      "confidence": 96
+    },
+    {
+      "text": "Interaction)",
+      "confidence": 95
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Tenant",
+      "confidence": 93
+    },
+    {
+      "text": "&",
+      "confidence": 93
+    },
+    {
+      "text": "API",
+      "confidence": 95
+    },
+    {
+      "text": "Key",
+      "confidence": 96
+    },
+    {
+      "text": "Management",
+      "confidence": 93
+    },
+    {
+      "text": "(R2Hub",
+      "confidence": 91
+    },
+    {
+      "text": "Application)",
+      "confidence": 94
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Authenticated",
+      "confidence": 92
+    },
+    {
+      "text": "Payload",
+      "confidence": 95
+    },
+    {
+      "text": "Reception",
+      "confidence": 93
+    },
+    {
+      "text": "(R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Application)",
+      "confidence": 91
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Authenticated",
+      "confidence": 96
+    },
+    {
+      "text": "Payload",
+      "confidence": 96
+    },
+    {
+      "text": "Retrieval",
+      "confidence": 93
+    },
+    {
+      "text": "(R2Hub",
+      "confidence": 92
+    },
+    {
+      "text": "Application",
+      "confidence": 93
+    },
+    {
+      "text": "for",
+      "confidence": 93
+    },
+    {
+      "text": "MyBizz",
+      "confidence": 92
+    },
+    {
+      "text": "Client)",
+      "confidence": 96
+    },
+    {
+      "text": "MyBizz",
+      "confidence": 58
+    },
+    {
+      "text": "Client",
+      "confidence": 96
+    },
+    {
+      "text": "Interaction",
+      "confidence": 96
+    },
+    {
+      "text": "with",
+      "confidence": 93
+    },
+    {
+      "text": "R2Hub",
+      "confidence": 86
+    },
+    {
+      "text": "(MyBizz",
+      "confidence": 87
+    },
+    {
+      "text": "Application)",
+      "confidence": 95
+    }
+  ],
+  "average_confidence": 90.50375939849624,
+  "total_blocks": 266,
+  "high_confidence_blocks": 246
+}

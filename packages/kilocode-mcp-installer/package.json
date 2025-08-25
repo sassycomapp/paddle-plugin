@@ -1,0 +1,55 @@
+{
+    "name": "@kilocode/mcp-installer",
+    "version": "1.0.0",
+    "description": "KiloCode-customized MCP server installer with dual configuration support",
+    "main": "dist/index.js",
+    "bin": {
+        "kilocode-mcp-install": "dist/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "start": "node dist/index.js",
+        "test": "jest",
+        "lint": "eslint src --ext .ts",
+        "prepare": "npm run build"
+    },
+    "keywords": [
+        "mcp",
+        "modelcontextprotocol",
+        "kilocode",
+        "installer",
+        "server"
+    ],
+    "author": "KiloCode Team",
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.0.0",
+        "commander": "^11.0.0",
+        "fs-extra": "^11.2.0",
+        "glob": "^10.3.10",
+        "js-yaml": "^4.1.0",
+        "ora": "^7.0.1",
+        "chalk": "^5.3.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.4",
+        "@types/js-yaml": "^4.0.6",
+        "@types/node": "^20.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^8.0.0",
+        "jest": "^29.0.0",
+        "ts-jest": "^29.0.0",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=8.0.0"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ]
+}

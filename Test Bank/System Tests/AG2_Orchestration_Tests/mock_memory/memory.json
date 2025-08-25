@@ -1,0 +1,556 @@
+{
+  "agents": {
+    "test-agent": {
+      "conversations": [
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T11:25:49.143086"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: AG2 is a multi-agent system Previous context: What is AG2?",
+          "timestamp": "2025-08-13T11:25:49.152035"
+        },
+        {
+          "role": "user",
+          "content": "search for AG2",
+          "timestamp": "2025-08-13T11:25:49.222375"
+        },
+        {
+          "role": "assistant",
+          "content": "Found relevant sources: AG2 Documentation Previous context: search for AG2",
+          "timestamp": "2025-08-13T11:25:49.223449"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T11:25:49.268881"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T11:25:49.269934"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T16:59:54.614960"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: AG2 is a multi-agent system Previous context: What is AG2?",
+          "timestamp": "2025-08-13T16:59:54.621907"
+        },
+        {
+          "role": "user",
+          "content": "search for AG2",
+          "timestamp": "2025-08-13T16:59:54.649798"
+        },
+        {
+          "role": "assistant",
+          "content": "Found relevant sources: AG2 Documentation Previous context: search for AG2",
+          "timestamp": "2025-08-13T16:59:54.655122"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T16:59:54.680945"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T16:59:54.682805"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T17:02:23.913385"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T17:02:23.915092"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T17:15:27.550616"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T17:15:27.551421"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T21:44:36.803139"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: AG2 is a multi-agent system Previous context: What is AG2?",
+          "timestamp": "2025-08-13T21:44:36.808641"
+        },
+        {
+          "role": "user",
+          "content": "search for AG2",
+          "timestamp": "2025-08-13T21:44:36.838007"
+        },
+        {
+          "role": "assistant",
+          "content": "Found relevant sources: AG2 Documentation Previous context: search for AG2",
+          "timestamp": "2025-08-13T21:44:36.840933"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T21:44:36.867068"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T21:44:36.868376"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T21:59:15.317638"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: AG2 is a multi-agent system Previous context: What is AG2?",
+          "timestamp": "2025-08-13T21:59:15.319239"
+        },
+        {
+          "role": "user",
+          "content": "search for AG2",
+          "timestamp": "2025-08-13T21:59:15.341808"
+        },
+        {
+          "role": "assistant",
+          "content": "Found relevant sources: AG2 Documentation Previous context: search for AG2",
+          "timestamp": "2025-08-13T21:59:15.343278"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T21:59:15.363311"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T21:59:15.364907"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:01:38.160780"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:01:38.161691"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:01:38.181178"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:01:38.182308"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T22:01:38.202111"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T22:01:38.203205"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:04:57.084606"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:04:57.086455"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:04:57.104822"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:04:57.106855"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T22:04:57.124565"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T22:04:57.126418"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:07:02.380456"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:07:02.382920"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:07:02.400470"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:07:02.402592"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T22:07:02.423498"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T22:07:02.425869"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:08:44.961208"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:08:44.962781"
+        },
+        {
+          "role": "user",
+          "content": "test query",
+          "timestamp": "2025-08-13T22:08:44.979485"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: test query",
+          "timestamp": "2025-08-13T22:08:44.980987"
+        },
+        {
+          "role": "user",
+          "content": "non-existent topic",
+          "timestamp": "2025-08-13T22:08:44.998230"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: non-existent topic",
+          "timestamp": "2025-08-13T22:08:44.999918"
+        }
+      ],
+      "context": {}
+    },
+    "researcher": {
+      "conversations": [
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T21:52:42.213996"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T21:55:25.891822"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: \n        AG2 Multi-Agent Orchestration System\n        \n        The AG2 system is designed to coordinate multiple AI agents working together\n        to solve complex tasks. It includes three specialized agents:\n        \n        1. Researcher Agent: Handles information gathering and knowledge retrieval\n        2. Analyst Agent: Processes and analyzes data to provide insights\n        3. Coordinator Agent: Manages task distribution and workflow orchestration\n        \n        Key Features:\n        - Multi-agent coordination\n        - RAG (Retrieval-Augmented Generation)\n        - Memory management\n        - Task scheduling\n        - Error handling and recovery\n         Previous context: What is AG2?",
+          "timestamp": "2025-08-13T21:55:25.893484"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T21:58:12.535124"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: \n        AG2 Multi-Agent Orchestration System\n        \n        The AG2 system is designed to coordinate multiple AI agents working together\n        to solve complex tasks. It includes three specialized agents:\n        \n        1. Researcher Agent: Handles information gathering and knowledge retrieval\n        2. Analyst Agent: Processes and analyzes data to provide insights\n        3. Coordinator Agent: Manages task distribution and workflow orchestration\n        \n        Key Features:\n        - Multi-agent coordination\n        - RAG (Retrieval-Augmented Generation)\n        - Memory management\n        - Task scheduling\n        - Error handling and recovery\n         Previous context: What is AG2?",
+          "timestamp": "2025-08-13T21:58:12.536159"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-13T22:09:35.322417"
+        },
+        {
+          "role": "assistant",
+          "content": "Based on available knowledge: \n        AG2 Multi-Agent Orchestration System\n        \n        The AG2 system is designed to coordinate multiple AI agents working together\n        to solve complex tasks. It includes three specialized agents:\n        \n        1. Researcher Agent: Handles information gathering and knowledge retrieval\n        2. Analyst Agent: Processes and analyzes data to provide insights\n        3. Coordinator Agent: Manages task distribution and workflow orchestration\n        \n        Key Features:\n        - Multi-agent coordination\n        - RAG (Retrieval-Augmented Generation)\n        - Memory management\n        - Task scheduling\n        - Error handling and recovery\n         Previous context: What is AG2?",
+          "timestamp": "2025-08-13T22:09:35.325114"
+        },
+        {
+          "role": "user",
+          "content": "Test coordinator mode",
+          "timestamp": "2025-08-13T22:13:03.854415"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: Test coordinator mode",
+          "timestamp": "2025-08-13T22:13:03.857530"
+        },
+        {
+          "role": "user",
+          "content": "Test analyst mode",
+          "timestamp": "2025-08-13T22:13:03.860926"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: Test analyst mode",
+          "timestamp": "2025-08-13T22:13:03.863758"
+        },
+        {
+          "role": "user",
+          "content": "Test coordinator mode",
+          "timestamp": "2025-08-13T22:16:47.509811"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: Test coordinator mode",
+          "timestamp": "2025-08-13T22:16:47.511637"
+        },
+        {
+          "role": "user",
+          "content": "Test analyst mode",
+          "timestamp": "2025-08-13T22:16:47.513849"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: Test analyst mode",
+          "timestamp": "2025-08-13T22:16:47.515300"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.433764"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.437447"
+        },
+        {
+          "role": "user",
+          "content": "",
+          "timestamp": "2025-08-14T11:46:05.465425"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.469173"
+        },
+        {
+          "role": "user",
+          "content": "!!! @#$",
+          "timestamp": "2025-08-14T11:46:05.475520"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: !!! @#$",
+          "timestamp": "2025-08-14T11:46:05.480727"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.504716"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.508340"
+        },
+        {
+          "role": "user",
+          "content": "How does it work?",
+          "timestamp": "2025-08-14T11:46:05.513603"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: How does it work?",
+          "timestamp": "2025-08-14T11:46:05.516318"
+        },
+        {
+          "role": "user",
+          "content": "What are the benefits?",
+          "timestamp": "2025-08-14T11:46:05.521856"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: What are the benefits?",
+          "timestamp": "2025-08-14T11:46:05.527348"
+        }
+      ],
+      "context": {}
+    },
+    "user": {
+      "conversations": [
+        {
+          "role": "Hello",
+          "content": "user",
+          "timestamp": "2025-08-13T22:01:38.050932"
+        },
+        {
+          "role": "What is AG2?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:01:38.082416"
+        },
+        {
+          "role": "Hello",
+          "content": "user",
+          "timestamp": "2025-08-13T22:03:21.974807"
+        },
+        {
+          "role": "What is AG2?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:03:21.993944"
+        },
+        {
+          "role": "How does it work?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:03:21.996092"
+        },
+        {
+          "role": "Hello",
+          "content": "user",
+          "timestamp": "2025-08-13T22:04:57.005392"
+        },
+        {
+          "role": "What is AG2?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:04:57.027106"
+        },
+        {
+          "role": "How does it work?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:04:57.031295"
+        },
+        {
+          "role": "Hello",
+          "content": "user",
+          "timestamp": "2025-08-13T22:07:02.057087"
+        },
+        {
+          "role": "What is AG2?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:07:02.082484"
+        },
+        {
+          "role": "How does it work?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:07:02.085388"
+        },
+        {
+          "role": "Hello",
+          "content": "user",
+          "timestamp": "2025-08-13T22:08:44.910425"
+        },
+        {
+          "role": "What is AG2?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:08:44.928932"
+        },
+        {
+          "role": "How does it work?",
+          "content": "user",
+          "timestamp": "2025-08-13T22:08:44.931686"
+        }
+      ],
+      "context": {}
+    },
+    "assistant": {
+      "conversations": [
+        {
+          "role": "Hi there!",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:03:21.976888"
+        },
+        {
+          "role": "AG2 is a multi-agent system",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:03:21.994958"
+        },
+        {
+          "role": "Hi there!",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:04:57.006767"
+        },
+        {
+          "role": "AG2 is a multi-agent system",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:04:57.029182"
+        },
+        {
+          "role": "Hi there!",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:07:02.059594"
+        },
+        {
+          "role": "AG2 is a multi-agent system",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:07:02.084052"
+        },
+        {
+          "role": "Hi there!",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:08:44.912307"
+        },
+        {
+          "role": "AG2 is a multi-agent system",
+          "content": "assistant",
+          "timestamp": "2025-08-13T22:08:44.930427"
+        }
+      ],
+      "context": {}
+    },
+    "test_agent": {
+      "conversations": [
+        {
+          "role": "user",
+          "content": "Hello, what is AG2?",
+          "timestamp": "2025-08-14T11:46:05.381734"
+        },
+        {
+          "role": "assistant",
+          "content": "AG2 is a multi-agent orchestration system.",
+          "timestamp": "2025-08-14T11:46:05.384891"
+        },
+        {
+          "role": "user",
+          "content": "What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.406457"
+        },
+        {
+          "role": "assistant",
+          "content": "Previous context: What is AG2?",
+          "timestamp": "2025-08-14T11:46:05.410007"
+        }
+      ],
+      "context": {}
+    }
+  },
+  "conversations": [],
+  "context": {}
+}

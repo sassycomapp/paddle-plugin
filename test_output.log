@@ -1,0 +1,856 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 75, in _check_dependencies
+    import pytesseract
+ModuleNotFoundError: No module named 'pytesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 79, in _check_dependencies
+    logger.warning("\u274c pytesseract is not available")
+Message: '\u274c pytesseract is not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 75, in _check_dependencies
+    import pytesseract
+ModuleNotFoundError: No module named 'pytesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 79, in _check_dependencies
+    logger.warning("\u274c pytesseract is not available")
+Message: '\u274c pytesseract is not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 82, in _check_dependencies
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 86, in _check_dependencies
+    logger.warning("\u274c Pillow is not available")
+Message: '\u274c Pillow is not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 82, in _check_dependencies
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 86, in _check_dependencies
+    logger.warning("\u274c Pillow is not available")
+Message: '\u274c Pillow is not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 90, in _check_dependencies
+    import pytesseract
+ModuleNotFoundError: No module named 'pytesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 95, in _check_dependencies
+    logger.warning("\u274c Tesseract OCR is not available")
+Message: '\u274c Tesseract OCR is not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 90, in _check_dependencies
+    import pytesseract
+ModuleNotFoundError: No module named 'pytesseract'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 47: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1121, in main
+    test_suite = PNGToMarkdownTestSuite()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 63, in __init__
+    self.dependencies_available = self._check_dependencies()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 95, in _check_dependencies
+    logger.warning("\u274c Tesseract OCR is not available")
+Message: '\u274c Tesseract OCR is not available'
+Arguments: ()
+PNG to Markdown Conversion Test Suite
+============================================================
+2025-08-21 16:13:47,403 - __main__ - INFO - Starting PNG to Markdown Conversion Test Suite...
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 124, in _create_test_images
+    from PIL import Image, ImageDraw, ImageFont
+ModuleNotFoundError: No module named 'PIL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 47-48: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1086, in run_comprehensive_tests
+    if not self.setup_test_environment():
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 112, in setup_test_environment
+    self._create_test_images()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 153, in _create_test_images
+    logger.warning(f"\u26a0\ufe0f  Could not create test images due to missing PIL: {e}")
+Message: "\u26a0\ufe0f  Could not create test images due to missing PIL: No module named 'PIL'"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 124, in _create_test_images
+    from PIL import Image, ImageDraw, ImageFont
+ModuleNotFoundError: No module named 'PIL'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 47-48: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1086, in run_comprehensive_tests
+    if not self.setup_test_environment():
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 112, in setup_test_environment
+    self._create_test_images()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 153, in _create_test_images
+    logger.warning(f"\u26a0\ufe0f  Could not create test images due to missing PIL: {e}")
+Message: "\u26a0\ufe0f  Could not create test images due to missing PIL: No module named 'PIL'"
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1086, in run_comprehensive_tests
+    if not self.setup_test_environment():
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 114, in setup_test_environment
+    logger.info(f"\u2705 Test environment set up: {self.test_dir}")
+Message: '\u2705 Test environment set up: C:\\Users\\salib\\AppData\\Local\\Temp\\png2md_test_8qokhrj6'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1086, in run_comprehensive_tests
+    if not self.setup_test_environment():
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 114, in setup_test_environment
+    logger.info(f"\u2705 Test environment set up: {self.test_dir}")
+Message: '\u2705 Test environment set up: C:\\Users\\salib\\AppData\\Local\\Temp\\png2md_test_8qokhrj6'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 589, in run_basic_text_extraction_test
+    logger.info("\U0001f50d Running Basic Text Extraction Tests...")
+Message: '\U0001f50d Running Basic Text Extraction Tests...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 589, in run_basic_text_extraction_test
+    logger.info("\U0001f50d Running Basic Text Extraction Tests...")
+Message: '\U0001f50d Running Basic Text Extraction Tests...'
+Arguments: ()
+2025-08-21 16:13:47,415 - __main__ - INFO -   Test Case 1: Simple text extraction
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 606, in run_basic_text_extraction_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - dependencies not available")
+Message: '  \u26a0\ufe0f  Skipping Simple text extraction - dependencies not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 606, in run_basic_text_extraction_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - dependencies not available")
+Message: '  \u26a0\ufe0f  Skipping Simple text extraction - dependencies not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 607, in run_basic_text_extraction_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Basic Text Extraction - Simple text extraction'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1092, in run_comprehensive_tests
+    self.run_basic_text_extraction_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 607, in run_basic_text_extraction_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Basic Text Extraction - Simple text extraction'
+Arguments: ()
+2025-08-21 16:13:47,418 - __main__ - INFO -    Details: {'error': 'Missing dependencies (pytesseract, pillow)'}
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 770, in run_error_handling_test
+    logger.info("\U0001f50d Running Error Handling Tests...")
+Message: '\U0001f50d Running Error Handling Tests...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 770, in run_error_handling_test
+    logger.info("\U0001f50d Running Error Handling Tests...")
+Message: '\U0001f50d Running Error Handling Tests...'
+Arguments: ()
+2025-08-21 16:13:47,419 - __main__ - INFO -   Test Case 1: Non-existent file
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 800, in run_error_handling_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - pytesseract not available")
+Message: '  \u26a0\ufe0f  Skipping Non-existent file - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 800, in run_error_handling_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - pytesseract not available")
+Message: '  \u26a0\ufe0f  Skipping Non-existent file - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 801, in run_error_handling_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Error Handling - Non-existent file'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 801, in run_error_handling_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Error Handling - Non-existent file'
+Arguments: ()
+2025-08-21 16:13:47,420 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:13:47,420 - __main__ - INFO -   Test Case 2: Invalid file format
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 800, in run_error_handling_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - pytesseract not available")
+Message: '  \u26a0\ufe0f  Skipping Invalid file format - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 49-50: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 800, in run_error_handling_test
+    logger.warning(f"  \u26a0\ufe0f  Skipping {test_case['description']} - pytesseract not available")
+Message: '  \u26a0\ufe0f  Skipping Invalid file format - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 801, in run_error_handling_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Error Handling - Invalid file format'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1093, in run_comprehensive_tests
+    self.run_error_handling_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 801, in run_error_handling_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Error Handling - Invalid file format'
+Arguments: ()
+2025-08-21 16:13:47,423 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 873, in run_batch_processing_test
+    logger.info("\U0001f50d Running Batch Processing Tests...")
+Message: '\U0001f50d Running Batch Processing Tests...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 873, in run_batch_processing_test
+    logger.info("\U0001f50d Running Batch Processing Tests...")
+Message: '\U0001f50d Running Batch Processing Tests...'
+Arguments: ()
+2025-08-21 16:13:47,424 - __main__ - INFO -   Processing 3 files in batch...
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 47-48: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 888, in run_batch_processing_test
+    logger.warning("\u26a0\ufe0f  Skipping batch processing - pytesseract not available")
+Message: '\u26a0\ufe0f  Skipping batch processing - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 47-48: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 888, in run_batch_processing_test
+    logger.warning("\u26a0\ufe0f  Skipping batch processing - pytesseract not available")
+Message: '\u26a0\ufe0f  Skipping batch processing - pytesseract not available'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 889, in run_batch_processing_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Batch Processing'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1094, in run_comprehensive_tests
+    self.run_batch_processing_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 889, in run_batch_processing_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: Batch Processing'
+Arguments: ()
+2025-08-21 16:13:47,427 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1095, in run_comprehensive_tests
+    self.run_cli_interface_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 974, in run_cli_interface_test
+    logger.info("\U0001f50d Running CLI Interface Tests...")
+Message: '\U0001f50d Running CLI Interface Tests...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f50d' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1095, in run_comprehensive_tests
+    self.run_cli_interface_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 974, in run_cli_interface_test
+    logger.info("\U0001f50d Running CLI Interface Tests...")
+Message: '\U0001f50d Running CLI Interface Tests...'
+Arguments: ()
+2025-08-21 16:13:47,428 - __main__ - INFO -   CLI Test 1: Help command
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1095, in run_comprehensive_tests
+    self.run_cli_interface_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 996, in run_cli_interface_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: CLI Interface - Help command'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 45: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1095, in run_comprehensive_tests
+    self.run_cli_interface_test()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 996, in run_cli_interface_test
+    self._log_test_result(
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 763, in _log_test_result
+    logger.error(f"\u274c FAIL: {test_name}")
+Message: '\u274c FAIL: CLI Interface - Help command'
+Arguments: ()
+2025-08-21 16:13:47,539 - __main__ - INFO -    Details: {'command': 'C:\\Python313\\python.exe png_to_markdown_converter.py --help', 'return_code': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "c:\\_1mybizz\\paddle-plugin\\png_to_markdown_converter.py", line 22, in <module>\n    from core.ocr_processor import TesseractOCRProcessor\n  File "c:\\_1mybizz\\pa', 'expected_success': True, 'actual_success': False}
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1101, in run_comprehensive_tests
+    report = self.generate_test_report()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1024, in generate_test_report
+    logger.info("\U0001f4ca Generating Test Report...")
+Message: '\U0001f4ca Generating Test Report...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python313\Lib\logging\__init__.py", line 1153, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 44: character maps to <undefined>
+Call stack:
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1134, in <module>
+    sys.exit(main())
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1124, in main
+    report = test_suite.run_comprehensive_tests()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1101, in run_comprehensive_tests
+    report = self.generate_test_report()
+  File "c:\_1mybizz\paddle-plugin\png_to_markdown_test_suite.py", line 1024, in generate_test_report
+    logger.info("\U0001f4ca Generating Test Report...")
+Message: '\U0001f4ca Generating Test Report...'
+Arguments: ()
+2025-08-21 16:13:47,541 - __main__ - ERROR - Error during test execution: Object of type datetime is not JSON serializable
+
+Test suite failed!

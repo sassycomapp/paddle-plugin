@@ -1,0 +1,93 @@
+{
+  "tesseract": {
+    "path": null,
+    "languages": ["eng"],
+    "psm": 3,
+    "oem": 3,
+    "config": "",
+    "confidence_threshold": 0,
+    "timeout": 30,
+    "retry_count": 3
+  },
+  "preprocessing": {
+    "enabled": true,
+    "max_size": 3000,
+    "enhance_contrast": true,
+    "remove_noise": true,
+    "binarize": true,
+    "sharpen": true,
+    "deskew": true,
+    "contrast_factor": 1.5,
+    "brightness_factor": 1.1,
+    "sharpen_factor": 1.0,
+    "noise_reduction_radius": 1,
+    "binarization_threshold": 128
+  },
+  "formatting": {
+    "preserve_layout": true,
+    "include_metadata": true,
+    "include_statistics": true,
+    "confidence_threshold": 0,
+    "max_line_length": 80,
+    "paragraph_spacing": 2,
+    "table_alignment": "left",
+    "preserve_whitespace": true,
+    "normalize_whitespace": true,
+    "remove_extra_newlines": true,
+    "clean_special_chars": true,
+    "preserve_urls": true,
+    "preserve_emails": true,
+    "preserve_phone_numbers": true
+  },
+  "metadata": {
+    "include_processing_info": true,
+    "include_quality_metrics": true,
+    "include_confidence_analysis": true,
+    "include_image_info": true,
+    "include_statistics": true
+  },
+  "batch": {
+    "size": 10,
+    "timeout": 30,
+    "retry_count": 3,
+    "parallel_processing": true,
+    "max_workers": 4
+  },
+  "output": {
+    "directory": "./output",
+    "filename_pattern": "{original_name}_OCR.md",
+    "include_backup": true,
+    "backup_count": 5,
+    "temp_directory": "./temp",
+    "cleanup_temp_files": true
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "./logs/converter.log",
+    "max_size": "10MB",
+    "backup_count": 5,
+    "enable_console_logging": true,
+    "enable_file_logging": true,
+    "enable_structured_logging": false,
+    "log_directory": "./logs",
+    "create_log_directory": true
+  },
+  "validation": {
+    "max_file_size": 104857600,
+    "min_file_size": 1024,
+    "max_filename_length": 255,
+    "max_path_length": 4096,
+    "allowed_extensions": [".png", ".jpg", ".jpeg", ".tiff", ".tif", ".bmp", ".gif", ".webp"],
+    "backup_enabled": true,
+    "backup_count": 5
+  },
+  "performance": {
+    "enable_caching": true,
+    "cache_directory": "./cache",
+    "cache_max_size": "100MB",
+    "cache_ttl": 3600,
+    "memory_limit": 1024,
+    "enable_memory_monitoring": true,
+    "enable_progress_tracking": true
+  }
+}

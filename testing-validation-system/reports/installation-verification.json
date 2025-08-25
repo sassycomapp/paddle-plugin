@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-08-05T14:35:00.005Z",
+  "checks": [
+    {
+      "name": "Node.js",
+      "command": "node --version",
+      "required": true,
+      "status": "✅",
+      "output": "v22.15.0"
+    },
+    {
+      "name": "npm",
+      "command": "npm --version",
+      "required": true,
+      "status": "✅",
+      "output": "11.3.0"
+    },
+    {
+      "name": "PostgreSQL",
+      "command": "pg_isready --version",
+      "required": true,
+      "status": "❌",
+      "error": "Command failed: pg_isready --version\n'pg_isready' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Podman",
+      "command": "podman --version",
+      "required": true,
+      "status": "✅",
+      "output": "podman version 5.5.2"
+    },
+    {
+      "name": "podman-compose",
+      "command": "podman-compose --version",
+      "required": true,
+      "status": "❌",
+      "error": "Command failed: podman-compose --version\n'podman-compose' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    },
+    {
+      "name": "Python",
+      "command": "python3 --version",
+      "required": false,
+      "status": "⚠️",
+      "error": "Command failed: python3 --version\nPython was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.\r\n"
+    },
+    {
+      "name": "Semgrep",
+      "command": "semgrep --version",
+      "required": false,
+      "status": "⚠️",
+      "error": "Command failed: semgrep --version\n'semgrep' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+    }
+  ],
+  "status": "INCOMPLETE"
+}

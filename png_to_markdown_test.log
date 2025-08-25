@@ -1,0 +1,86 @@
+2025-08-21 15:33:32,523 - __main__ - WARNING - pytesseract is not available
+2025-08-21 15:33:32,528 - __main__ - WARNING - Pillow is not available
+2025-08-21 15:33:32,528 - __main__ - WARNING - Tesseract OCR is not available
+2025-08-21 15:33:32,528 - __main__ - INFO - Starting PNG to Markdown Conversion Test Suite...
+2025-08-21 15:33:32,538 - __main__ - WARNING - Could not create test images due to missing PIL: No module named 'PIL'
+2025-08-21 15:33:32,545 - __main__ - INFO - Test environment set up: C:\Users\salib\AppData\Local\Temp\png2md_test_ta9395mq
+2025-08-21 15:33:32,545 - __main__ - INFO - Running Basic Text Extraction Tests...
+2025-08-21 15:33:32,545 - __main__ - INFO - Test Case 1: Simple text extraction
+2025-08-21 15:33:32,546 - __main__ - WARNING - Skipping Simple text extraction - dependencies not available
+2025-08-21 15:33:32,546 - __main__ - ERROR - FAIL: Basic Text Extraction - Simple text extraction
+2025-08-21 15:33:32,546 - __main__ - INFO - Details: {'error': 'Missing dependencies (pytesseract, pillow)'}
+2025-08-21 15:33:32,546 - __main__ - INFO - Running Error Handling Tests...
+2025-08-21 15:33:32,546 - __main__ - INFO - Test Case 1: Non-existent file
+2025-08-21 15:33:32,546 - __main__ - WARNING - Skipping Non-existent file - pytesseract not available
+2025-08-21 15:33:32,546 - __main__ - ERROR - FAIL: Error Handling - Non-existent file
+2025-08-21 15:33:32,546 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 15:33:32,546 - __main__ - INFO - Test Case 2: Invalid file format
+2025-08-21 15:33:32,547 - __main__ - WARNING - Skipping Invalid file format - pytesseract not available
+2025-08-21 15:33:32,547 - __main__ - ERROR - FAIL: Error Handling - Invalid file format
+2025-08-21 15:33:32,547 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 15:33:32,547 - __main__ - INFO - Running Batch Processing Tests...
+2025-08-21 15:33:32,548 - __main__ - INFO - Processing 3 files in batch...
+2025-08-21 15:33:32,548 - __main__ - WARNING - Skipping batch processing - pytesseract not available
+2025-08-21 15:33:32,549 - __main__ - ERROR - FAIL: Batch Processing
+2025-08-21 15:33:32,549 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 15:33:32,549 - __main__ - INFO - Running CLI Interface Tests...
+2025-08-21 15:33:32,549 - __main__ - INFO - CLI Test 1: Help command
+2025-08-21 15:33:33,192 - __main__ - ERROR - FAIL: CLI Interface - Help command
+2025-08-21 15:33:33,193 - __main__ - INFO - Details: {'command': 'C:\\Python313\\python.exe png_to_markdown_converter.py --help', 'return_code': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "c:\\_1mybizz\\paddle-plugin\\png_to_markdown_converter.py", line 22, in <module>\n    from core.ocr_processor import TesseractOCRProcessor\n  File "c:\\_1mybizz\\pa', 'expected_success': True, 'actual_success': False}
+2025-08-21 15:33:33,193 - __main__ - INFO - Generating Test Report...
+2025-08-21 15:33:33,194 - __main__ - ERROR - Error during test execution: Object of type datetime is not JSON serializable
+2025-08-21 16:12:39,968 - __main__ - INFO - Starting PNG to Markdown Conversion Test Suite...
+2025-08-21 16:12:40,036 - __main__ - INFO -   Test Case 1: Simple text extraction
+2025-08-21 16:12:40,038 - __main__ - INFO -    Details: {'error': 'Missing dependencies (pytesseract, pillow)'}
+2025-08-21 16:12:40,039 - __main__ - INFO -   Test Case 1: Non-existent file
+2025-08-21 16:12:40,043 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:12:40,043 - __main__ - INFO -   Test Case 2: Invalid file format
+2025-08-21 16:12:40,047 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:12:40,049 - __main__ - INFO -   Processing 3 files in batch...
+2025-08-21 16:12:40,053 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:12:40,054 - __main__ - INFO -   CLI Test 1: Help command
+2025-08-21 16:12:40,472 - __main__ - INFO -    Details: {'command': 'C:\\Python313\\python.exe png_to_markdown_converter.py --help', 'return_code': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "c:\\_1mybizz\\paddle-plugin\\png_to_markdown_converter.py", line 22, in <module>\n    from core.ocr_processor import TesseractOCRProcessor\n  File "c:\\_1mybizz\\pa', 'expected_success': True, 'actual_success': False}
+2025-08-21 16:12:40,477 - __main__ - ERROR - Error during test execution: Object of type datetime is not JSON serializable
+2025-08-21 16:13:47,403 - __main__ - INFO - Starting PNG to Markdown Conversion Test Suite...
+2025-08-21 16:13:47,415 - __main__ - INFO -   Test Case 1: Simple text extraction
+2025-08-21 16:13:47,418 - __main__ - INFO -    Details: {'error': 'Missing dependencies (pytesseract, pillow)'}
+2025-08-21 16:13:47,419 - __main__ - INFO -   Test Case 1: Non-existent file
+2025-08-21 16:13:47,420 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:13:47,420 - __main__ - INFO -   Test Case 2: Invalid file format
+2025-08-21 16:13:47,423 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:13:47,424 - __main__ - INFO -   Processing 3 files in batch...
+2025-08-21 16:13:47,427 - __main__ - INFO -    Details: {'error': 'pytesseract not available'}
+2025-08-21 16:13:47,428 - __main__ - INFO -   CLI Test 1: Help command
+2025-08-21 16:13:47,539 - __main__ - INFO -    Details: {'command': 'C:\\Python313\\python.exe png_to_markdown_converter.py --help', 'return_code': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "c:\\_1mybizz\\paddle-plugin\\png_to_markdown_converter.py", line 22, in <module>\n    from core.ocr_processor import TesseractOCRProcessor\n  File "c:\\_1mybizz\\pa', 'expected_success': True, 'actual_success': False}
+2025-08-21 16:13:47,541 - __main__ - ERROR - Error during test execution: Object of type datetime is not JSON serializable
+2025-08-21 16:14:36,019 - __main__ - WARNING - pytesseract is not available
+2025-08-21 16:14:36,020 - __main__ - WARNING - Pillow is not available
+2025-08-21 16:14:36,021 - __main__ - WARNING - Tesseract OCR is not available
+2025-08-21 16:14:36,021 - __main__ - INFO - Starting PNG to Markdown Conversion Test Suite...
+2025-08-21 16:14:36,027 - __main__ - WARNING - Could not create test images due to missing PIL: No module named 'PIL'
+2025-08-21 16:14:36,034 - __main__ - INFO - Test environment set up: C:\Users\salib\AppData\Local\Temp\png2md_test_24abp_u3
+2025-08-21 16:14:36,035 - __main__ - INFO - Running Basic Text Extraction Tests...
+2025-08-21 16:14:36,035 - __main__ - INFO - Test Case 1: Simple text extraction
+2025-08-21 16:14:36,035 - __main__ - WARNING - Skipping Simple text extraction - dependencies not available
+2025-08-21 16:14:36,035 - __main__ - ERROR - FAIL: Basic Text Extraction - Simple text extraction
+2025-08-21 16:14:36,035 - __main__ - INFO - Details: {'error': 'Missing dependencies (pytesseract, pillow)'}
+2025-08-21 16:14:36,035 - __main__ - INFO - Running Error Handling Tests...
+2025-08-21 16:14:36,035 - __main__ - INFO - Test Case 1: Non-existent file
+2025-08-21 16:14:36,035 - __main__ - WARNING - Skipping Non-existent file - pytesseract not available
+2025-08-21 16:14:36,035 - __main__ - ERROR - FAIL: Error Handling - Non-existent file
+2025-08-21 16:14:36,035 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 16:14:36,035 - __main__ - INFO - Test Case 2: Invalid file format
+2025-08-21 16:14:36,036 - __main__ - WARNING - Skipping Invalid file format - pytesseract not available
+2025-08-21 16:14:36,036 - __main__ - ERROR - FAIL: Error Handling - Invalid file format
+2025-08-21 16:14:36,036 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 16:14:36,037 - __main__ - INFO - Running Batch Processing Tests...
+2025-08-21 16:14:36,037 - __main__ - INFO - Processing 3 files in batch...
+2025-08-21 16:14:36,037 - __main__ - WARNING - Skipping batch processing - pytesseract not available
+2025-08-21 16:14:36,037 - __main__ - ERROR - FAIL: Batch Processing
+2025-08-21 16:14:36,037 - __main__ - INFO - Details: {'error': 'pytesseract not available'}
+2025-08-21 16:14:36,037 - __main__ - INFO - Running CLI Interface Tests...
+2025-08-21 16:14:36,037 - __main__ - INFO - CLI Test 1: Help command
+2025-08-21 16:14:36,241 - __main__ - ERROR - FAIL: CLI Interface - Help command
+2025-08-21 16:14:36,242 - __main__ - INFO - Details: {'command': 'C:\\Python313\\python.exe png_to_markdown_converter.py --help', 'return_code': 1, 'stdout': '', 'stderr': 'Traceback (most recent call last):\n  File "c:\\_1mybizz\\paddle-plugin\\png_to_markdown_converter.py", line 22, in <module>\n    from core.ocr_processor import TesseractOCRProcessor\n  File "c:\\_1mybizz\\pa', 'expected_success': True, 'actual_success': False}
+2025-08-21 16:14:36,242 - __main__ - INFO - Generating Test Report...
+2025-08-21 16:14:36,243 - __main__ - ERROR - Error during test execution: Object of type datetime is not JSON serializable

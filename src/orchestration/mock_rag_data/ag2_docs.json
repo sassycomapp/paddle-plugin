@@ -1,0 +1,26 @@
+{
+  "ag2_overview": {
+    "content": "AG2 is an advanced orchestration system designed to coordinate multiple AI agents and services. It provides a unified interface for managing complex workflows, integrating various AI capabilities, and maintaining context across interactions. The system supports multiple specialized agents including researchers, coordinators, and analysts, each with specific roles and capabilities.",
+    "metadata": {
+      "source": "AG2 Documentation",
+      "type": "overview",
+      "tags": ["ag2", "orchestration", "multi-agent"]
+    }
+  },
+  "agent_roles": {
+    "content": "AG2 includes three main agent types: 1) Researcher - handles information gathering, web searches, and knowledge retrieval. 2) Coordinator - manages workflows, task delegation, and process optimization. 3) Analyst - performs data analysis, generates insights, and creates reports. Each agent has access to different tools and can collaborate with others.",
+    "metadata": {
+      "source": "Agent Documentation",
+      "type": "roles",
+      "tags": ["agents", "roles", "capabilities"]
+    }
+  },
+  "system_architecture": {
+    "content": "The AG2 system architecture consists of a central orchestrator that manages multiple specialized agents. Each agent has access to tools like RAG (Retrieval-Augmented Generation), web search, and memory systems. The orchestrator uses intelligent routing to determine which agent should handle each task based on the query content and agent capabilities.",
+    "metadata": {
+      "source": "Technical Documentation",
+      "type": "architecture",
+      "tags": ["architecture", "design", "components"]
+    }
+  }
+}

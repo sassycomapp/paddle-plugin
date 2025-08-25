@@ -1,0 +1,78 @@
+# AG2 Orchestration System Test Configuration
+
+# Test Environment Settings
+environment:
+  name: "test"
+  debug: true
+  log_level: "DEBUG"
+
+# Deployment Modes to Test
+deployment_modes:
+  - "pure"
+  - "lite"
+  - "full"
+
+# Test Data Configuration
+test_data:
+  documents_path: "mock_data/documents/"
+  queries_path: "mock_data/queries/"
+  expected_path: "mock_data/expected/"
+  
+# Performance Benchmarks
+performance:
+  response_time_threshold: 5.0  # seconds
+  memory_usage_threshold: 512   # MB
+  concurrent_users: 10
+  test_duration: 60  # seconds
+
+# Load Testing Configuration
+load:
+  max_concurrent_requests: 100
+  ramp_up_time: 30  # seconds
+  test_duration: 300  # seconds
+  target_rps: 10  # requests per second
+
+# Security Testing
+security:
+  test_api_keys: true
+  test_input_validation: true
+  test_rate_limiting: true
+  test_sql_injection: true
+  test_xss: true
+
+# Mock Configuration
+mock:
+  enable_mock_servers: true
+  mock_response_delay: 0.1  # seconds
+  mock_error_rate: 0.05  # 5% error rate
+
+# Agent Configuration
+agents:
+  researcher:
+    timeout: 30
+    max_retries: 3
+  analyst:
+    timeout: 45
+    max_retries: 2
+  coordinator:
+    timeout: 60
+    max_retries: 1
+
+# RAG Configuration
+rag:
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k_results: 5
+  similarity_threshold: 0.7
+
+# Memory Configuration
+memory:
+  max_entries: 1000
+  cleanup_interval: 300  # seconds
+  persistence_enabled: false  # for testing
+
+# Logging Configuration
+logging:
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "reports/test.log"
+  console: true

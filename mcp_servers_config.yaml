@@ -1,0 +1,511 @@
+# MCP Server Configuration for Cache Management System
+
+# Global MCP Configuration
+global:
+  # Server settings
+  host: "localhost"
+  port: 8080
+  protocol: "http"
+  
+  # Connection settings
+  max_connections: 100
+  request_timeout: 30
+  enable_ssl: false
+  
+  # Authentication
+  auth_enabled: false
+  api_key: null
+  
+  # Logging
+  log_level: "INFO"
+  log_file: "./logs/mcp_servers.log"
+  enable_access_logs: true
+
+# Cache MCP Server Configuration
+cache_mcp_server:
+  enabled: true
+  name: "Cache MCP Server"
+  description: "Intelligent cache management system with multiple cache layers"
+  
+  # Server settings
+  host: "localhost"
+  port: 8080
+  protocol: "http"
+  
+  # Connection settings
+  max_connections: 100
+  request_timeout: 30
+  enable_ssl: false
+  
+  # Authentication
+  auth_enabled: false
+  api_key: null
+  
+  # Tools configuration
+  tools:
+    - name: "cache_get"
+      description: "Get a value from the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key to retrieve"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use (predictive, semantic, vector, global, vector_diary)"
+    
+    - name: "cache_set"
+      description: "Store a value in the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key"
+        - name: "value"
+          type: "any"
+          required: true
+          description: "Value to store"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use"
+        - name: "ttl_seconds"
+          type: "integer"
+          required: false
+          description: "Time-to-live in seconds"
+        - name: "metadata"
+          type: "object"
+          required: false
+          description: "Optional metadata dictionary"
+    
+    - name: "cache_delete"
+      description: "Delete a value from the cache"
+      parameters:
+        - name: "key"
+          type: "string"
+          required: true
+          description: "Cache key to delete"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use"
+    
+    - name: "cache_search"
+      description: "Search for values in the cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Search query"
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to use"
+        - name: "n_results"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Maximum number of results to return"
+        - name: "min_similarity"
+          type: "number"
+          required: false
+          default: 0.0
+          description: "Minimum similarity threshold"
+    
+    - name: "cache_stats"
+      description: "Get overall cache statistics"
+      parameters: []
+    
+    - name: "cache_clear"
+      description: "Clear the cache"
+      parameters:
+        - name: "layer"
+          type: "string"
+          required: false
+          description: "Specific cache layer to clear"
+    
+    - name: "cache_performance"
+      description: "Get cache performance metrics"
+      parameters: []
+    
+    - name: "predictive_cache_predict"
+      description: "Get predictions from the predictive cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for prediction"
+        - name: "n_predictions"
+          type: "integer"
+          required: false
+          default: 3
+          description: "Number of predictions to return"
+    
+    - name: "semantic_cache_similar"
+      description: "Find similar entries in the semantic cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for similarity search"
+        - name: "n_results"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of results to return"
+        - name: "min_similarity"
+          type: "number"
+          required: false
+          default: 0.7
+          description: "Minimum similarity threshold"
+    
+    - name: "vector_cache_select_context"
+      description: "Select context from the vector cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for context selection"
+        - name: "n_context"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of context elements to return"
+        - name: "min_similarity"
+          type: "number"
+          required: false
+          default: 0.6
+          description: "Minimum similarity threshold"
+    
+    - name: "global_cache_search_knowledge"
+      description: "Search the global knowledge cache"
+      parameters:
+        - name: "query"
+          type: "string"
+          required: true
+          description: "Query for knowledge search"
+        - name: "n_results"
+          type: "integer"
+          required: false
+          default: 5
+          description: "Number of results to return"
+        - name: "min_relevance"
+          type: "number"
+          required: false
+          default: 0.5
+          description: "Minimum relevance threshold"
+    
+    - name: "vector_diary_get_session_memories"
+      description: "Get session memories from the vector diary"
+      parameters:
+        - name: "session_id"
+          type: "string"
+          required: true
+          description: "Session ID to retrieve memories for"
+        - name: "context_type"
+          type: "string"
+          required: false
+          description: "Optional context type filter"
+        - name: "limit"
+          type: "integer"
+          required: false
+          default: 50
+          description: "Maximum number of memories to return"
+    
+    - name: "vector_diary_generate_insights"
+      description: "Generate longitudinal insights from the vector diary"
+      parameters:
+        - name: "session_id"
+          type: "string"
+          required: false
+          description: "Optional session ID to focus analysis on"
+        - name: "category"
+          type: "string"
+          required: false
+          description: "Optional insight category filter"
+
+# Database Configuration
+database:
+  # PostgreSQL settings
+  host: "localhost"
+  port: 5432
+  database: "paddle_plugin_cache"
+  username: "postgres"
+  password: "2001"
+  ssl_mode: "prefer"
+  
+  # Connection pooling
+  connection_pool:
+    max_size: 20
+    min_size: 5
+    timeout: 30
+    max_overflow: 20
+  
+  # Persistence
+  persist_dir: "./cache_storage"
+  
+  # Collections (tables)
+  collections:
+    - name: "predictive_cache"
+      description: "Predictive cache entries"
+      columns:
+        - name: "id"
+          type: "uuid"
+          primary_key: true
+        - name: "key"
+          type: "varchar(255)"
+          not_null: true
+          unique: true
+        - name: "value"
+          type: "jsonb"
+          not_null: true
+        - name: "metadata"
+          type: "jsonb"
+        - name: "created_at"
+          type: "timestamp"
+          not_null: true
+        - name: "expires_at"
+          type: "timestamp"
+        - name: "access_count"
+          type: "integer"
+          default: 0
+        - name: "last_accessed"
+          type: "timestamp"
+    
+    - name: "semantic_cache"
+      description: "Semantic cache entries"
+      columns:
+        - name: "id"
+          type: "uuid"
+          primary_key: true
+        - name: "key"
+          type: "varchar(255)"
+          not_null: true
+          unique: true
+        - name: "value"
+          type: "jsonb"
+          not_null: true
+        - name: "embedding"
+          type: "vector(384)"
+        - name: "metadata"
+          type: "jsonb"
+        - name: "created_at"
+          type: "timestamp"
+          not_null: true
+        - name: "expires_at"
+          type: "timestamp"
+        - name: "access_count"
+          type: "integer"
+          default: 0
+        - name: "last_accessed"
+          type: "timestamp"
+    
+    - name: "vector_cache"
+      description: "Vector cache entries"
+      columns:
+        - name: "id"
+          type: "uuid"
+          primary_key: true
+        - name: "key"
+          type: "varchar(255)"
+          not_null: true
+          unique: true
+        - name: "value"
+          type: "jsonb"
+          not_null: true
+        - name: "embedding"
+          type: "vector(1536)"
+        - name: "metadata"
+          type: "jsonb"
+        - name: "created_at"
+          type: "timestamp"
+          not_null: true
+        - name: "expires_at"
+          type: "timestamp"
+        - name: "access_count"
+          type: "integer"
+          default: 0
+        - name: "last_accessed"
+          type: "timestamp"
+    
+    - name: "vector_diary"
+      description: "Vector diary entries"
+      columns:
+        - name: "id"
+          type: "uuid"
+          primary_key: true
+        - name: "session_id"
+          type: "varchar(255)"
+          not_null: true
+        - name: "content"
+          type: "text"
+          not_null: true
+        - name: "embedding"
+          type: "vector(1536)"
+        - name: "context_type"
+          type: "varchar(100)"
+        - name: "metadata"
+          type: "jsonb"
+        - name: "created_at"
+          type: "timestamp"
+          not_null: true
+        - name: "expires_at"
+          type: "timestamp"
+        - name: "importance_score"
+          type: "float"
+          default: 0.0
+        - name: "access_count"
+          type: "integer"
+          default: 0
+        - name: "last_accessed"
+          type: "timestamp"
+
+# Integration Configuration
+integration:
+  # KiloCode routing
+  kilocode_routing:
+    enabled: true
+    fallback_order: ["predictive", "semantic", "vector", "global"]
+    routing_logic: "smart"
+  
+  # MCP RAG Server
+  mcp_rag_server:
+    enabled: true
+    endpoint: "http://localhost:8001"
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 1
+  
+  # Vector Store MCP
+  vector_store_mcp:
+    enabled: true
+    endpoint: "http://localhost:8002"
+    timeout: 30
+    retry_attempts: 3
+    retry_delay: 1
+  
+  # Memory Bank Sync
+  memory_bank_sync:
+    enabled: true
+    sync_interval: 300  # 5 minutes
+    batch_size: 100
+    retry_attempts: 3
+    retry_delay: 5
+
+# Performance Configuration
+performance:
+  # Cache settings
+  cache_size_limits:
+    predictive_cache: 1000
+    semantic_cache: 5000
+    vector_cache: 2000
+    vector_diary: 10000
+  
+  # TTL settings
+  ttl_settings:
+    predictive_cache: 3600  # 1 hour
+    semantic_cache: 86400   # 24 hours
+    vector_cache: 7200      # 2 hours
+    vector_diary: 2592000   # 30 days
+  
+  # Cleanup settings
+  cleanup_settings:
+    enabled: true
+    interval: 3600  # 1 hour
+    batch_size: 100
+    max_workers: 4
+  
+  # Monitoring
+  monitoring:
+    enabled: true
+    metrics_interval: 60  # seconds
+    health_check_interval: 300  # 5 minutes
+    alert_thresholds:
+      response_time: 1000  # ms
+      error_rate: 0.05     # 5%
+      memory_usage: 0.8    # 80%
+      cache_hit_rate: 0.7  # 70%
+
+# Security Configuration
+security:
+  # Authentication
+  authentication:
+    enabled: false
+    api_key: null
+    jwt_secret: null
+    token_expiry: 3600  # 1 hour
+  
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst_limit: 20
+    window_size: 60  # seconds
+  
+  # CORS settings
+  cors:
+    enabled: true
+    allowed_origins: ["*"]
+    allowed_methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    allowed_headers: ["*"]
+    allow_credentials: true
+  
+  # Input validation
+  input_validation:
+    enabled: true
+    max_key_length: 255
+    max_value_size: 10485760  # 10MB
+    allowed_content_types: ["application/json", "text/plain"]
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # File logging
+  file:
+    enabled: true
+    path: "./logs/cache_mcp_server.log"
+    max_size: 10485760  # 10MB
+    backup_count: 5
+    encoding: "utf-8"
+  
+  # Console logging
+  console:
+    enabled: true
+    level: "INFO"
+    format: "%(asctime)s - %(levelname)s - %(message)s"
+  
+  # Structured logging
+  structured:
+    enabled: true
+    include_timestamp: true
+    include_request_id: true
+    include_user_id: false
+
+# Development Configuration
+development:
+  debug_mode: false
+  test_mode: false
+  mock_data: false
+  
+  # Development database
+  dev_database_url: "sqlite:///./cache_dev.db"
+  
+  # Testing
+  testing:
+    test_timeout: 30
+    test_parallelism: 4
+    coverage_threshold: 0.8
+  
+  # Mock data settings
+  mock_data_settings:
+    num_mock_entries: 100
+    mock_data_path: "./data/mock_data.json"
+  
+  # Profiling
+  profiling:
+    enabled: false
+    output_dir: "./profiles"
+    interval: 300  # seconds

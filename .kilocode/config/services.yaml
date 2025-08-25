@@ -1,0 +1,472 @@
+# KiloCode Service Configuration
+# This file defines service-specific settings and dependencies
+
+# Service Registry
+services:
+  # Core MCP Services
+  core_services:
+    enabled: true
+    auto_start: true
+    dependencies: []
+    
+    # Service definitions
+    services:
+      # Filesystem MCP Server
+      filesystem:
+        enabled: true
+        name: "KiloCode Filesystem Server"
+        description: "Filesystem operations for KiloCode environment"
+        command: "npx"
+        args: ["-y", "@modelcontextprotocol/server-filesystem", ".", "/tmp"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+          KILOCODE_PROJECT_PATH: "c:\\_1mybizz\\paddle-plugin"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # GitHub MCP Server
+      github:
+        enabled: true
+        name: "KiloCode GitHub Server"
+        description: "GitHub integration for KiloCode"
+        command: "npx"
+        args: ["-y", "@modelcontextprotocol/server-github"]
+        environment:
+          GITHUB_PERSONAL_ACCESS_TOKEN: ""
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 60
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # PostgreSQL MCP Server
+      postgres:
+        enabled: true
+        name: "KiloCode PostgreSQL Server"
+        description: "PostgreSQL database operations"
+        command: "npx"
+        args: ["-y", "@modelcontextprotocol/server-postgres", "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+          KILOCODE_DB_CONFIG: "postgresql://localhost:5432/postgres"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Fetch MCP Server
+      fetch:
+        enabled: true
+        name: "KiloCode Fetch Server"
+        description: "HTTP request handling"
+        command: "python"
+        args: ["-m", "mcp_server_fetch"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+
+  # Custom MCP Services
+  custom_services:
+    enabled: true
+    auto_start: true
+    dependencies: ["core_services"]
+    
+    # Service definitions
+    services:
+      # Agent Memory Service
+      agent-memory:
+        enabled: true
+        name: "KiloCode Agent Memory"
+        description: "Multi-tiered memory architecture"
+        command: "node"
+        args: ["mcp_servers/agent-memory/index.js"]
+        environment:
+          DATABASE_URL: "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"
+          MEMORY_BANK_PATH: "../../memorybank"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # RAG MCP Server
+      rag-mcp-server:
+        enabled: true
+        name: "KiloCode RAG Server"
+        description: "Retrieval-Augmented Generation server"
+        command: "node"
+        args: ["mcp_servers/rag-mcp-server.js"]
+        environment:
+          CHROMA_URL: "http://localhost:8000"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+          KILOCODE_RAG_CONFIG: "http://localhost:8000"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 20
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Snap Windows MCP Server
+      snap-windows:
+        enabled: true
+        name: "KiloCode Snap Windows"
+        description: "Windows window management"
+        command: "node"
+        args: ["mcp_servers/snap-mcp-server.js"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Memory Service
+      mcp-memory-service:
+        enabled: true
+        name: "KiloCode Memory Service"
+        description: "Advanced memory management service"
+        command: "uv"
+        args: ["--directory", "mcp_servers/mcp-memory-service", "run", "mcp-memory-server"]
+        environment:
+          MCP_MEMORY_CHROMA_PATH: "mcp_servers/mcp-memory-service/data/chroma_db"
+          MCP_MEMORY_BACKUPS_PATH: "mcp_servers/mcp-memory-service/data/backups"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Testing Validation Service
+      testing-validation:
+        enabled: true
+        name: "KiloCode Testing Validation"
+        description: "Testing and validation service"
+        command: "node"
+        args: ["testing-validation-system/src/mcp/test-mcp-server.js"]
+        environment:
+          DATABASE_URL: "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Logging Telemetry Service
+      logging-telemetry-mcp:
+        enabled: true
+        name: "KiloCode Logging Telemetry"
+        description: "Logging and telemetry service"
+        command: "node"
+        args: ["mcp_servers/logging-telemetry-mcp-server.js"]
+        environment:
+          PORT: "3001"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Scheduler Service
+      mcp-scheduler:
+        enabled: true
+        name: "KiloCode Scheduler"
+        description: "Task scheduling service"
+        command: "node"
+        args: ["mcp_servers/mcp-scheduler-server.js"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Playwright Service
+      playwright:
+        enabled: true
+        name: "KiloCode Playwright"
+        description: "Browser automation service"
+        command: "npx"
+        args: ["-y", "@executeautomation/playwright-mcp-server"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+
+  # External Services
+  external_services:
+    enabled: true
+    auto_start: false
+    dependencies: []
+    
+    # Service definitions
+    services:
+      # Podman Service
+      podman:
+        enabled: false
+        name: "KiloCode Podman"
+        description: "Container management service"
+        command: "npx"
+        args: ["-y", "podman-mcp-server@latest"]
+        environment:
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 60
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+
+# Service Dependencies
+dependencies:
+  # Dependency chains
+  chains:
+    memory_chain:
+      services: ["postgres", "agent-memory", "mcp-memory-service"]
+      order: ["postgres", "agent-memory", "mcp-memory-service"]
+      
+    rag_chain:
+      services: ["postgres", "chroma", "rag-mcp-server"]
+      order: ["postgres", "chroma", "rag-mcp-server"]
+      
+    testing_chain:
+      services: ["postgres", "testing-validation", "playwright"]
+      order: ["postgres", "testing-validation", "playwright"]
+      
+    logging_chain:
+      services: ["logging-telemetry-mcp", "mcp-scheduler"]
+      order: ["logging-telemetry-mcp", "mcp-scheduler"]
+
+# Service Health Monitoring
+health_monitoring:
+  enabled: true
+  interval: 30
+  timeout: 10
+  unhealthy_threshold: 3
+  healthy_threshold: 2
+  
+  # Health check endpoints
+  endpoints:
+    "/health": "Basic health check"
+    "/metrics": "Prometheus metrics"
+    "/ready": "Readiness check"
+    "/live": "Liveness check"
+    
+  # Alerting
+  alerting:
+    enabled: true
+    notification_channels: []
+    alert_rules:
+      - name: "Service Down"
+        condition: "service_down"
+        threshold: 1
+        duration: 60
+        severity: "critical"
+        
+      - name: "High Memory Usage"
+        condition: "memory_usage > 80"
+        threshold: 5
+        duration: 300
+        severity: "warning"
+        
+      - name: "High CPU Usage"
+        condition: "cpu_usage > 90"
+        threshold: 3
+        duration: 300
+        severity: "warning"
+
+# Service Discovery
+service_discovery:
+  enabled: true
+  registry_type: "file"  # file, consul, etcd
+  registry_path: ".kilocode/registry"
+  heartbeat_interval: 30
+  cache_ttl: 60
+  
+  # Service registration
+  registration:
+    auto_register: true
+    service_tags: ["kilocode", "mcp", "production"]
+    service_metadata:
+      version: "1.0.0"
+      environment: "development"
+      project: "paddle-plugin"
+
+# Load Balancing
+load_balancing:
+  enabled: true
+  strategy: "round_robin"  # round_robin, least_connections, random
+  health_check_interval: 30
+  health_check_timeout: 10
+  max_retries: 3
+  retry_delay: 1
+  
+  # Balancing rules
+  rules:
+    - service: "agent-memory"
+      strategy: "least_connections"
+      max_connections: 100
+      
+    - service: "rag-mcp-server"
+      strategy: "round_robin"
+      max_connections: 50
+      
+    - service: "testing-validation"
+      strategy: "least_connections"
+      max_connections: 25
+
+# Circuit Breaker
+circuit_breaker:
+  enabled: true
+  failure_threshold: 5
+  recovery_timeout: 30
+  half_open_max_requests: 3
+  
+  # Circuit breaker rules
+  rules:
+    - service: "github"
+      failure_threshold: 3
+      recovery_timeout: 60
+      half_open_max_requests: 2
+      
+    - service: "fetch"
+      failure_threshold: 5
+      recovery_timeout: 30
+      half_open_max_requests: 3
+      
+    - service: "rag-mcp-server"
+      failure_threshold: 3
+      recovery_timeout: 45
+      half_open_max_requests: 2
+
+# Service Metrics
+service_metrics:
+  enabled: true
+  collection_interval: 30
+  retention_days: 30
+  
+  # Metrics to collect
+  metrics:
+    - "cpu_usage"
+    - "memory_usage"
+    - "disk_usage"
+    - "network_io"
+    - "request_count"
+    - "response_time"
+    - "error_rate"
+    - "active_connections"
+    
+  # Export configuration
+  export:
+    enabled: true
+    format: "prometheus"
+    port: 9090
+    path: "/metrics"
+    
+  # Alerting thresholds
+  thresholds:
+    cpu_usage: 90
+    memory_usage: 85
+    disk_usage: 90
+    response_time: 1000
+    error_rate: 5
+    active_connections: 1000
+
+# Service Logging
+service_logging:
+  enabled: true
+  level: "INFO"
+  format: "json"
+  
+  # Log rotation
+  rotation:
+    enabled: true
+    max_size: 10485760  # 10MB
+    max_files: 5
+    compress: true
+    
+  # Log destinations
+  destinations:
+    - type: "file"
+      path: "logs/services.log"
+    - type: "console"
+      enabled: true
+    - type: "external"
+      enabled: false
+      endpoint: null
+      
+  # Structured logging
+  structured:
+    enabled: true
+    include_timestamp: true
+    include_service_name: true
+    include_request_id: true
+    include_trace_id: true

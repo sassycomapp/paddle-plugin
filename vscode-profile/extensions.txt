@@ -1,0 +1,14 @@
+ms-python.python
+ms-python.vscode-pylance
+ms-python.isort
+ms-python.black-formatter
+ms-python.flake8
+ms-python.mypy
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-vscode.vscode-git
+github.vscode-pull-request-github
+github.vscode-github-actions
+ms-azuretools.vscode-docker
+ms-vscode.vscode-remote-containers
+ms-vscode.vscode-remote

@@ -1,0 +1,470 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto eol=lf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.css          text
+*.htm          text
+*.html         text
+*.java         text
+*.js           text
+*.json         text
+*.jsx          text
+*.less         text
+*.md           text
+*.mdwn         text
+*.mdown        text
+*.markdown     text
+*.mustache     text
+*.php          text
+*.pl           text
+*.py           text
+*.rb           text
+*.rbw          text
+*.sass         text
+*.scala        text
+*.scss         text
+*.sh           text
+*.sql          text
+*.svg          text
+*.ts           text
+*.tsx          text
+*.xml          text
+*.xhtml        text
+*.yml          text
+*.yaml         text
+
+# Denote all files that are truly binary and should not be modified.
+*.png          binary
+*.jpg          binary
+*.jpeg         binary
+*.gif          binary
+*.ico          binary
+*.svg          binary
+*.woff         binary
+*.woff2        binary
+*.ttf          binary
+*.eot          binary
+*.zip          binary
+*.tar          binary
+*.gz           binary
+*.psd          binary
+*.ai           binary
+*.pdf          binary
+*.doc          binary
+*.docx         binary
+*.xls          binary
+*.xlsx         binary
+*.ppt          binary
+*.pptx         binary
+*.dll          binary
+*.exe          binary
+*.bin          binary
+*.mp3          binary
+*.mp4          binary
+*.avi          binary
+*.mov          binary
+*.wmv          binary
+*.flv          binary
+*.swf          binary
+*.7z           binary
+*.rar          binary
+*.gz           binary
+*.bz2          binary
+*.xz           binary
+*.tar          binary
+*.tgz          binary
+*.tbz2         binary
+*.txz          binary
+*.dmg          binary
+*.iso          binary
+*.img          binary
+*.vmdk         binary
+*.ova          binary
+*.ovf          binary
+*.vdi          binary
+*.vhd          binary
+*.vhdx         binary
+*.qcow2        binary
+*.raw          binary
+*.bin          binary
+*.elf          binary
+*.macho        binary
+*.pe           binary
+*.coff         binary
+*.ar           binary
+*.deb          binary
+*.rpm          binary
+*.ddeb         binary
+*.udeb         binary
+*.gem          binary
+*.msi          binary
+*.msix         binary
+*.msm          binary
+*.msp          binary
+*.mst          binary
+*.cab          binary
+*.wim          binary
+*.swm          binary
+*.esd          binary
+*.vhd          binary
+*.vhdx         binary
+*.qcow2        binary
+*.raw          binary
+*.bin          binary
+*.elf          binary
+*.macho        binary
+*.pe           binary
+*.coff         binary
+*.ar           binary
+*.deb          binary
+*.rpm          binary
+*.ddeb         binary
+*.udeb         binary
+*.gem          binary
+*.msi          binary
+*.msix         binary
+*.msm          binary
+*.msp          binary
+*.mst          binary
+*.cab          binary
+*.wim          binary
+*.swm          binary
+*.esd          binary
+
+# Git LFS
+*.psd          filter=lfs diff=lfs merge=lfs -text
+*.ai           filter=lfs diff=lfs merge=lfs -text
+*.zip          filter=lfs diff=lfs merge=lfs -text
+*.tar          filter=lfs diff=lfs merge=lfs -text
+*.gz           filter=lfs diff=lfs merge=lfs -text
+*.7z           filter=lfs diff=lfs merge=lfs -text
+*.rar          filter=lfs diff=lfs merge=lfs -text
+*.bz2          filter=lfs diff=lfs merge=lfs -text
+*.xz           filter=lfs diff=lfs merge=lfs -text
+*.dmg          filter=lfs diff=lfs merge=lfs -text
+*.iso          filter=lfs diff=lfs merge=lfs -text
+*.img          filter=lfs diff=lfs merge=lfs -text
+*.vmdk         filter=lfs diff=lfs merge=lfs -text
+*.ova          filter=lfs diff=lfs merge=lfs -text
+*.ovf          filter=lfs diff=lfs merge=lfs -text
+*.vdi          filter=lfs diff=lfs merge=lfs -text
+*.vhd          filter=lfs diff=lfs merge=lfs -text
+*.vhdx         filter=lfs diff=lfs merge=lfs -text
+*.qcow2        filter=lfs diff=lfs merge=lfs -text
+*.raw          filter=lfs diff=lfs merge=lfs -text
+*.bin          filter=lfs diff=lfs merge=lfs -text
+*.elf          filter=lfs diff=lfs merge=lfs -text
+*.macho        filter=lfs diff=lfs merge=lfs -text
+*.pe           filter=lfs diff=lfs merge=lfs -text
+*.coff         filter=lfs diff=lfs merge=lfs -text
+*.ar           filter=lfs diff=lfs merge=lfs -text
+*.deb          filter=lfs diff=lfs merge=lfs -text
+*.rpm          filter=lfs diff=lfs merge=lfs -text
+*.ddeb         filter=lfs diff=lfs merge=lfs -text
+*.udeb         filter=lfs diff=lfs merge=lfs -text
+*.gem          filter=lfs diff=lfs merge=lfs -text
+*.msi          filter=lfs diff=lfs merge=lfs -text
+*.msix         filter=lfs diff=lfs merge=lfs -text
+*.msm          filter=lfs diff=lfs merge=lfs -text
+*.msp          filter=lfs diff=lfs merge=lfs -text
+*.mst          filter=lfs diff=lfs merge=lfs -text
+*.cab          filter=lfs diff=lfs merge=lfs -text
+*.wim          filter=lfs diff=lfs merge=lfs -text
+*.swm          filter=lfs diff=lfs merge=lfs -text
+*.esd          filter=lfs diff=lfs merge=lfs -text
+
+# VS Code
+.vscode/*      text
+\!.vscode/settings.json
+\!.vscode/tasks.json
+\!.vscode/launch.json
+\!.vscode/extensions.json
+\!.vscode/launch.json
+\!.vscode/tasks.json
+\!.vscode/settings.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Linux
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+# Project specific
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/*
+\!.vscode/settings.json
+\!.vscode/tasks.json
+\!.vscode/launch.json
+\!.vscode/extensions.json
+\!.vscode/launch.json
+\!.vscode/tasks.json
+\!.vscode/settings.json
+\!.vscode/extensions.json
+
+# IDE - VSCode
+.vscode/*
+\!.vscode/settings.json
+\!.vscode/tasks.json
+\!.vscode/launch.json
+\!.vscode/extensions.json
+\!.vscode/launch.json
+\!.vscode/tasks.json
+\!.vscode/settings.json
+\!.vscode/extensions.json
+
+# IDE - Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# IDE - JetBrains
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Application specific
+mybizz/
+my-apps/
+application-projects/
+app-projects/
+apps/

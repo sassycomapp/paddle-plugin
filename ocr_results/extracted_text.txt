@@ -1,0 +1,11 @@
+Tesseract OCR Test Results
+Generated: 2025-08-21 12:22:17
+Target Image: Docs/_My Todo/A.0 Mybizz system.png
+Average Confidence: 90.50
+Total Text Blocks: 266
+High Confidence Blocks: 246
+
+==================================================
+EXTRACTED TEXT:
+==================================================
+

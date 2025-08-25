@@ -1,0 +1,52 @@
+# Everything Search MCP Server Dependencies
+# Core MCP Protocol
+mcp>=1.0.0
+
+# Everything SDK
+everything-sdk>=0..0
+
+# PyWin32 for Windows integration
+pywin32>=305
+
+# Async support
+asyncio>=3.4.3
+
+# JSON handling
+json>=2.0.9
+
+# Logging
+logging>=0.5.1.2
+
+# Path handling
+pathlib>=1.0.1
+
+# Date/time handling
+datetime>=4.3
+
+# Type hints
+typing>=3.7.4
+
+# Configuration management
+configparser>=5.3.0
+
+# Environment variables
+python-dotenv>=0.19.0
+
+# Optional: Enhanced async functionality
+aiofiles>=0.8.0
+
+# Optional: Enhanced logging
+structlog>=22.1.0
+
+# Optional: Performance monitoring
+psutil>=5.9.0
+
+# Optional: Enhanced error handling
+rich>=12.6.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+pytest-asyncio>=0.18.0
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950

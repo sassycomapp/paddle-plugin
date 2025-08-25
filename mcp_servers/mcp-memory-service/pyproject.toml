@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling", "python-semantic-release", "build"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-memory-service"
+version = "4.0.0-alpha.1"  
+description = "An intelligent semantic memory service with dream-inspired autonomous consolidation using PGvector and sentence-transformers"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+authors = [
+    { name = "Heinrich Krupp", email = "heinrich.krupp@gmail.com" }
+]
+license = { text = "Apache-2.0" }
+dependencies = [
+    "PGvector==0.5.23",
+    "tokenizers==0.20.3",
+    "mcp>=1.0.0,<2.0.0",
+    "sqlite-vec>=0.1.0",
+    "sentence-transformers>=2.2.2",
+    "build>=0.10.0",
+    "aiohttp>=3.8.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
+    "sse-starlette>=2.1.0",
+    "aiofiles>=23.2.1",
+    "psutil>=5.9.0",
+    "zeroconf>=0.130.0",
+    "fastmcp>=0.4.0"
+]
+
+[project.optional-dependencies]
+ml = [
+    "sentence-transformers>=2.2.2",
+    "torch>=1.6.0"
+]
+PGvector = [
+    "PGvector==0.5.23"
+]
+sqlite = [
+    "sqlite-vec>=0.1.0"
+]
+
+[project.scripts]
+memory = "mcp_memory_service.server:main"
+mcp-memory-server = "mcp_memory_service.mcp_server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_memory_service"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.version]
+path = "src/mcp_memory_service/__init__.py"
+
+[tool.semantic_release]
+version_variable = [
+    "src/mcp_memory_service/__init__.py:__version__",
+    "pyproject.toml:version"
+]
+branch = "main"
+changelog_file = "CHANGELOG.md"
+build_command = "pip install build && python -m build"
+build_command_env = []
+dist_path = "dist/"
+upload_to_pypi = false
+upload_to_release = true
+commit_message = "chore(release): bump version to {version}"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "style",
+    "refactor",
+    "test"
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+
+[tool.semantic_release.changelog]
+template_dir = "templates"
+changelog_sections = [
+    ["feat", "Features"],
+    ["fix", "Bug Fixes"],
+    ["perf", "Performance"],
+    ["refactor", "Code Refactoring"],
+    ["test", "Tests"]
+]

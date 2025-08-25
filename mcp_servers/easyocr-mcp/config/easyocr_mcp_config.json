@@ -1,0 +1,120 @@
+{
+    "_description": "EasyOCR MCP Server Configuration - Optimized for Low-Resource Usage on Asus x515ae",
+    "_version": "1.0.0",
+    "_generated_by": "EasyOCR MCP Server",
+    "_timestamp": "2025-01-01T00:00:00Z",
+    "easyocr": {
+        "languages": [
+            "en"
+        ],
+        "gpu": false,
+        "model_storage_directory": "C:/easyocr_models",
+        "confidence_threshold": 30,
+        "recognize_text_args": {
+            "decoder": "beamsearch",
+            "beamWidth": 5,
+            "batch_size": 1,
+            "workers": 1,
+            "allowlist": null,
+            "blocklist": null,
+            "detail": 1,
+            "rotation_info": [
+                0
+            ],
+            "y_ths": 0.5,
+            "x_ths": 0.5,
+            "contrast_ths": 0.1,
+            "adjust_contrast": 0.0,
+            "filter_ths": 0.1,
+            "text_threshold": 0.3,
+            "link_threshold": 0.4,
+            "low_text": 0.4
+        }
+    },
+    "preprocessing": {
+        "enabled": true,
+        "max_image_size": 1024,
+        "enhance_contrast": true,
+        "remove_noise": true,
+        "binarize": true,
+        "sharpen": true,
+        "deskew": true,
+        "contrast_factor": 1.5,
+        "brightness_factor": 1.1,
+        "sharpen_factor": 1.0,
+        "noise_reduction_radius": 1,
+        "binarization_threshold": 128,
+        "use_grayscale": true,
+        "use_binarization": true
+    },
+    "batch": {
+        "size": 5,
+        "timeout": 30,
+        "retry_count": 3
+    },
+    "output": {
+        "directory": "./output",
+        "filename_pattern": "{original_name}_OCR.md",
+        "include_backup": true
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "./logs/easyocr_mcp.log",
+        "max_size": "10MB",
+        "backup_count": 5,
+        "encoding": "utf-8"
+    },
+    "encoding": {
+        "default_encoding": "utf-8",
+        "fallback_encodings": [
+            "utf-8",
+            "latin-1",
+            "cp1252"
+        ],
+        "file_encoding": "utf-8",
+        "console_encoding": "utf-8",
+        "strict_mode": true,
+        "auto_detect": true,
+        "error_handling": "strict"
+    },
+    "metadata": {
+        "include_detailed_stats": true,
+        "include_quality_metrics": true,
+        "include_performance_metrics": true,
+        "include_file_info": true,
+        "include_processing_info": true
+    },
+    "validation": {
+        "max_file_size": 104857600,
+        "min_file_size": 1024,
+        "max_image_width": 2048,
+        "max_image_height": 2048,
+        "supported_formats": [
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".tiff",
+            ".tif",
+            ".bmp",
+            ".gif",
+            ".webp"
+        ]
+    },
+    "performance": {
+        "model_preloading": true,
+        "cache_enabled": true,
+        "cache_size": 100,
+        "cache_ttl": 3600,
+        "memory_limit": "512MB",
+        "cpu_optimization": true,
+        "thread_pool_size": 2
+    },
+    "monitoring": {
+        "enabled": true,
+        "metrics_interval": 30,
+        "performance_tracking": true,
+        "error_tracking": true,
+        "resource_monitoring": true,
+        "log_level": "INFO"
+    }
+}

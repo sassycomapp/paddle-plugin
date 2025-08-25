@@ -1,0 +1,23 @@
+{
+  "ag2_overview": {
+    "content": "AG2 is an advanced orchestration system that coordinates multiple AI agents to perform complex tasks. It uses a multi-agent architecture where specialized agents handle different aspects of task execution.",
+    "metadata": {
+      "source": "mock_document",
+      "type": "overview"
+    }
+  },
+  "orchestration_benefits": {
+    "content": "The benefits of AG2 orchestration include improved task efficiency, better resource utilization, and the ability to handle complex multi-step processes through agent collaboration.",
+    "metadata": {
+      "source": "mock_document",
+      "type": "benefits"
+    }
+  },
+  "agent_roles": {
+    "content": "AG2 uses specialized agents including: Research Agent for information gathering, Coordinator Agent for task management, Memory Agent for context storage, and Search Agent for web queries.",
+    "metadata": {
+      "source": "mock_document",
+      "type": "technical"
+    }
+  }
+}

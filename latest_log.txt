@@ -1,0 +1,7 @@
+Get-ChildItem : A parameter cannot be found that matches parameter name 'Sort'.
+At line:1 char:40
++ Get-ChildItem -Path Logs -Filter *.log -Sort LastWriteTime -Descendin ...
++                                        ~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], ParameterBindingException
+    + FullyQualifiedErrorId : NamedParameterNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 

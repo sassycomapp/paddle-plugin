@@ -1,0 +1,57 @@
+[2025-08-24T08:19:06.189Z] [INFO] Starting KiloCode setup process
+[2025-08-24T08:19:06.192Z] [INFO] Creating directory structure
+[2025-08-24T08:19:50.774Z] [INFO] Starting KiloCode setup process
+[2025-08-24T08:19:50.781Z] [INFO] Creating directory structure
+[2025-08-24T08:19:50.863Z] [SUCCESS] Directory structure created successfully
+[2025-08-24T08:19:50.897Z] [WARN] npm version check failed. Continuing with setup...
+[2025-08-24T08:19:50.864Z] [INFO] Validating system dependencies
+[2025-08-24T08:19:51.518Z] [WARN] npx not found. Some functionality may be limited.
+[2025-08-24T08:19:51.524Z] [WARN] Failed to sync MCP servers: spawn kilocode-mcp-install ENOENT
+[2025-08-24T08:19:51.518Z] [SUCCESS] System dependencies validated successfully
+[2025-08-24T08:19:51.518Z] [INFO] Installing MCP servers
+[2025-08-24T08:19:51.524Z] [SUCCESS] MCP servers installation process completed
+[2025-08-24T08:19:51.525Z] [INFO] Generating configuration files
+[2025-08-24T08:21:06.733Z] [INFO] Starting KiloCode setup process
+[2025-08-24T08:21:06.735Z] [INFO] Creating directory structure
+[2025-08-24T08:21:06.746Z] [SUCCESS] Directory structure created successfully
+[2025-08-24T08:21:06.753Z] [WARN] npm version check failed. Continuing with setup...
+[2025-08-24T08:21:06.746Z] [INFO] Validating system dependencies
+[2025-08-24T08:21:06.964Z] [WARN] npx not found. Some functionality may be limited.
+[2025-08-24T08:21:06.964Z] [SUCCESS] System dependencies validated successfully
+[2025-08-24T08:21:06.964Z] [INFO] Installing MCP servers
+[2025-08-24T08:21:06.967Z] [WARN] Failed to sync MCP servers: spawn kilocode-mcp-install ENOENT
+[2025-08-24T08:21:06.968Z] [SUCCESS] MCP servers installation process completed
+[2025-08-24T08:21:06.968Z] [INFO] Generating configuration files
+[2025-08-24T08:22:08.956Z] [INFO] Starting KiloCode setup process
+[2025-08-24T08:22:08.973Z] [INFO] Creating directory structure
+[2025-08-24T08:22:09.036Z] [SUCCESS] Directory structure created successfully
+[2025-08-24T08:22:09.036Z] [INFO] Validating system dependencies
+[2025-08-24T08:22:09.053Z] [WARN] npm version check failed. Continuing with setup...
+[2025-08-24T08:22:09.296Z] [WARN] npx not found. Some functionality may be limited.
+[2025-08-24T08:22:09.296Z] [SUCCESS] System dependencies validated successfully
+[2025-08-24T08:22:09.296Z] [INFO] Installing MCP servers
+[2025-08-24T08:22:09.301Z] [WARN] Failed to sync MCP servers: spawn kilocode-mcp-install ENOENT
+[2025-08-24T08:22:09.301Z] [SUCCESS] MCP servers installation process completed
+[2025-08-24T08:22:09.301Z] [INFO] Generating configuration files
+[2025-08-24T08:23:18.952Z] [INFO] Starting KiloCode setup process
+[2025-08-24T08:23:18.958Z] [INFO] Creating directory structure
+[2025-08-24T08:23:18.974Z] [SUCCESS] Directory structure created successfully
+[2025-08-24T08:23:18.974Z] [INFO] Validating system dependencies
+[2025-08-24T08:23:18.985Z] [WARN] npm version check failed. Continuing with setup...
+[2025-08-24T08:23:19.620Z] [WARN] npx not found. Some functionality may be limited.
+[2025-08-24T08:23:19.621Z] [SUCCESS] System dependencies validated successfully
+[2025-08-24T08:23:19.621Z] [INFO] Installing MCP servers
+[2025-08-24T08:23:19.625Z] [WARN] Failed to sync MCP servers: spawn kilocode-mcp-install ENOENT
+[2025-08-24T08:23:19.626Z] [INFO] Generating configuration files
+[2025-08-24T08:23:19.626Z] [SUCCESS] MCP servers installation process completed
+[2025-08-24T08:23:19.630Z] [SUCCESS] Configuration files generated successfully
+[2025-08-24T08:23:19.630Z] [INFO] Validating installation
+[2025-08-24T08:23:19.634Z] [WARN] MCP installer is not available in PATH. You may need to run: npm install -g @kilocode/mcp-installer
+[2025-08-24T08:23:44.664Z] [INFO] Initializing KiloCode MCP Server Manager
+[2025-08-24T08:23:44.818Z] [INFO] Configurations loaded successfully
+[2025-08-24T08:23:44.826Z] [INFO] Environment validation completed successfully
+[2025-08-24T08:23:44.826Z] [SUCCESS] MCP Server Manager initialized successfully
+[2025-08-24T08:24:13.608Z] [INFO] Initializing KiloCode MCP Server Manager
+[2025-08-24T08:24:13.692Z] [INFO] Configurations loaded successfully
+[2025-08-24T08:24:13.723Z] [INFO] Environment validation completed successfully
+[2025-08-24T08:24:13.723Z] [SUCCESS] MCP Server Manager initialized successfully

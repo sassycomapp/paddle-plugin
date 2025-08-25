@@ -1,0 +1,21 @@
+# Agent Manifest
+agents:
+  orchestrator:
+    description: "Orchestrates workflow between agents"
+    entry_point: "agents/orchestrator.py"
+    dependencies: []
+  
+  memory_agent:
+    description: "Manages context persistence"
+    entry_point: "agents/memory_agent.py"
+    dependencies: ["orchestrator"]
+
+  secret_agent:
+    description: "Handles credentials securely"
+    entry_point: "agents/secret_agent.py"
+    dependencies: ["orchestrator"]
+
+  logger_agent:
+    description: "Monitors system and agent activities"
+    entry_point: "agents/logger_agent.py"
+    dependencies: ["orchestrator"]

@@ -1,0 +1,282 @@
+# Cache Management System Configuration
+
+# Global settings
+global:
+  # Cache system settings
+  cache_enabled: true
+  debug_mode: false
+  log_level: INFO
+  
+  # Performance settings
+  max_concurrent_requests: 100
+  request_timeout: 30  # seconds
+  enable_metrics: true
+  
+  # Database settings
+  database:
+    host: ${DB_HOST:localhost}
+    port: ${DB_PORT:5432}
+    name: ${DB_NAME:paddle_plugin_cache}
+    user: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:2001}
+    persist_dir: ${PERSIST_DIR:./cache_storage}
+    connection_pool:
+      max_size: 20
+      min_size: 5
+      timeout: 30
+    ssl_mode: prefer
+  
+  # MCP server settings
+  mcp_host: ${MCP_HOST:localhost}
+  mcp_port: ${MCP_PORT:8080}
+  mcp_protocol: http
+
+# Predictive Cache Configuration
+predictive_cache:
+  enabled: true
+  ttl: 3600  # 1 hour
+  max_size: 1000
+  prediction_window: 300  # 5 minutes
+  confidence_threshold: 0.7
+  
+  # Database collection settings
+  collection: "predictive_cache"
+  
+  # Prediction heuristics
+  heuristics:
+    - pattern_matching
+    - frequency_analysis
+    - temporal_analysis
+    - user_behavior_analysis
+  
+  # ML model settings
+  ml_settings:
+    model_type: "lightgbm"
+    retrain_interval: 3600  # 1 hour
+    min_samples_for_training: 100
+    feature_importance_threshold: 0.1
+
+# Semantic Cache Configuration
+semantic_cache:
+  enabled: true
+  ttl: 86400  # 24 hours
+  max_size: 5000
+  similarity_threshold: 0.8
+  
+  # Database collection settings
+  collection: "semantic_cache"
+  
+  # Embedding settings
+  embedding_model: "all-MiniLM-L6-v2"
+  embedding_batch_size: 32
+  embedding_device: "cpu"
+  embedding_dimension: 384
+  
+  # Semantic hashing
+  semantic_hashing:
+    enabled: true
+    hash_length: 16
+    similarity_threshold: 0.85
+  
+  # Cache eviction
+  eviction_policy: "lru"  # lru, lfu, adaptive
+  cleanup_interval: 300   # 5 minutes
+
+# Vector Cache Configuration
+vector_cache:
+  enabled: true
+  ttl: 7200  # 2 hours
+  max_size: 2000
+  similarity_threshold: 0.75
+  reranking_enabled: true
+  context_window_size: 10
+  
+  # Database collection settings
+  collection: "vector_cache"
+  
+  # Vector operations
+  vector_operations:
+    similarity_metric: "cosine"
+    index_type: "hnsw"
+    search_ef: 50
+    construction_ef: 200
+    embedding_dim: 1536
+  
+  # Context selection
+  context_selection:
+    max_context_length: 2000
+    min_context_relevance: 0.6
+    diversity_threshold: 0.3
+  
+  # Reranking
+  reranking:
+    enabled: true
+    model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    top_k: 10
+
+# Global Knowledge Cache Configuration
+global_cache:
+  enabled: true
+  cache_ttl_seconds: 86400  # 24 hours
+  max_cache_size: 5000
+  knowledge_base_enabled: true
+  fallback_enabled: true
+  consolidation_enabled: true
+  
+  # Knowledge base settings
+  knowledge_base:
+    index_path: "./data/knowledge_index"
+    chunk_size: 1000
+    chunk_overlap: 200
+    max_knowledge_items: 10000
+  
+  # Fallback settings
+  fallback:
+    enabled: true
+    max_fallback_items: 5
+    fallback_similarity_threshold: 0.5
+  
+  # Consolidation settings
+  consolidation:
+    enabled: true
+    consolidation_interval: 3600  # 1 hour
+    min_similarity_for_consolidation: 0.7
+    max_consolidation_candidates: 100
+
+# Vector Diary Configuration
+vector_diary:
+  enabled: true
+  ttl: 2592000  # 30 days
+  max_size: 10000
+  analysis_interval: 86400  # 24 hours
+  min_insight_confidence: 0.6
+  max_memory_age: 90           # 90 days
+  
+  # Database collection settings
+  collection: "vector_diary"
+  
+  # Memory management
+  memory_management:
+    importance_threshold: 0.3
+    decay_factor: 0.95
+    max_relationships_per_memory: 10
+    
+  # Longitudinal analysis
+  longitudinal_analysis:
+    enabled: true
+    analysis_types:
+      - temporal_patterns
+      - relationship_analysis
+      - trend_detection
+      - anomaly_detection
+    
+    # Insight generation
+    insight_generation:
+      min_memory_count_for_insight: 5
+      confidence_threshold: 0.6
+      max_insights_per_analysis: 10
+  
+  # Session management
+  session_management:
+    session_timeout: 1800  # 30 minutes
+    max_sessions: 100
+    session_cleanup_interval: 300  # 5 minutes
+
+# Performance Monitoring
+monitoring:
+  enabled: true
+  metrics_collection_interval: 60  # seconds
+  performance_thresholds:
+    max_response_time: 1000  # ms
+    max_error_rate: 0.05     # 5%
+    max_memory_usage: 0.8    # 80%
+  
+  # Logging configuration
+  logging:
+    log_file: "./logs/cache_server.log"
+    max_log_size: 10485760  # 10MB
+    backup_count: 5
+    log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  
+  # Alerting
+  alerting:
+    enabled: true
+    alert_thresholds:
+      error_rate: 0.1
+      response_time: 2000
+      memory_usage: 0.9
+    notification_channels:
+      - email
+      - webhook
+
+# MCP Server Settings
+mcp_server:
+  host: localhost
+  port: 8080
+  tools:
+    - predictive_cache_query
+    - semantic_cache_query
+    - vector_cache_query
+    - global_cache_query
+    - vector_diary_query
+    - cache_stats
+    - cache_cleanup
+
+# Integration Settings
+integration:
+  kilocode_routing:
+    enabled: true
+    fallback_order: ["predictive", "semantic", "vector", "global"]
+  
+  mcp_rag_server:
+    endpoint: http://localhost:8001
+    timeout: 30
+  
+  vector_store_mcp:
+    endpoint: http://localhost:8002
+    timeout: 30
+  
+  memory_bank_sync:
+    enabled: true
+    sync_interval: 300  # 5 minutes
+
+# Security Settings
+security:
+  enabled: true
+  authentication:
+    enabled: false  # Set to true to enable authentication
+    api_key: ${API_KEY:}
+    jwt_secret: ${JWT_SECRET:}
+    
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst_limit: 20
+    
+  # CORS settings
+  cors:
+    enabled: true
+    allowed_origins: ["*"]
+    allowed_methods: ["GET", "POST", "PUT", "DELETE"]
+    allowed_headers: ["*"]
+
+# Development Settings
+development:
+  debug_mode: false
+  test_mode: false
+  mock_data: false
+  
+  # Development database
+  dev_database_url: ${DEV_DATABASE_URL:sqlite:///./cache_dev.db}
+  
+  # Mock data settings
+  mock_data_settings:
+    num_mock_entries: 100
+    mock_data_path: "./data/mock_data.json"
+    
+  # Testing
+  testing:
+    test_timeout: 30
+    test_parallelism: 4
+    coverage_threshold: 0.8

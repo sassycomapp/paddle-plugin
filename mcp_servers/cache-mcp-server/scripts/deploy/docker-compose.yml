@@ -1,0 +1,172 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database with pgvector
+  postgres:
+    image: pgvector/pgvector:latest
+    container_name: cache-postgres
+    environment:
+      POSTGRES_DB: paddle_plugin_cache
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2001
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/database/init_cache_database.sql:/docker-entrypoint-initdb.d/init_cache_database.sql
+    networks:
+      - cache-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # Cache MCP Server
+  cache-mcp-server:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    container_name: cache-mcp-server
+    environment:
+      # Database Configuration
+      DATABASE_URL: "postgresql://postgres:2001@postgres:5432/paddle_plugin_cache"
+      CACHE_DB_HOST: postgres
+      CACHE_DB_PORT: 5432
+      CACHE_DB_NAME: paddle_plugin_cache
+      CACHE_DB_USER: postgres
+      CACHE_DB_PASSWORD: 2001
+      
+      # MCP Server Configuration
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: 8080
+      MCP_API_KEY: ${MCP_API_KEY:-}
+      
+      # Cache Configuration
+      CACHE_BACKEND: pgvector
+      EMBEDDING_MODEL: all-MiniLM-L6-v2
+      EMBEDDING_DIMENSION: 384
+      
+      # Logging Configuration
+      LOG_LEVEL: INFO
+      LOG_FILE: /app/logs/cache_mcp_server.log
+      
+      # Performance Configuration
+      MAX_CONCURRENT_REQUESTS: 100
+      REQUEST_TIMEOUT: 30
+      ENABLE_METRICS: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../logs:/app/logs
+      - ../../data:/app/data
+      - ../../cache_storage:/app/cache_storage
+      - ../../config:/app/config
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - cache-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '0.5'
+        reservations:
+          memory: 512M
+          cpus: '0.25'
+
+  # Redis for caching (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: cache-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - cache-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    restart: unless-stopped
+
+  # Prometheus for monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cache-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - cache-network
+    restart: unless-stopped
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cache-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_USERS_ALLOW_SIGN_UP: false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    networks:
+      - cache-network
+    restart: unless-stopped
+
+  # Nginx reverse proxy (optional)
+  nginx:
+    image: nginx:alpine
+    container_name: cache-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+    depends_on:
+      - cache-mcp-server
+    networks:
+      - cache-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+
+networks:
+  cache-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

@@ -1,0 +1,136 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "c:\\_1mybizz\\paddle-plugin",
+        "c:\\_1mybizz\\paddle-plugin\\_tmp"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${env:GITHUB_TOKEN}",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "postgres": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "${env:POSTGRES_URL}"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "rag-mcp-server": {
+      "command": "node",
+      "args": [
+        "mcp_servers/rag-mcp-server.js"
+      ],
+      "env": {
+        "CHROMA_URL": "${env:CHROMA_URL}",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "agent-memory": {
+      "command": "node",
+      "args": [
+        "mcp_servers/agent-memory/index.js"
+      ],
+      "env": {
+        "DATABASE_URL": "${env:POSTGRES_URL}",
+        "MEMORY_BANK_PATH": "c:\\_1mybizz\\paddle-plugin\\memorybank",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "mcp-memory-service": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "mcp_servers/mcp-memory-service",
+        "run",
+        "mcp-memory-server"
+      ],
+      "env": {
+        "MCP_MEMORY_CHROMA_PATH": "mcp_servers/mcp-memory-service/data/chroma_db",
+        "MCP_MEMORY_BACKUPS_PATH": "mcp_servers/mcp-memory-service/data/backups",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "fetch": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_server_fetch"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "EverythingSearchMCPServer": {
+      "command": "node",
+      "args": [
+        "mcp_servers/everything-search/server.js"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "logging-telemetry-mcp": {
+      "command": "node",
+      "args": [
+        "mcp_servers/logging-telemetry-mcp-server.js"
+      ],
+      "env": {
+        "PORT": "3001",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "mcp-scheduler": {
+      "command": "node",
+      "args": [
+        "mcp_servers/mcp-scheduler-server.js"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PR_
