@@ -2,14 +2,15 @@
 # Paddle-plugin Systems Overview
 
 ## Introduction:
-    The systems and MCPs have for the most part (99%) been installed, Configure, integrated and documented.
-A problem is that many things have been over designed and over implemented. 
-    The CREDO is: Simple, Robust, Secure, Fit for purpose
+    The systems and MCPs have for the most part (99%) been installed, Configured, integrated and documented.
+				A problem is that many things have been over designed and over implemented. 
+    
+				The CREDO is: Simple, Robust, Secure, Fit for purpose
 
 ## Basic architecture:
     The system is intended to be a semi-autonomous Agentic IDE
         - OS: Win 11; WSL2; Ubuntu 22.04; Nodejs
-        -  Principle UI: Kilo Code
+        - Principle UI: Kilo Code
         - Orchestrators: Kilo Code; AG2
         - Collection of Agentic systems
         - Collection of MCPs
@@ -20,7 +21,7 @@ A problem is that many things have been over designed and over implemented.
     - There are various python versions implemented in vscode
     - The mybizz app which we are not working on as yet, requires 3.7x. I was not able to find the 3.7x version and installed 3.8 for the sake of supporting the mybizz application. 
     - Version 3.13 was installed as the default system python interpreter
-    - During the setup of this agentic IDE in vscode, kilo code may have installed other versions for supporting various dependencies
+    - During the setup of this agentic IDE in vscode, kilo code may have installed other versions for supporting various dependencies. Likely these will be found in venv's
 
 ## Virtual Environments
     During the setup of the agentic IDE in vscode, the AI assistants have created several venv's to overcome compatibility/ integration conflicts. The creation of the venv's was never considered as a whole which led to other complications such as;
@@ -33,12 +34,14 @@ A problem is that many things have been over designed and over implemented.
     b. We DO use PostgreSQLDB and Pgvector,
     We do NOT use ChromaDB
     c. We DO use KiloCode and AG2,
-We do NOT use PM2
+				We do NOT use PM2
+				d. We do use MCP EasyOCRmcp
+				We do not use SimpleOCR mcp, PaddleOCR mcp
 
 ## Workspaces, Nodes and Libraries
     Not enough thought has been given to workspaces. These must be properly defined and consideration must be given to what is actually required and how to maintain efficiency and the resource overhead budget
 
-    The nodes and libraries which are currently implemented were selected to support the Agentic IDE but thought needs to be given to typical requirements of the apps which are to be developed in the Agentic IDE
+    The nodes and libraries which are currently implemented were selected to support the Agentic IDE but some thought needs to be given to typical requirements of the apps which are to be developed in the Agentic IDE
     
     By contrast, constant vigilance needs to be applied in order to not over -strain the current hardware resources. The system is running on  an Asus x515EA laptop with 8Gb Ram and no GPU
 
@@ -77,9 +80,11 @@ We do NOT use PM2
 ## Agentic IDE Architectural overview
 
     The user operates the agentic IDE through the Kilo Code UI, chat interface.
-The kilo code system has 5 principle modes: Ask, Code, Orchestrator, Architect, Debug. 
+				The kilo code system has 5 principle modes: Ask, Code, Orchestrator, Architect, Debug. 
     The orchestrator mode manages all the modes unless one of the other 4 are specifically , manually selected.
     
+				The user selects the model. Kilocode or AG2 do not select models
+
     The user submits a task to the kilo code/ orchestrator mode. 
     Orchestrator mode will enlist the services of the Architect mode. Once kilo code has completed the plan  and the plan has been approved by the user, the orchestrator mode will appoint the Code mode to produce the code
     
@@ -161,7 +166,7 @@ C:\_1mybizz\paddle-plugin\Docs\Systems_Descriptions\Complete Unified Setup Achie
     Memory system
         C:\_1mybizz\paddle-plugin\Docs\Systems_Descriptions\Memory
         Episodic memory
-Semantic Memory
+								Semantic Memory
         Working Memory
         
         Memory System Components:
@@ -251,38 +256,38 @@ Semantic Memory
         C:\_1mybizz\paddle-plugin\Docs\AssessmentStore_TypeScript_Interfaces.md
         
 ## Current Priorities:
-    1. Orchestrator layer integration (100% the highest priority)
+    1. ### Orchestrator layer integration (100% the highest priority)
         The  .kilocode / Kilocode UI needs to be  correctly setup to allow kilocode and AG2 to find and use the MCP tools as required and to make kilocode environmentally aware of the systems available.
         There have been several big attmpts at gettimng this intgration establish and there are many documents to consider.However, I feel that previous attempt have been too wide, deep and sophisticated where as a simple robust approach is preferrred
         The README may be completely wrong and must be re-evaluated
-The role of AG2 needs to be determined definitively and applied as AG2 can add immense value to the agentic IDE
-    2. ## Virtual Environments
+								The role of AG2 needs to be determined definitively and applied as AG2 can add immense value to the agentic IDE
+    2. ### Virtual Environments
         Venv's need to be examined. 
         There may be a very bad situation where totally inappropriate duplicate installations have been implemented
         It may be that essential elements are too deeply nested and cannot be found by the orchestration system.
         The integration points contained in the venv's may need to be correctly identified and mapped
-    3. Partial CI/CD setup
+    3. ### Partial CI/CD setup
         This system has only partially been designed and also partially implemented and partially documented. The CI/CD system needs to be properly scoped, architected, validated and implemented.
-    4. TestBank
+    4. ### TestBank
         the Test Bank is a repository of tests meant to serve application development projects rather than the VS Code setup. However, Kilo Code has interpreted the testing system as part of the IDE configuration. The pyproject.toml defines pytest.ini_options for testsGitHub and the restore guide suggests running environment testsGitHub, but a dedicated repository for application‑level tests would keep the IDE lean.
         Ideally, the testbank is part of the overall Testing, validation system and must be setup to support the testing, validation system with logical catagorization and further segmentaion as required
         The Test bank is the central repo for all tests in order to keep the IDE system clean, lean and well managed
-    5. Secrets
+    5. ### Secrets
         The vscode Agentic IDE requires to have all credentials managed by the 'Secrets Management' system which is Hashicorp based. Currently there may be API Keys and passwords stored in hardcoding in the files and in environment variables.
         Secrets must not be passed to github, they must remain well protrected within the hashicorp secrets system
-    6. Podman
+    6. ### Podman
         It may be that Podman is not being used as effectively as possible. We want to ensure that optimum use is made of podman. Perhaps the use of podman can obviate having an excessive situation with the venv's
-    7. Kilo Code file generation
+    7. ### Kilo Code file generation
         Review the output of Kilo Code and remove unnecessary or misinterpreted files. Establish stricter prompts or parameters to prevent it from generating large numbers of irrelevant documents.
         Kilo code often runs ahead of the architect and produces an implementation which no longer aligns with the architecture. It is essential that the architect is responsible for the design which is implemented. Kilo Code, 'Code Mode',  must not be permitted to implement systems and subsystems on the fly without testing against the Architects plan. When the implementation is required to differ from the architects plan, the Architect must review the proposed alteration and iterate the plan. This will help to produce a well integrated and contiguous implementation
-    8. Workspace, Nodes and Heavy Libraries
+    8. ### Workspace, Nodes and Heavy Libraries
         Review and set up appropriate workspaces
         We need to take stock of the libraries and node modules in use and determine a set which supports the Agentic IDE and the potential project applications which we intend to build here.
-    9. Orphans
+    9. ### Orphans
         There have been many installations that have been implemented and removed, Others have gone through phases of iteration, the result is that there are many orphaned Docs, folders, files and configurations which need to be identified and removed
         There is a serious risk of potentially removing an element which appears to be redundant yet actually is required somewhere and then accidentally breaking the code.
         The source of truth must be the overall Architectural plan
-    10. The architectural plan
+    10. ### The architectural plan
         The vscode agentic IDE started when I had an Anvil application and repo called paddle-plugin vscode. I needed to add tools to assist me and in this way, the system was built. Now the system is fairly well designed and almost 100% completely built but proper thought still needs to be given to objective based system scoping and subsequent overall architecture. Strictly speaking there is currently no comprehensive architectural plan. An architectural plan will address many of the issues which we are currently facing in the system
         
         

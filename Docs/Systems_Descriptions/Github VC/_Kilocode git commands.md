@@ -1,3 +1,4 @@
+
 # Git Simple Commands (PowerShell)
 
 > Assumes you’re already in the repo folder and `origin` is set.
@@ -28,42 +29,23 @@ git fetch origin
 git merge --ff-only origin/main
 git switch -c work_in_progress
 ```
-
 ---
 
-## Push to `origin/main` (add → commit → push)
-
-```powershell
-git switch main
-
-# Optional: list files > 90MB
-Get-ChildItem -Recurse -File | Where-Object { $_.Length -gt 90MB } |
-  Select-Object FullName, @{n="MB";e={[math]::Round($_.Length/1MB,1)}}
-
-git add -A
-git commit -m "your message [skip ci]" --no-verify
-git push
-```
-
+## Push to `origin/main` 
+C:\_1mybizz\paddle-plugin\push_to_main_with_lfs.ps1
+### Usage
+powershell -ExecutionPolicy Bypass -File .\push_to_main_with_lfs.ps1 -Message "Your message"
 ---
 
-## Push to feature branch `work_in_progress` (add → commit → push)
-
-```powershell
-git switch work_in_progress
-
-# Optional: list files > 90MB
-Get-ChildItem -Recurse -File | Where-Object { $_.Length -gt 90MB } |
-  Select-Object FullName, @{n="MB";e={[math]::Round($_.Length/1MB,1)}}
-
-git add -A
-git commit -m "your message [skip ci]" --no-verify
-git push -u origin HEAD
-```
+## Push to feature branch (Active branch)
+C:\_1mybizz\paddle-plugin\push_to_branch_with_lfs.ps1
+### Usage
+powershell -ExecutionPolicy Bypass -File .\push_to_branch_with_lfs.ps1 -Message "Your message"
 
 ---
 
 ## Merge `work_in_progress` into `main`
+without deleting the branch 'work_in_progress'
 
 ```powershell
 git switch main
@@ -71,6 +53,22 @@ git fetch origin
 git merge --ff-only origin/main
 git merge work_in_progress
 git push
+```
+
+---
+
+## Merge `work_in_progress` into `main`
+And deleting the branch 'work_in_progress'
+
+```powershell
+git switch main
+git fetch origin
+git merge --ff-only origin/main
+git merge work_in_progress
+git push
+
+git branch -d work_in_progress              # safe: deletes only if fully merged
+git push origin --delete work_in_progress   # remove from GitHub
 ```
 
 ---
