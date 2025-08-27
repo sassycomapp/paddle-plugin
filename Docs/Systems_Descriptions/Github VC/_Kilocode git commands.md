@@ -175,3 +175,8 @@ git push
 ## Open a Pull Request (simple)
 
 Push your branch, then on GitHub click **“Compare & pull request”** (base: `main`, compare: `work_in_progress`).
+
+
+## Change to Main/ Change to Branch
+git switch main
+git switch work_in_progress

@@ -29,6 +29,16 @@ git switch -c work_in_progress
 # later (just switch)
 git switch work_in_progress
 ```
+## Stage → Commit → Push (to the origin/main)
+
+git switch main
+git fetch origin
+git merge --ff-only origin/main   # keep local main up to date
+
+git add -A
+git commit -m "type: short summary"   # e.g., docs:, feat:, fix:, chore:
+git push origin main
+
 
 ## Stage → Commit → Push (to the remote branch)
 
