@@ -3,11 +3,61 @@
 
 # Service Registry
 services:
+  # AG2 Orchestration System
+  ag2_orchestration:
+    enabled: true
+    auto_start: true
+    mode: "full"  # Options: "pure", "lite", "full"
+    description: "AG2 Agent Generation 2 Orchestration System"
+    dependencies: ["postgres"]
+    
+    # AG2 Configuration
+    config:
+      # Agent Configuration
+      agents:
+        researcher:
+          enabled: true
+          name: "AG2 Researcher Agent"
+          description: "Information gathering and knowledge retrieval"
+          capabilities: ["web_research", "document_analysis", "knowledge_base_query"]
+          
+        coordinator:
+          enabled: true
+          name: "AG2 Coordinator Agent"
+          description: "Task management and workflow optimization"
+          capabilities: ["task_delegation", "workflow_coordination", "resource_allocation"]
+          
+        analyst:
+          enabled: true
+          name: "AG2 Analyst Agent"
+          description: "Data analysis and insight generation"
+          capabilities: ["data_analysis", "pattern_recognition", "statistical_analysis"]
+    
+    # Service settings
+    settings:
+      log_level: "INFO"
+      debug_mode: false
+      memory_path: "./memory"
+      max_concurrent_queries: 10
+      query_timeout: 300
+      
+    # Health monitoring
+    health_check:
+      enabled: true
+      endpoint: "/health"
+      interval: 30
+      timeout: 15
+      
+    # Restart policy
+    restart_policy: "on_failure"
+    max_restarts: 3
+    restart_delay: 5
+
   # Core MCP Services
   core_services:
     enabled: true
     auto_start: true
-    dependencies: []
+    dependencies: ["ag2_orchestration"]
     
     # Service definitions
     services:
@@ -51,17 +101,227 @@ services:
         max_restarts: 3
         restart_delay: 5
         
+      # GitHub Version Control System
+      github_version_control:
+        enabled: true
+        name: "KiloCode GitHub Version Control"
+        description: "Comprehensive GitHub version control system for multiple projects"
+        command: "node"
+        args: ["mcp_servers/github-version-control-server.js"]
+        environment:
+          # GitHub authentication
+          GITHUB_PERSONAL_ACCESS_TOKEN: ""
+          GITHUB_BASE_URL: "https://api.github.com"
+          
+          # Project configurations
+          PADDLE_PLUGIN_REPO: "sassycomapp/paddle-plugin"
+          PADDLE_PLUGIN_LOCAL_PATH: "c:\\_1mybizz\\paddle-plugin"
+          MYBIZZ_REPO: "sassycomapp/mybizz"
+          MYBIZZ_LOCAL_PATH: "c:\\_1mybizz\\mybizz"
+          VSC_IDE_REPO: "sassycomapp/vsc_ide"
+          VSC_IDE_LOCAL_PATH: "c:\\vsc_ide"
+          
+          # Version control settings
+          BRANCH_PROTECTION_ENABLED: "true"
+          PULL_REQUEST_REQUIRED_REVIEW_COUNT: "1"
+          AUTO_MERGE_ENABLED: "false"
+          
+          # Sync settings
+          SYNC_ENABLED: "true"
+          SYNC_INTERVAL: "300"  # 5 minutes
+          MAX_SYNC_RETRIES: "3"
+          SYNC_TIMEOUT: "60"
+          
+          # Git configuration
+          GIT_USER_NAME: "KiloCode Bot"
+          GIT_USER_EMAIL: "bot@kilocode.com"
+          GIT_DEFAULT_BRANCH: "main"
+          
+          # Environment
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+          KILOCODE_VC_CONFIG: "github"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+        # GitHub Version Control specific configuration
+        config:
+          # Project definitions
+          projects:
+            paddle-plugin:
+              repo: "sassycomapp/paddle-plugin"
+              local_path: "c:\\_1mybizz\\paddle-plugin"
+              description: "Agentic IDE setup in VSCode (main development project)"
+              branch_protection:
+                enabled: true
+                required_review_count: 1
+                required_status_checks: ["ci/build", "ci/test"]
+                enforce_admins: true
+              workflows:
+                - name: "sync"
+                  enabled: true
+                  schedule: "0 */6 * * *"  # Every 6 hours
+                  branches: ["main", "develop"]
+                - name: "ci"
+                  enabled: true
+                  events: ["push", "pull_request"]
+                  branches: ["main", "develop"]
+                - name: "cd"
+                  enabled: true
+                  events: ["push"]
+                  branches: ["main"]
+              gitignore:
+                patterns:
+                  - "**/__pycache__/**"
+                  - "**/*.pyc"
+                  - "**/*.pyo"
+                  - "**/*.pyd"
+                  - "**/.Python"
+                  - "**/env/**"
+                  - "**/.venv/**"
+                  - "**/venv/**"
+                  - "**/env.bak/**"
+                  - "**/venv.bak/**"
+                  - "**/node_modules/**"
+                  - "**/npm-debug.log*"
+                  - "**/yarn-debug.log*"
+                  - "**/yarn-error.log*"
+                  - "**/.DS_Store"
+                  - "**/Thumbs.db"
+                  - "**/*.tmp"
+                  - "**/*.bak"
+                  - "**/*_backup.*"
+                  - "**/*copy*.*"
+                  - "**/*draft*.*"
+                  - "**/dist/**"
+                  - "**/build/**"
+                  - "**/.git/**"
+                  - "**/.vscode/**"
+                  - "**/.idea/**"
+                  - "**/*.log"
+                  - "**/logs/**"
+                  - "**/backups/**"
+                  - "**/data/**"
+                  - "**/memorybank/**"
+                  - "**/easyocr-env/**"
+                  - "**/simba/**"
+                  - "**/brave-search-integration/**"
+                  - "**/testing-validation-system/**"
+                  - "**/mcp_servers/**"
+                  - "**/errors/**"
+                  - "**/ocr_results/**"
+                  - "**/ocr_test_results/**"
+                  - "**/packages/**"
+                  - "**/scripts/**"
+                  - "**/utils/**"
+                  - "**/Test Bank/**"
+                  - "**/tmp/**"
+                  - "**/_tmp/**"
+                  - "**/benchmarks/**"
+            mybizz:
+              repo: "sassycomapp/mybizz"
+              local_path: "c:\\_1mybizz\\mybizz"
+              description: "Anvil.works application (currently empty, planned for VSCode development)"
+              branch_protection:
+                enabled: true
+                required_review_count: 1
+                enforce_admins: true
+              workflows:
+                - name: "sync"
+                  enabled: true
+                  schedule: "0 */6 * * *"
+                  branches: ["main"]
+                - name: "anvil-sync"
+                  enabled: true
+                  events: ["push"]
+                  branches: ["main"]
+              gitignore:
+                patterns:
+                  - "**/env/**"
+                  - "**/.venv/**"
+                  - "**/venv/**"
+                  - "**/node_modules/**"
+                  - "**/dist/**"
+                  - "**/build/**"
+                  - "**/.git/**"
+                  - "**/*.log"
+                  - "**/logs/**"
+            vsc_ide:
+              repo: "sassycomapp/vsc_ide"
+              local_path: "c:\\vsc_ide"
+              description: "Audit repository for paddle-plugin agentic IDE setup"
+              branch_protection:
+                enabled: true
+                required_review_count: 1
+                enforce_admins: true
+              workflows:
+                - name: "sync"
+                  enabled: true
+                  schedule: "0 */6 * * *"
+                  branches: ["main"]
+                - name: "audit"
+                  enabled: true
+                  events: ["push", "pull_request"]
+                  branches: ["main"]
+              gitignore:
+                patterns:
+                  - "**/node_modules/**"
+                  - "**/dist/**"
+                  - "**/build/**"
+                  - "**/.git/**"
+                  - "**/*.log"
+                  - "**/logs/**"
+                  - "**/tmp/**"
+                  
+          # Global version control settings
+          global_settings:
+            auto_sync: true
+            sync_interval: 300
+            backup_enabled: true
+            backup_interval: 86400  # 24 hours
+            retention_days: 30
+            log_level: "INFO"
+            conflict_resolution: "manual"
+            
+          # Security settings
+          security:
+            token_rotation_enabled: false
+            token_rotation_interval: 2592000  # 30 days
+            two_factor_required: false
+            ip_whitelist: []
+            allowed_actions: ["read", "write", "delete"]
+            restricted_branches: ["main", "develop"]
+            
+          # Monitoring and alerting
+          monitoring:
+            enabled: true
+            metrics_collection: true
+            log_events: true
+            alert_thresholds:
+              sync_failures: 5
+              response_time: 30000  # 30 seconds
+              error_rate: 0.05  # 5%
+            notification_channels: []
+        
       # PostgreSQL MCP Server
       postgres:
         enabled: true
         name: "KiloCode PostgreSQL Server"
-        description: "PostgreSQL database operations"
+        description: "PostgreSQL database operations with pgvector extension"
         command: "npx"
-        args: ["-y", "@modelcontextprotocol/server-postgres", "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"]
+        args: ["-y", "@modelcontextprotocol/server-postgres", "postgresql://postgres:2001@localhost:5432/postgres"]
         environment:
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
           KILOCODE_DB_CONFIG: "postgresql://localhost:5432/postgres"
+          POSTGRES_VERSION: "17.5"
+          PGVECTOR_VERSION: "0.8.0"
         health_check:
           enabled: true
           endpoint: "/health"
@@ -106,8 +366,16 @@ services:
         command: "node"
         args: ["mcp_servers/agent-memory/index.js"]
         environment:
-          DATABASE_URL: "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"
+          DATABASE_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          PGHOST: "localhost"
+          PGPORT: "5432"
+          PGDATABASE: "postgres"
+          PGUSER: "postgres"
+          PGPASSWORD: "2001"
           MEMORY_BANK_PATH: "../../memorybank"
+          MEMORY_BANK_CACHE_SIZE: "1000"
+          MEMORY_BANK_TTL: "3600"
+          MEMORY_BANK_MAX_MEMORY: "512MB"
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
         health_check:
@@ -123,14 +391,35 @@ services:
       rag-mcp-server:
         enabled: true
         name: "KiloCode RAG Server"
-        description: "Retrieval-Augmented Generation server"
+        description: "Retrieval-Augmented Generation server with PostgreSQL pgvector"
         command: "node"
         args: ["mcp_servers/rag-mcp-server.js"]
         environment:
-          CHROMA_URL: "http://localhost:8000"
+          # PostgreSQL configuration for vector storage
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          PGHOST: "localhost"
+          PGPORT: "5432"
+          PGDATABASE: "postgres"
+          PGUSER: "postgres"
+          PGPASSWORD: "2001"
+          PGVECTOR_VERSION: "0.8.0"
+          
+          # Simba KMS integration
+          SIMBA_ENABLED: "true"
+          SIMBA_KB_PATH: "../../knowledge_base"
+          SIMBA_EMBEDDING_MODEL: "Xenova/all-MiniLM-L6-v2"
+          SIMBA_CHUNK_SIZE: "1000"
+          SIMBA_CHUNK_OVERLAP: "200"
+          
+          # RAG configuration
+          RAG_TOP_K: "5"
+          RAG_SIMILARITY_THRESHOLD: "0.8"
+          RAG_MAX_CONTEXT: "4000"
+          
+          # Environment
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
-          KILOCODE_RAG_CONFIG: "http://localhost:8000"
+          KILOCODE_RAG_CONFIG: "postgresql://localhost:5432/postgres"
         health_check:
           enabled: true
           endpoint: "/health"
@@ -169,6 +458,12 @@ services:
         environment:
           MCP_MEMORY_CHROMA_PATH: "mcp_servers/mcp-memory-service/data/chroma_db"
           MCP_MEMORY_BACKUPS_PATH: "mcp_servers/mcp-memory-service/data/backups"
+          MCP_MEMORY_RETENTION_DAYS: "30"
+          MCP_MEMORY_CONSOLIDATION_INTERVAL: "3600"
+          MCP_MEMORY_MAX_MEMORY: "1GB"
+          MCP_MEMORY_CACHE_SIZE: "5000"
+          MCP_MEMORY_EMBEDDING_MODEL: "text-embedding-ada-002"
+          MCP_MEMORY_SIMILARITY_THRESHOLD: "0.8"
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
         health_check:
@@ -184,13 +479,22 @@ services:
       testing-validation:
         enabled: true
         name: "KiloCode Testing Validation"
-        description: "Testing and validation service"
+        description: "Comprehensive testing and validation system with AI-powered test orchestration"
         command: "node"
         args: ["testing-validation-system/src/mcp/test-mcp-server.js"]
         environment:
-          DATABASE_URL: "postgresql://postgres:DeeCee@2001@localhost:5432/postgres"
+          DATABASE_URL: "postgresql://postgres:2001@localhost:5432/postgres"
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
+          # Testing configuration
+          TEST_TIMEOUT: "30000"
+          MAX_CONCURRENT_TESTS: "5"
+          SEMGREP_RULES: "auto"
+          # Report configuration
+          REPORT_FORMAT: "json"
+          REPORT_PATH: "../../reports"
+          # Container configuration
+          PODMAN_COMPOSE_FILE: "testing-validation-system/podman-compose.yml"
         health_check:
           enabled: true
           endpoint: "/health"
@@ -199,6 +503,76 @@ services:
         restart_policy: "on_failure"
         max_restarts: 3
         restart_delay: 5
+        
+        # Testing Validation specific configuration
+        config:
+          # Test types supported
+          test_types:
+            - "unit"
+            - "integration"
+            - "e2e"
+            - "security"
+            - "performance"
+          
+          # Framework configuration
+          frameworks:
+            jest:
+              enabled: true
+              config_path: "testing-validation-system/jest.config.js"
+            pytest:
+              enabled: true
+              config_path: "testing-validation-system/pytest.ini"
+            playwright:
+              enabled: true
+              browsers: ["chromium", "firefox", "webkit"]
+          
+          # Security scanning
+          security:
+            semgrep:
+              enabled: true
+              rules: "auto"
+              exclude_patterns:
+                - "node_modules/**"
+                - "**/*.test.js"
+                - "**/*.spec.js"
+          
+          # Database configuration
+          database:
+            test_database: "test_db"
+            migrations_path: "testing-validation-system/sql/migrations"
+            fixtures_path: "testing-validation-system/sql/fixtures"
+          
+          # Container configuration
+          containers:
+            test_runner:
+              image: "node:18"
+              volumes:
+                - "../../testing-validation-system:/app"
+              environment:
+                NODE_ENV: "test"
+            postgres:
+              image: "postgres:15"
+              environment:
+                POSTGRES_DB: "test_db"
+                POSTGRES_USER: "test_user"
+                POSTGRES_PASSWORD: "test_pass"
+              volumes:
+                - "postgres_data:/var/lib/postgresql/data"
+          
+          # Reporting configuration
+          reporting:
+            formats: ["json", "html", "markdown"]
+            path: "../../reports"
+            retention_days: 30
+            include_screenshots: true
+            include_videos: true
+          
+          # Performance configuration
+          performance:
+            max_test_duration: "300000"
+            memory_limit: "512MB"
+            cpu_limit: "1.0"
+            concurrency_limit: 5
         
       # Logging Telemetry Service
       logging-telemetry-mcp:
@@ -239,6 +613,67 @@ services:
         max_restarts: 3
         restart_delay: 5
         
+      # Simba Knowledge Management System
+      simba-kms:
+        enabled: true
+        name: "KiloCode Simba KMS"
+        description: "Knowledge Management System for document ingestion and retrieval"
+        command: "node"
+        args: ["mcp_servers/simba-kms-server.js"]
+        environment:
+          # PostgreSQL connection
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          PGHOST: "localhost"
+          PGPORT: "5432"
+          PGDATABASE: "postgres"
+          PGUSER: "postgres"
+          PGPASSWORD: "2001"
+          
+          # Simba configuration
+          SIMBA_KB_PATH: "../../knowledge_base"
+          SIMBA_EMBEDDING_MODEL: "Xenova/all-MiniLM-L6-v2"
+          SIMBA_CHUNK_SIZE: "1000"
+          SIMBA_CHUNK_OVERLAP: "200"
+          SIMBA_MAX_DOCUMENT_SIZE: "10MB"
+          SIMBA_BATCH_SIZE: "100"
+          
+          # Vector database settings
+          PGVECTOR_INDEX_TYPE: "ivfflat"
+          PGVECTOR_INDEX_LISTS: "100"
+          PGVECTOR_SIMILARITY_THRESHOLD: "0.8"
+          
+          # Environment
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Brave Search Service
+      brave-search:
+        enabled: true
+        name: "KiloCode Brave Search"
+        description: "Web search integration for AG2 orchestration"
+        command: "npx"
+        args: ["-y", "@modelcontextprotocol/server-brave-search"]
+        environment:
+          BRAVE_API_KEY: ""
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
       # Playwright Service
       playwright:
         enabled: true
@@ -257,25 +692,595 @@ services:
         restart_policy: "on_failure"
         max_restarts: 3
         restart_delay: 5
+        
+      # Predictive Cache Service
+      predictive-cache:
+        enabled: true
+        name: "KiloCode Predictive Cache"
+        description: "Zero-token hinting layer for anticipated context usage"
+        command: "node"
+        args: ["mcp_servers/predictive-cache-mcp-server.js"]
+        environment:
+          REDIS_URL: "redis://localhost:6379"
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Semantic Cache Service
+      semantic-cache:
+        enabled: true
+        name: "KiloCode Semantic Cache"
+        description: "Adaptive prompt reuse layer based on behavioral context"
+        command: "node"
+        args: ["mcp_servers/semantic-cache-mcp-server.js"]
+        environment:
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Vector Cache Service
+      vector-cache:
+        enabled: true
+        name: "KiloCode Vector Cache"
+        description: "Embedding-based context selector and reranker"
+        command: "node"
+        args: ["mcp_servers/vector-cache-mcp-server.js"]
+        environment:
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Global Knowledge Cache Service
+      global-cache:
+        enabled: true
+        name: "KiloCode Global Knowledge Cache"
+        description: "Fallback memory leveraging persistent LLM training data"
+        command: "node"
+        args: ["mcp_servers/global-cache-mcp-server.js"]
+        environment:
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          POSTGRES_HOST: "localhost"
+          POSTGRES_PORT: "5432"
+          POSTGRES_DATABASE: "global_cache"
+          POSTGRES_USER: "postgres"
+          POSTGRES_PASSWORD: "2001"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Vector Diary Service
+      vector-diary:
+        enabled: true
+        name: "KiloCode Vector Diary"
+        description: "Persistent context memory for longitudinal reasoning"
+        command: "node"
+        args: ["mcp_servers/vector-diary-mcp-server.js"]
+        environment:
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          PGHOST: "localhost"
+          PGPORT: "5432"
+          PGDATABASE: "vector_diary"
+          PGUSER: "postgres"
+          PGPASSWORD: "2001"
+          MEMORY_BANK_PATH: "../../memorybank"
+          MEMORY_BANK_CACHE_SIZE: "2000"
+          MEMORY_BANK_EMBEDDING_DIM: "384"
+          MEMORY_BANK_MAX_CONTEXT: "10000"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 10
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Memory Bank Service
+      memory-bank:
+        enabled: true
+        name: "KiloCode Memory Bank"
+        description: "Centralized memory bank service for persistent storage and retrieval"
+        command: "node"
+        args: ["mcp_servers/memory-bank-server.js"]
+        environment:
+          MEMORY_BANK_PATH: "../../memorybank"
+          MEMORY_BANK_DB_PATH: "../../memorybank/data/memory_bank.db"
+          MEMORY_BANK_INDEX_PATH: "../../memorybank/indexes"
+          MEMORY_BANK_BACKUP_PATH: "../../memorybank/backups"
+          MEMORY_BANK_CACHE_PATH: "../../memorybank/cache"
+          MEMORY_BANK_LOG_LEVEL: "info"
+          MEMORY_BANK_MAX_FILE_SIZE: "100MB"
+          MEMORY_BANK_RETENTION_DAYS: "30"
+          MEMORY_BANK_CONSOLIDATION_INTERVAL: "3600"
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+        
+      # Token Management Service
+      token-management:
+        enabled: true
+        name: "KiloCode Token Management"
+        description: "Token counting, rate limiting, and quota management system"
+        command: "node"
+        args: ["mcp_servers/token-management-server.js"]
+        environment:
+          # PostgreSQL configuration
+          POSTGRES_URL: "postgresql://postgres:2001@localhost:5432/postgres"
+          PGHOST: "localhost"
+          PGPORT: "5432"
+          PGDATABASE: "postgres"
+          PGUSER: "postgres"
+          PGPASSWORD: "2001"
+          
+          # pg_tiktoken configuration
+          PG_TIKTOKEN_ENABLED: "true"
+          PG_TIKTOKEN_MODEL: "cl100k_base"
+          
+          # Token counting configuration
+          TOKEN_CACHE_SIZE: "1000"
+          TOKEN_CACHE_TTL: "3600"
+          TOKEN_COUNTING_MODEL: "cl100k_base"
+          
+          # Rate limiting configuration
+          RATE_LIMITING_ENABLED: "true"
+          DEFAULT_TOKEN_QUOTA: "10000"
+          RATE_LIMIT_WINDOW: "1 hour"
+          BURST_MODE_ENABLED: "true"
+          BURST_MULTIPLIER: "2.0"
+          
+          # Quota reset configuration
+          QUOTA_RESET_ENABLED: "true"
+          QUOTA_RESET_DAILY_TIME: "00:00:00"
+          QUOTA_RESET_WEEKLY_DAY: "1"
+          QUOTA_RESET_MONTHLY_DAY: "1"
+          QUOTA_RESET_MONITOR_INTERVAL: "60"
+          QUOTA_RESET_MAX_RETRIES: "3"
+          QUOTA_RESET_RETRY_DELAY: "60"
+          
+          # Priority allocation configuration
+          HIGH_PRIORITY_PERCENTAGE: "50"
+          MEDIUM_PRIORITY_PERCENTAGE: "30"
+          LOW_PRIORITY_PERCENTAGE: "20"
+          EMERGENCY_OVERRIDE_ENABLED: "true"
+          EMERGENCY_THRESHOLD: "0.95"
+          
+          # Security configuration
+          TOKEN_ENCRYPTION_ENABLED: "true"
+          TOKEN_LOGGING_ENABLED: "true"
+          TOKEN_AUDIT_LOGGING: "true"
+          
+          # Performance configuration
+          TOKEN_BATCH_SIZE: "100"
+          TOKEN_MAX_CONCURRENT_REQUESTS: "50"
+          TOKEN_TIMEOUT_SECONDS: "30"
+          
+          # Environment
+          NODE_ENV: "production"
+          KILOCODE_ENV: "development"
+        health_check:
+          enabled: true
+          endpoint: "/health"
+          interval: 30
+          timeout: 15
+        restart_policy: "on_failure"
+        max_restarts: 3
+        restart_delay: 5
+
+  # Secrets Management System
+  secrets_management:
+    enabled: true
+    auto_start: true
+    dependencies: ["postgres"]
+    description: "HashiCorp Vault-based secrets management with fallback mechanisms"
+    
+    # Vault Configuration
+    vault:
+      enabled: true
+      name: "KiloCode Vault Server"
+      description: "HashiCorp Vault for secure secrets management"
+      command: "vault"
+      args: ["server", "-config=vault-config.hcl"]
+      environment:
+        VAULT_ADDR: "http://localhost:8200"
+        VAULT_API_ADDR: "http://localhost:8200"
+        VAULT_CLUSTER_ADDR: "http://localhost:8201"
+        VAULT_UI: "true"
+        VAULT_LOG_LEVEL: "info"
+        # Storage configuration
+        VAULT_STORAGE_FILE_PATH: "./vault/data"
+        # Development mode (disable in production)
+        VAULT_DEV_ROOT_TOKEN_ID: "root"
+        VAULT_DEV_LISTEN_ADDRESS: "127.0.0.1:8200"
+        # TLS configuration (production)
+        # VAULT_TLS_CERT_FILE: "/etc/vault/tls.crt"
+        # VAULT_TLS_KEY_FILE: "/etc/vault/tls.key"
+        # VAULT_TLS_SERVER_NAME: "vault.example.com"
+      health_check:
+        enabled: true
+        endpoint: "/v1/sys/health"
+        interval: 30
+        timeout: 15
+      restart_policy: "on_failure"
+      max_restarts: 3
+      restart_delay: 5
+      
+      # Vault-specific configuration
+      config:
+        # Storage backend
+        storage:
+          type: "file"  # file, raft, consul
+          path: "./vault/data"
+          
+        # Listener configuration
+        listener:
+          tcp:
+            address: "127.0.0.1:8200"
+            tls_disable: 1  # Set to 0 and configure certs for production
+            
+        # API and cluster addresses
+        api_addr: "http://localhost:8200"
+        cluster_addr: "http://localhost:8201"
+        ui: true
+        
+        # Telemetry
+        telemetry:
+          statsd_address: ""
+          disable_hostname: true
+          
+        # Performance
+        max_lease_ttl: "8760h"
+        default_lease_ttl: "24h"
+        
+        # Storage
+        storage:
+          file:
+            path: "./vault/data"
+            
+        # HA settings
+        ha_enabled: false
+        ha_configuration:
+          cluster_name: "kilocode-vault"
+          api_addr: "http://localhost:8200"
+          cluster_addr: "http://localhost:8201"
+          
+        # Audit devices
+        audit:
+          file:
+            type: "file"
+            path: "./vault/audit.log"
+            
+        # Seal configuration
+        seal:
+          type: "shamir"
+          
+        # Recovery keys storage
+        recovery_keys:
+          storage_path: "./vault/recovery-keys"
+          key_count: 5
+          threshold: 3
+
+    # Vault Python SDK Client
+    vault_client:
+      enabled: true
+      name: "KiloCode Vault Client"
+      description: "Python SDK client for Vault integration"
+      command: "python"
+      args: ["-m", "src.vault_client"]
+      environment:
+        # Vault connection
+        VAULT_ADDR: "http://localhost:8200"
+        VAULT_TOKEN: "root"
+        VAULT_AUTH_METHOD: "token"  # token, approle, kubernetes
+        VAULT_NAMESPACE: ""
+        VAULT_TIMEOUT: "30"
+        VAULT_VERIFY_SSL: "false"
+        
+        # Authentication (AppRole for production)
+        VAULT_ROLE_ID: ""
+        VAULT_SECRET_ID: ""
+        
+        # Fallback configuration
+        VAULT_FALLBACK_ENABLED: "true"
+        VAULT_FALLBACK_LOG_LEVEL: "warning"
+        
+        # Environment variables for fallback
+        POSTGRES_HOST: "localhost"
+        POSTGRES_PORT: "5432"
+        POSTGRES_USER: "postgres"
+        POSTGRES_PASSWORD: "2001"
+        POSTGRES_DB: "postgres"
+        
+        OPENROUTER_API_KEY: ""
+        BRAVE_API_KEY: ""
+        OPENAI_API_KEY: ""
+        
+        MINIO_ACCESS_KEY: ""
+        MINIO_SECRET_KEY: ""
+        MINIO_ENDPOINT: "localhost:9000"
+        MINIO_BUCKET: "simba-data"
+        
+        # Logging
+        LOG_LEVEL: "INFO"
+        VAULT_LOG_LEVEL: "DEBUG"
+      health_check:
+        enabled: true
+        endpoint: "/health"
+        interval: 30
+        timeout: 15
+      restart_policy: "on_failure"
+      max_restarts: 3
+      restart_delay: 5
+      
+      # Client-specific configuration
+      config:
+        # Authentication configuration
+        auth:
+          method: "token"  # token, approle, kubernetes
+          token: "root"
+          approle:
+            role_id: ""
+            secret_id: ""
+          kubernetes:
+            role: ""
+            jwt: ""
+            
+        # Secret paths
+        secrets:
+          database: "secret/data/database"
+          api_keys: "secret/data/api-keys"
+          storage: "secret/data/storage"
+          mcp: "secret/data/mcp"
+          frontend: "secret/data/frontend"
+          
+        # Fallback configuration
+        fallback:
+          enabled: true
+          timeout: 5
+          retry_attempts: 3
+          retry_delay: 1
+          
+        # Caching
+        cache:
+          enabled: true
+          ttl: 300
+          max_size: 1000
+          
+        # Security
+        security:
+          encrypt_secrets: true
+          audit_logging: true
+          access_logging: true
+
+    # Environment Validator
+    environment_validator:
+      enabled: true
+      name: "KiloCode Environment Validator"
+      description: "Comprehensive environment validation for secrets management"
+      command: "python"
+      args: ["-m", "src.environment_validator"]
+      environment:
+        VAULT_ADDR: "http://localhost:8200"
+        VAULT_TOKEN: "root"
+        LOG_LEVEL: "INFO"
+        VALIDATION_TIMEOUT: "30"
+        VALIDATION_RETRY_COUNT: "3"
+        VALIDATION_RETRY_DELAY: "5"
+      health_check:
+        enabled: true
+        endpoint: "/health"
+        interval: 300  # Every 5 minutes
+        timeout: 60
+      restart_policy: "on_failure"
+      max_restarts: 3
+      restart_delay: 5
+      
+      # Validator configuration
+      config:
+        # Validation components
+        components:
+          vault:
+            enabled: true
+            check_connection: true
+            check_secrets: true
+            check_policies: true
+          database:
+            enabled: true
+            check_credentials: true
+            check_connection: true
+          api_keys:
+            enabled: true
+            check_openrouter: true
+            check_brave: true
+            check_openai: true
+          storage:
+            enabled: true
+            check_minio: true
+            check_credentials: true
+          mcp:
+            enabled: true
+            check_cache: true
+            check_memory: true
+          frontend:
+            enabled: true
+            check_env_vars: true
+            check_api_keys: true
+            
+        # Validation thresholds
+        thresholds:
+          critical: 0
+          warning: 5
+          info: 10
+          
+        # Output configuration
+        output:
+          format: "text"  # text, json, yaml
+          file_path: "./logs/environment-validation.log"
+          console_output: true
+          file_output: true
+
+    # Credential Rotator
+    credential_rotator:
+      enabled: true
+      name: "KiloCode Credential Rotator"
+      description: "Automated credential rotation service"
+      command: "python"
+      args: ["-m", "src.credential_rotation"]
+      environment:
+        VAULT_ADDR: "http://localhost:8200"
+        VAULT_TOKEN: "root"
+        LOG_LEVEL: "INFO"
+        ROTATION_INTERVAL: "3600"  # 1 hour
+        ROTATION_ENABLED: "true"
+        ROTATION_DRY_RUN: "false"
+      health_check:
+        enabled: true
+        endpoint: "/health"
+        interval: 300  # Every 5 minutes
+        timeout: 60
+      restart_policy: "on_failure"
+      max_restarts: 3
+      restart_delay: 5
+      
+      # Rotator configuration
+      config:
+        # Rotation schedules
+        schedules:
+          database:
+            enabled: true
+            interval: "24h"  # 24 hours
+            method: "vault"  # vault, custom
+            custom_script: ""
+            
+          api_keys:
+            enabled: true
+            interval: "168h"  # 7 days
+            method: "vault"
+            custom_script: ""
+            
+          storage:
+            enabled: true
+            interval: "168h"  # 7 days
+            method: "vault"
+            custom_script: ""
+            
+          custom:
+            enabled: false
+            interval: "24h"
+            method: "custom"
+            custom_script: ""
+            
+        # Rotation configuration
+        rotation:
+          max_retries: 3
+          retry_delay: 60
+          timeout: 300
+          dry_run: false
+          
+        # Notification configuration
+        notifications:
+          enabled: false
+          email:
+            smtp_server: ""
+            smtp_port: 587
+            username: ""
+            password: ""
+            recipients: []
+          webhook:
+            url: ""
+            headers: {}
+            
+        # Logging configuration
+        logging:
+          level: "INFO"
+          file_path: "./logs/credential-rotation.log"
+          max_size: "10MB"
+          backup_count: 5
 
   # External Services
   external_services:
     enabled: true
     auto_start: false
-    dependencies: []
+    dependencies: ["ag2_orchestration"]
     
     # Service definitions
     services:
       # Podman Service
       podman:
-        enabled: false
+        enabled: true
         name: "KiloCode Podman"
-        description: "Container management service"
+        description: "Container management service with Podman 5.5.2"
         command: "npx"
         args: ["-y", "podman-mcp-server@latest"]
         environment:
           NODE_ENV: "production"
           KILOCODE_ENV: "development"
+          # Podman system configuration
+          PODMAN_VERSION: "5.5.2"
+          PODMAN_RUNTIME: "crun"
+          PODMAN_STORAGE_DRIVER: "vfs"
+          PODMAN_NETWORK_BACKEND: "netavark"
+          PODMAN_CNI_PLUGIN: "aardvark-dns"
+          # Storage paths for Windows/WSL2
+          PODMAN_GRAPHROOT: "C:\\Users\\salib\\.local\\share\\containers\\storage"
+          PODMAN_RUNROOT: "C:\\Users\\salib\\.local\\share\\containers\\run"
+          # Network configuration
+          PODMAN_DNS_ENABLED: "true"
+          PODMAN_CIDR: "10.88.0.0/16"
+          PODMAN_MTU: "1500"
+          # Engine configuration
+          PODMAN_CGROUP_MANAGER: "cgroupfs"
+          PODMAN_SERVICE_TIMEOUT: "5"
+          PODMAN_ACTIVE_SERVICE_TIMEOUT: "1800"
+          # Registry configuration
+          PODMAN_REGISTRIES: "['docker.io', 'registry.access.redhat.com', 'registry.redhat.io', 'quay.io']"
+          # Logging configuration
+          PODMAN_LOG_LEVEL: "info"
+          PODMAN_LOG_SIZE_MAX: "10000000"
+          PODMAN_EVENTS_LOGGER: "file"
+          # RAG system integration
+          PODMAN_RAG_INTEGRATION: "true"
+          PODMAN_RAG_NETWORK: "rag-network"
+          PODMAN_RAG_VOLUME: "rag-data"
         health_check:
           enabled: true
           endpoint: "/health"
@@ -284,26 +1289,109 @@ services:
         restart_policy: "on_failure"
         max_restarts: 3
         restart_delay: 5
+        
+        # Podman-specific configuration
+        config:
+          # Core service definition
+          version: "5.5.2"
+          runtime: "crun"
+          storage_driver: "vfs"
+          network_backend: "netavark"
+          cni_plugin: "aardvark-dns"
+          
+          # Storage configuration
+          storage:
+            driver: "vfs"
+            graphroot: "C:\\Users\\salib\\.local\\share\\containers\\storage"
+            runroot: "C:\\Users\\salib\\.local\\share\\containers\\run"
+            size: "50G"
+            options:
+              vfs:
+                ignore_chown_errors: false
+                mount_program: ""
+                
+          # Network configuration
+          network:
+            dns_enabled: true
+            default_network: "podman"
+            cni_plugin_dir: "C:\\Program Files\\Podman\\cni-plugins"
+            cni_config_dir: "C:\\Program Files\\Podman\\cni-conf.d"
+            network_backend: "cni"
+            slirp4netns:
+              enable_ipv6: true
+              mtu: 1500
+              cidr: "10.88.0.0/16"
+              enable_host_loopback: false
+              
+          # Engine configuration
+          engine:
+            cgroup_manager: "cgroupfs"
+            service_timeout: 5
+            active_service_timeout: 1800
+            events_logger: "file"
+            runtime: "crun"
+            registries:
+              - "docker.io"
+              - "registry.access.redhat.com"
+              - "registry.redhat.io"
+              - "quay.io"
+              
+          # Logging configuration
+          logging:
+            level: "info"
+            size_max: 10000000
+            events_enabled: true
+            
+          # RAG system integration
+          rag_integration:
+            enabled: true
+            network_name: "rag-network"
+            volume_name: "rag-data"
+            port_mappings:
+              - "container:8000:host:8000"
+              - "container:5432:host:5432"
+            resource_limits:
+              memory: "2GB"
+              cpu: "1.0"
 
 # Service Dependencies
 dependencies:
   # Dependency chains
   chains:
+    # Secrets Management Chain
+    secrets_chain:
+      services: ["secrets_management", "postgres", "vault_client", "environment_validator", "credential_rotator"]
+      order: ["postgres", "secrets_management", "vault_client", "environment_validator", "credential_rotator"]
+      
+    # AG2 Orchestration Chain (updated to include secrets)
+    ag2_chain:
+      services: ["ag2_orchestration", "postgres", "agent-memory", "simba-kms", "rag-mcp-server", "brave-search", "token-management", "secrets_management"]
+      order: ["postgres", "secrets_management", "ag2_orchestration", "agent-memory", "simba-kms", "rag-mcp-server", "brave-search", "token-management"]
+      
+    # Memory Chain (updated to include secrets)
     memory_chain:
-      services: ["postgres", "agent-memory", "mcp-memory-service"]
-      order: ["postgres", "agent-memory", "mcp-memory-service"]
+      services: ["postgres", "agent-memory", "mcp-memory-service", "memory-bank", "predictive-cache", "semantic-cache", "token-management", "secrets_management"]
+      order: ["postgres", "secrets_management", "agent-memory", "mcp-memory-service", "memory-bank", "predictive-cache", "semantic-cache", "token-management"]
       
+    # RAG Chain (updated to include secrets)
     rag_chain:
-      services: ["postgres", "chroma", "rag-mcp-server"]
-      order: ["postgres", "chroma", "rag-mcp-server"]
+      services: ["postgres", "simba-kms", "rag-mcp-server", "vector-cache", "global-cache", "brave-search", "token-management", "secrets_management"]
+      order: ["postgres", "secrets_management", "simba-kms", "rag-mcp-server", "vector-cache", "global-cache", "brave-search", "token-management"]
       
+    # Testing Chain (updated to include secrets)
     testing_chain:
-      services: ["postgres", "testing-validation", "playwright"]
-      order: ["postgres", "testing-validation", "playwright"]
+      services: ["postgres", "testing-validation", "playwright", "vector-diary", "secrets_management"]
+      order: ["postgres", "secrets_management", "testing-validation", "playwright", "vector-diary"]
       
+    # Logging Chain (updated to include secrets)
     logging_chain:
-      services: ["logging-telemetry-mcp", "mcp-scheduler"]
-      order: ["logging-telemetry-mcp", "mcp-scheduler"]
+      services: ["logging-telemetry-mcp", "mcp-scheduler", "secrets_management"]
+      order: ["secrets_management", "logging-telemetry-mcp", "mcp-scheduler"]
+      
+    # Cache Chain (updated to include secrets)
+    cache_chain:
+      services: ["postgres", "predictive-cache", "semantic-cache", "vector-cache", "global-cache", "vector-diary", "memory-bank", "token-management", "secrets_management"]
+      order: ["postgres", "secrets_management", "predictive-cache", "semantic-cache", "vector-cache", "global-cache", "vector-diary", "memory-bank", "token-management"]
 
 # Service Health Monitoring
 health_monitoring:
@@ -371,6 +1459,10 @@ load_balancing:
   
   # Balancing rules
   rules:
+    - service: "ag2_orchestration"
+      strategy: "round_robin"
+      max_connections: 10
+      
     - service: "agent-memory"
       strategy: "least_connections"
       max_connections: 100
@@ -379,9 +1471,41 @@ load_balancing:
       strategy: "round_robin"
       max_connections: 50
       
+    - service: "brave-search"
+      strategy: "round_robin"
+      max_connections: 25
+      
     - service: "testing-validation"
       strategy: "least_connections"
       max_connections: 25
+      
+    - service: "predictive-cache"
+      strategy: "round_robin"
+      max_connections: 75
+      
+    - service: "semantic-cache"
+      strategy: "least_connections"
+      max_connections: 50
+      
+    - service: "vector-cache"
+      strategy: "least_connections"
+      max_connections: 100
+      
+    - service: "global-cache"
+      strategy: "round_robin"
+      max_connections: 50
+      
+    - service: "vector-diary"
+      strategy: "least_connections"
+      max_connections: 25
+      
+    - service: "memory-bank"
+      strategy: "least_connections"
+      max_connections: 50
+      
+    - service: "token-management"
+      strategy: "round_robin"
+      max_connections: 100
 
 # Circuit Breaker
 circuit_breaker:
@@ -392,6 +1516,11 @@ circuit_breaker:
   
   # Circuit breaker rules
   rules:
+    - service: "ag2_orchestration"
+      failure_threshold: 3
+      recovery_timeout: 60
+      half_open_max_requests: 2
+      
     - service: "github"
       failure_threshold: 3
       recovery_timeout: 60
@@ -405,6 +1534,41 @@ circuit_breaker:
     - service: "rag-mcp-server"
       failure_threshold: 3
       recovery_timeout: 45
+      half_open_max_requests: 2
+      
+    - service: "predictive-cache"
+      failure_threshold: 3
+      recovery_timeout: 30
+      half_open_max_requests: 2
+      
+    - service: "semantic-cache"
+      failure_threshold: 3
+      recovery_timeout: 30
+      half_open_max_requests: 2
+      
+    - service: "vector-cache"
+      failure_threshold: 3
+      recovery_timeout: 45
+      half_open_max_requests: 2
+      
+    - service: "global-cache"
+      failure_threshold: 3
+      recovery_timeout: 60
+      half_open_max_requests: 2
+      
+    - service: "vector-diary"
+      failure_threshold: 3
+      recovery_timeout: 30
+      half_open_max_requests: 2
+      
+    - service: "memory-bank"
+      failure_threshold: 3
+      recovery_timeout: 45
+      half_open_max_requests: 2
+      
+    - service: "token-management"
+      failure_threshold: 3
+      recovery_timeout: 60
       half_open_max_requests: 2
 
 # Service Metrics

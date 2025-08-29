@@ -1,0 +1,172 @@
+# Anvil Application Configuration
+# This file defines the application structure, database schema, and secrets
+
+app:
+  name: "paddle-plugin"
+  description: "Anvil-based VS Code Agentic Setup"
+  python_version: "3.7"
+  environment: "development"
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "paddle_plugin"
+  user: "postgres"
+  password: "password"
+  
+  schema:
+    tables:
+      users:
+        columns:
+          id:
+            type: "SERIAL"
+            primary_key: true
+            not_null: true
+          username:
+            type: "VARCHAR(50)"
+            not_null: true
+          email:
+            type: "VARCHAR(100)"
+            not_null: true
+          created_at:
+            type: "TIMESTAMP"
+            default: "CURRENT_TIMESTAMP"
+        primary_key: "id"
+        
+      assessments:
+        columns:
+          id:
+            type: "SERIAL"
+            primary_key: true
+            not_null: true
+          user_id:
+            type: "INTEGER"
+            not_null: true
+          title:
+            type: "VARCHAR(200)"
+            not_null: true
+          description:
+            type: "TEXT"
+          status:
+            type: "VARCHAR(20)"
+            default: "draft"
+          created_at:
+            type: "TIMESTAMP"
+            default: "CURRENT_TIMESTAMP"
+          updated_at:
+            type: "TIMESTAMP"
+            default: "CURRENT_TIMESTAMP"
+        primary_key: "id"
+        foreign_keys:
+          - column: "user_id"
+            references: "users"
+            references_column: "id"
+            on_delete: "CASCADE"
+            
+      assessment_results:
+        columns:
+          id:
+            type: "SERIAL"
+            primary_key: true
+            not_null: true
+          assessment_id:
+            type: "INTEGER"
+            not_null: true
+          user_id:
+            type: "INTEGER"
+            not_null: true
+          score:
+            type: "DECIMAL(5,2)"
+          completed_at:
+            type: "TIMESTAMP"
+            default: "CURRENT_TIMESTAMP"
+        primary_key: "id"
+        foreign_keys:
+          - column: "assessment_id"
+            references: "assessments"
+            references_column: "id"
+            on_delete: "CASCADE"
+          - column: "user_id"
+            references: "users"
+            references_column: "id"
+            on_delete: "CASCADE"
+    
+    indexes:
+      idx_users_email:
+        table: "users"
+        columns: ["email"]
+        unique: true
+      idx_assessments_user_id:
+        table: "assessments"
+        columns: ["user_id"]
+      idx_assessment_results_assessment_id:
+        table: "assessment_results"
+        columns: ["assessment_id"]
+      idx_assessment_results_user_id:
+        table: "assessment_results"
+        columns: ["user_id"]
+    
+    functions:
+      calculate_average_score:
+        parameters:
+          - name: "assessment_id"
+            type: "INTEGER"
+        return_type: "DECIMAL(5,2)"
+        body: |
+          DECLARE
+            avg_score DECIMAL(5,2);
+          BEGIN
+            SELECT AVG(score) INTO avg_score
+            FROM assessment_results
+            WHERE assessment_id = calculate_average_score.assessment_id;
+            RETURN COALESCE(avg_score, 0);
+          END;
+
+secrets:
+  # Anvil-specific secrets
+  anvil_app_id: "${ANVIL_APP_ID}"
+  anvil_api_key: "${ANVIL_API_KEY}"
+  
+  # Database secrets
+  database_url: "${DATABASE_URL}"
+  database_password: "${DATABASE_PASSWORD}"
+  
+  # External service secrets
+  external_api_key: "${EXTERNAL_API_KEY}"
+  slack_webhook_url: "${SLACK_WEBHOOK_URL}"
+
+# Environment-specific configurations
+environments:
+  development:
+    debug: true
+    log_level: "DEBUG"
+    database:
+      host: "localhost"
+      name: "paddle_plugin_dev"
+      
+  staging:
+    debug: false
+    log_level: "INFO"
+    database:
+      host: "staging-db.example.com"
+      name: "paddle_plugin_staging"
+      
+  production:
+    debug: false
+    log_level: "WARNING"
+    database:
+      host: "prod-db.example.com"
+      name: "paddle_plugin_prod"
+
+# Deployment configuration
+deployment:
+  strategy: "blue-green"
+  health_check:
+    path: "/health"
+    interval: 30
+    timeout: 10
+    retries: 3
+  rollback:
+    enabled: true
+    auto_rollback: true
+    health_check_threshold: 5

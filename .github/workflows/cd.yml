@@ -1,0 +1,62 @@
+name: Simple CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - '.gitignore'
+
+env:
+  ANVIL_PYTHON_VERSION: '3.7'
+
+jobs:
+  validate-deployment:
+    name: Validate Deployment
+    runs-on: ubuntu-latest
+    environment: 
+      name: ${{ github.ref_name == 'main' && 'production' || 'development' }}
+      
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python 3.8 (Anvil compatibility)
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run Anvil compatibility validation
+      run: |
+        python scripts/validate_anvil_compatibility.py
+        
+    - name: Check secrets configuration
+      run: |
+        python scripts/check_secrets_config.py
+        
+    - name: Validate anvil.yaml
+      run: |
+        python scripts/validate_anvil_yaml.py
+        
+    - name: Notify on validation pass
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        text: 'Deployment validation passed for ${{ github.ref_name }} (Python 3.8)'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        
+    - name: Notify on validation failure
+      if: failure()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: failure
+        text: 'Deployment validation failed for ${{ github.ref_name }} (Python 3.8)'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

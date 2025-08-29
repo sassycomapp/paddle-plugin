@@ -1,0 +1,1291 @@
+﻿
+.env.example
+.gitattributes
+.gitconfig
+.github/workflows/sync.yml
+.github/workflows/test.yml
+.gitignore
+.kilocode/.kilocoderules
+.kilocode/Rules/rules.md
+.kilocode/config/cache_integration.yaml
+.kilocode/config/environment.yaml
+.kilocode/config/services.yaml
+.kilocode/integration/logger.js
+.kilocode/integration/mcp-server-manager.js
+.kilocode/integration/setup.js
+.kilocode/mcp.json
+.ops/run.log
+.opsrun.log
+DEPENDENCY_CONSOLIDATION_PLAN.md
+DEVELOPER_SETUP.md
+Docs/AssessmentStore_API_Methods.md
+Docs/AssessmentStore_Architecture_Design.md
+Docs/AssessmentStore_Implementation_Roadmap.md
+Docs/AssessmentStore_Migration_Strategy.md
+Docs/AssessmentStore_Performance_Scalability.md
+Docs/AssessmentStore_Service_Design.md
+Docs/AssessmentStore_TypeScript_Interfaces.md
+Docs/IDE/Configuration.md
+Docs/IDE/Credentials.md
+Docs/IDE/Environment_Variables.md
+Docs/IDE/IDE Features.md
+Docs/IDE/IDE Overview.md
+Docs/IDE/Kilocode/Custom Rules.md
+Docs/IDE/Kilocode/Docs Sources.md
+Docs/IDE/Kilocode/Kilocode Memory Bank.md
+Docs/IDE/Prerequisites.md
+Docs/IDE/Startup_Instructions.md
+Docs/IDE/System Description.md
+Docs/IDE/Usage_Instructions.md
+Docs/IDE/system caveats.md
+Docs/Kilocode/Integration Architecture Design.md
+Docs/Kilocode/KiloCode MCP Compliance Validation Standards.md
+Docs/Kilocode/KiloCode MCP Documentation Index.md
+Docs/Kilocode/KiloCode MCP Installer Assessment Report.md
+Docs/Kilocode/KiloCode MCP Naming Conventions and Organization Standards.md
+Docs/Kilocode/KiloCode MCP Security and Performance Benchmarks.md
+Docs/Kilocode/KiloCode MCP Server Configuration Requirements.md
+Docs/Kilocode/KiloCode MCP Server Validation Checklists.md
+Docs/MCP_Tools/Installed_Servers.md
+Docs/MCP_Tools/MCP Details/MCP Agent Memory (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Brave Search (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Configuration and Compliance Server Architecture.md
+Docs/MCP_Tools/MCP Details/MCP Container Control (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP EasyOCRmcp (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Everything Search MCP Server (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Fastmcp (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Generic MCP Package Installer (NOT Installed) (Rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Github (Pending).md
+Docs/MCP_Tools/MCP Details/MCP KiloCode MCP Server Installer (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Logging Telemetry (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Memory System (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Playwright (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Postgres (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Pytest (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP RAG-PGvector (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Scheduler (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Server-Fetch (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Snap-Windows (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP Testing Validation.md
+Docs/MCP_Tools/MCP Details/MCP file-mcp-server (rewrite).md
+Docs/MCP_Tools/MCP Details/MCP filesystem (rewrite).md
+Docs/MCP_Tools/MCP Details/_1 MCP Doc Template Prompt.md
+Docs/MCP_Tools/MCP Details/_2 MCP Doc template Instruction.md
+Docs/MCP_Tools/MCP Details/_3 MCP Doc Template.md
+Docs/MCP_Tools/MCP_Tools_Map.md
+Docs/MCP_Tools/api-documentation/server-communication-api.md
+Docs/MCP_Tools/architecture-diagrams/integration-architecture.md
+Docs/MCP_Tools/database-schema/assessment-store-schema.md
+Docs/MCP_Tools/database-schema/assessment-store-schema.sql
+Docs/MCP_Tools/database-schema/database-schema-specifications.md
+Docs/MCP_Tools/guides/admin-configuration.md
+Docs/MCP_Tools/guides/admin-installation.md
+Docs/MCP_Tools/guides/admin-monitoring.md
+Docs/MCP_Tools/guides/admin-security.md
+Docs/MCP_Tools/guides/api-documentation.md
+Docs/MCP_Tools/guides/compliance-validation-instructions.md
+Docs/MCP_Tools/guides/compliance-validation.md
+Docs/MCP_Tools/guides/configuration-procedures.md
+Docs/MCP_Tools/guides/configuration.md
+Docs/MCP_Tools/guides/database-schema.md
+Docs/MCP_Tools/guides/developer-api-documentation.md
+Docs/MCP_Tools/guides/developer-getting-started.md
+Docs/MCP_Tools/guides/documentation-quality-standards.md
+Docs/MCP_Tools/guides/documentation-review-processes.md
+Docs/MCP_Tools/guides/documentation-update-procedures.md
+Docs/MCP_Tools/guides/documentation-version-control.md
+Docs/MCP_Tools/guides/installation-guides.md
+Docs/MCP_Tools/guides/installation.md
+Docs/MCP_Tools/guides/integration-architecture.md
+Docs/MCP_Tools/guides/troubleshooting-guides.md
+Docs/MCP_Tools/guides/troubleshooting.md
+Docs/MCP_Tools/guides/user-guides.md
+Docs/MCP_Tools/technical/developer-technical-documentation.md
+Docs/MCP_Tools/version-control/documentation-version-control.md
+Docs/System Audits/audit_config_env.txt
+Docs/System Audits/audit_node_refs.txt
+Docs/System Audits/audit_python_imports.txt
+Docs/System Audits/audit_step2_matches.txt
+Docs/System Audits/audit_step2_summary.txt
+Docs/Systems_Descriptions/Cache Management/Cache Management System Architecture - Final Summary.md
+Docs/Systems_Descriptions/Cache Management/Caching System Description.md
+Docs/Systems_Descriptions/Cache Management/Caching implementation instructions.md
+Docs/Systems_Descriptions/Cache Management/Component Interface Specifications.md
+Docs/Systems_Descriptions/Cache Management/Comprehensive Architecture Documentation.md
+Docs/Systems_Descriptions/Cache Management/Configuration Schema and Deployment.md
+Docs/Systems_Descriptions/Cache Management/Data Flow Patterns.md
+Docs/Systems_Descriptions/Cache Management/Implementation Roadmap.md
+Docs/Systems_Descriptions/Cache Management/Intelligent Caching Architecture Design.md
+Docs/Systems_Descriptions/Cache Management/MCP Integration Patterns.md
+Docs/Systems_Descriptions/Cache Management/Monitoring and Performance Tracking.md
+Docs/Systems_Descriptions/Ci,CD system/Ci,CD System Description
+Docs/Systems_Descriptions/Complete Unified Setup Achieved.md
+Docs/Systems_Descriptions/Github VC/Commands.md
+Docs/Systems_Descriptions/Github VC/Github VC mybizz.md
+Docs/Systems_Descriptions/Github VC/Github VC vsc-ide.md
+Docs/Systems_Descriptions/Github VC/Manual Checklist.md
+Docs/Systems_Descriptions/Github VC/_Kilocode git commands.md
+Docs/Systems_Descriptions/Github VC/all-in-one Powershell Health Check.md
+Docs/Systems_Descriptions/Memory/Consolidated_Memory_Documentation.md
+Docs/Systems_Descriptions/Memory/Memory_System_Validation.md
+Docs/Systems_Descriptions/Orchestration (AG2)/AG2 Complete Documentation.md
+Docs/Systems_Descriptions/Orchestration/AG2_Cline_Validation.md
+Docs/Systems_Descriptions/Podman/PODMAN_SETUP.md
+Docs/Systems_Descriptions/Podman/PODMAN_SYSTEM_DOCUMENTATION.md
+Docs/Systems_Descriptions/Postgres/PostgreSQL_Integration_Points.md
+Docs/Systems_Descriptions/Postgres/PostgreSQL_System_Complete_Documentation.md
+Docs/Systems_Descriptions/Postgres/PostgreSQL_Troubleshooting_and_Maintenance.md
+Docs/Systems_Descriptions/Postgres/Postgres Reference Sheet.md
+Docs/Systems_Descriptions/Postgres/Postgres installation Plan.md
+Docs/Systems_Descriptions/Postgres/Postgres installation log.md
+Docs/Systems_Descriptions/Postgres/README.md
+Docs/Systems_Descriptions/Rag/RAG/Vector System Validation.md
+Docs/Systems_Descriptions/Rag/Rag System Design v3 (Adjusted).md
+Docs/Systems_Descriptions/Secrets Management/Hashicorp setup instructions.md
+Docs/Systems_Descriptions/Secrets Management/Secrets Management System Documentation.md
+Docs/Systems_Descriptions/Secrets Management/Secrets_Credentials_management_v1.md
+Docs/Systems_Descriptions/Secrets Management/Unresolved Issues.md
+Docs/Systems_Descriptions/Secrets Management/Vault Integration Guide.md
+Docs/Systems_Descriptions/Secrets Management/hashicorp post installation.md
+Docs/Systems_Descriptions/Simba/Simba KMS Installation instructions.md
+Docs/Systems_Descriptions/Testing, Validation system/README.md
+Docs/Systems_Descriptions/Token Management/API_Reference.md
+Docs/Systems_Descriptions/Token Management/Administrator_Guide.md
+Docs/Systems_Descriptions/Token Management/Configuration_Guide.md
+Docs/Systems_Descriptions/Token Management/Developer_Guide.md
+Docs/Systems_Descriptions/Token Management/MCP_KiloCode_Integration.md
+Docs/Systems_Descriptions/Token Management/Monitoring_and_Reporting.md
+Docs/Systems_Descriptions/Token Management/Quota_Reset_System.md
+Docs/Systems_Descriptions/Token Management/Rate_Limiting_System.md
+Docs/Systems_Descriptions/Token Management/Security_and_Revocation.md
+Docs/Systems_Descriptions/Token Management/Testing_Guide.md
+Docs/Systems_Descriptions/Token Management/Token management implementation instructions.md
+Docs/Systems_Descriptions/Token Management/Token_Counting_Module.md
+Docs/Systems_Descriptions/Token Management/Token_Usage_Logging.md
+Docs/Systems_Descriptions/Token Management/Token_management_system.md
+Docs/Systems_Descriptions/Token Management/Troubleshooting_Guide.md
+Docs/Systems_Descriptions/Token Management/User_Guide.md
+Docs/Systems_Descriptions/Token Management/pg_tiktoken_Setup.md
+Docs/Systems_Descriptions/Vector/Postgres_PGVector_Validation.md
+Docs/Systems_Descriptions/Vector/Vector System.md
+Docs/_My Todo/A.0 Mybizz system.png
+Docs/_My Todo/A.1. User Authentication & Authorization System.png
+Docs/_My Todo/Installation list.md
+Docs/_My Todo/Kilocode, MCP setup and config Task.md
+Docs/_My Todo/My stuff/Backing up vscode to vsc_ide repo.md
+Docs/_My Todo/My stuff/paddle-plugin system overview.md
+Docs/_My Todo/Test-MT.md
+ENVIRONMENT_TROUBLESHOOTING.md
+Everything-SDK.zip
+EverythingSetup.exe
+LICENSE.txt
+MIGRATION_GUIDE.md
+PNG_TO_MARKDOWN_ARCHITECTURE.md
+PYWIN32_FIX_SUMMARY.md
+README-MCP.md
+README.md
+Tesseract_OCR_Documentation.md
+Test Bank/MCP Tests/MCP Fastmcp/MCP Fastmcp.md
+Test Bank/MCP Tests/mcp_servers/comprehensive-snap-test.js
+Test Bank/MCP Tests/mcp_servers/final-verification.js
+Test Bank/MCP Tests/mcp_servers/integration-test.js
+Test Bank/MCP Tests/mcp_servers/test-all-mcp.bat
+Test Bank/MCP Tests/mcp_servers/test-brave-integration.js
+Test Bank/MCP Tests/mcp_servers/test-filesystem-mcp.js
+Test Bank/MCP Tests/mcp_servers/test-mcp-direct.ps1
+Test Bank/MCP Tests/mcp_servers/test-mcp-servers.js
+Test Bank/MCP Tests/mcp_servers/test-mcp-simple.ps1
+Test Bank/MCP Tests/mcp_servers/test-postgres-integration.js
+Test Bank/MCP Tests/mcp_servers/test-snap-functionality.js
+Test Bank/MCP Tests/mcp_servers/test-snap-mcp.js
+Test Bank/MCP Tests/mcp_servers/verify-filesystem-mcp.bat
+Test Bank/MCP Tests/mcp_servers/verify-filesystem-mcp.ps1
+Test Bank/MCP Tests/mcp_servers/verify-postgres-integration.js
+Test Bank/System Tests/AG2_Orchestration_Tests/README.md
+Test Bank/System Tests/AG2_Orchestration_Tests/TESTING_README.md
+Test Bank/System Tests/AG2_Orchestration_Tests/TESTING_SUMMARY.md
+Test Bank/System Tests/AG2_Orchestration_Tests/ag2_pure.py
+Test Bank/System Tests/AG2_Orchestration_Tests/config/test_config.yaml
+Test Bank/System Tests/AG2_Orchestration_Tests/conftest.py
+Test Bank/System Tests/AG2_Orchestration_Tests/e2e/test_end_to_end.py
+Test Bank/System Tests/AG2_Orchestration_Tests/integration/test_orchestrator_integration.py
+Test Bank/System Tests/AG2_Orchestration_Tests/logs/ag2_pure.log
+Test Bank/System Tests/AG2_Orchestration_Tests/mock_memory/memory.json
+Test Bank/System Tests/AG2_Orchestration_Tests/pytest.ini
+Test Bank/System Tests/AG2_Orchestration_Tests/quick_test.py
+Test Bank/System Tests/AG2_Orchestration_Tests/requirements.txt
+Test Bank/System Tests/AG2_Orchestration_Tests/run_all_tests.py
+Test Bank/System Tests/AG2_Orchestration_Tests/src/ag2_pure.py
+Test Bank/System Tests/AG2_Orchestration_Tests/test_orchestration.py
+Test Bank/System Tests/AG2_Orchestration_Tests/unit/test_agents.py
+Test Bank/System Tests/rag_system/test-rag-system.js
+UNIFIED_SETUP_SUMMARY.md
+WORKFLOW_CONFIRMATION.md
+__init__.py
+_orch_smoke/hello.txt
+ag2_node_check.txt
+ag2_python_check.txt
+agent_manifest.yaml
+agent_tools_map.yaml
+audit_config_env.txt
+audit_node_refs.txt
+audit_python_imports.txt
+audit_step2_matches.txt
+audit_step2_summary.txt
+brave-search-integration/braveSearchManager.js
+brave-search-integration/braveSearchPolicy.json
+brave-search-integration/exampleUsage.js
+cleanup.ps1
+comprehensive_test_report.md
+config/__init__.py
+config/assessment-store-database.json
+config/default_config.json
+config/manager.py
+config/settings.py
+config/validator.py
+convert_png_to_md.py
+core/__init__.py
+core/converter.py
+core/formatter.py
+core/metadata_generator.py
+core/ocr_processor.py
+core/preprocessor.py
+create_memory_tables.sql
+desktop.ini
+easyocr-mcp/.gitignore
+easyocr-mcp/README.md
+easyocr-mcp/easyocr-mcp.py
+easyocr-mcp/plan.md
+easyocr-mcp/pyproject.toml
+easyocr-mcp/test-gpu.py
+easyocr-mcp/test.png
+easyocr-mcp/test.py
+easyocr-mcp/test_mcp_tools.py
+easyocr-mcp/uv.lock
+enhanced_ocr_formatter.py
+environment_info.json
+errors/__init__.py
+errors/exceptions.py
+errors/handler.py
+everything_search_mcp.log
+final_search_result.py
+final_tesseract_test.log
+fix_pywin32_environment.py
+health_check.py
+improved_ocr_formatter.py
+install-rag-system.js
+kilocode_ocr_workflow.md
+latest_log.txt
+logfile.txt
+logs/ag2_pure.log
+logs/kilocode-integration.log
+logs/system-start.log
+mcp_everything_search_fixed.py
+mcp_servers/README.md
+mcp_servers/Tests/comprehensive-snap-test.js
+mcp_servers/Tests/final-verification.js
+mcp_servers/Tests/integration-test.js
+mcp_servers/Tests/test-all-mcp.bat
+mcp_servers/Tests/test-brave-integration.js
+mcp_servers/Tests/test-filesystem-mcp.js
+mcp_servers/Tests/test-mcp-direct.ps1
+mcp_servers/Tests/test-mcp-servers.js
+mcp_servers/Tests/test-mcp-simple.ps1
+mcp_servers/Tests/test-postgres-integration.js
+mcp_servers/Tests/test-snap-functionality.js
+mcp_servers/Tests/test-snap-mcp.js
+mcp_servers/Tests/verify-filesystem-mcp.bat
+mcp_servers/Tests/verify-filesystem-mcp.ps1
+mcp_servers/Tests/verify-postgres-integration.js
+mcp_servers/agent-memory-lite.js
+mcp_servers/agent-memory/README.md
+mcp_servers/agent-memory/index.js
+mcp_servers/agent-memory/install.bat
+mcp_servers/agent-memory/install.sh
+mcp_servers/agent-memory/mcp.json
+mcp_servers/agent-memory/package-lock.json
+mcp_servers/agent-memory/package.json
+mcp_servers/agent-memory/test-mcp.js
+mcp_servers/agent-memory/test-proper.js
+mcp_servers/agent-memory/test.js
+mcp_servers/agent-memory/verify.js
+mcp_servers/brave-search-mcp-server-lite.js
+mcp_servers/brave-search-mcp-server.js
+mcp_servers/braveSearchPolicy.json
+mcp_servers/cache-mcp-server/.env.example
+mcp_servers/cache-mcp-server/Dockerfile
+mcp_servers/cache-mcp-server/README.md
+mcp_servers/cache-mcp-server/config/cache_config.yaml
+mcp_servers/cache-mcp-server/requirements.txt
+mcp_servers/cache-mcp-server/scripts/database/create_collections.py
+mcp_servers/cache-mcp-server/scripts/database/init_cache_database.sql
+mcp_servers/cache-mcp-server/scripts/database/setup_database.py
+mcp_servers/cache-mcp-server/scripts/deploy/deploy_cache_server.py
+mcp_servers/cache-mcp-server/scripts/deploy/docker-compose.yml
+mcp_servers/cache-mcp-server/scripts/integration/integrate_with_mcp_servers.py
+mcp_servers/cache-mcp-server/scripts/monitoring/health_check.py
+mcp_servers/cache-mcp-server/scripts/monitoring/prometheus.yml
+mcp_servers/cache-mcp-server/scripts/validation/validate_configuration.py
+mcp_servers/cache-mcp-server/src/__init__.py
+mcp_servers/cache-mcp-server/src/cache_layers/__init__.py
+mcp_servers/cache-mcp-server/src/cache_layers/global_cache.py
+mcp_servers/cache-mcp-server/src/cache_layers/predictive_cache.py
+mcp_servers/cache-mcp-server/src/cache_layers/semantic_cache.py
+mcp_servers/cache-mcp-server/src/cache_layers/vector_cache.py
+mcp_servers/cache-mcp-server/src/cache_layers/vector_diary.py
+mcp_servers/cache-mcp-server/src/core/__init__.py
+mcp_servers/cache-mcp-server/src/core/base_cache.py
+mcp_servers/cache-mcp-server/src/core/config.py
+mcp_servers/cache-mcp-server/src/core/utils.py
+mcp_servers/cache-mcp-server/src/mcp/__init__.py
+mcp_servers/cache-mcp-server/src/mcp/server.py
+mcp_servers/cache-mcp-server/src/mcp/tools.py
+mcp_servers/cache-mcp-server/tests/config/test_config.py
+mcp_servers/cache-mcp-server/tests/data/test_data.py
+mcp_servers/cache-mcp-server/tests/e2e/test_complete_workflow.py
+mcp_servers/cache-mcp-server/tests/error_handling/test_cache_errors.py
+mcp_servers/cache-mcp-server/tests/integration/test_mcp_server.py
+mcp_servers/cache-mcp-server/tests/performance/test_cache_performance.py
+mcp_servers/cache-mcp-server/tests/run_all_tests.py
+mcp_servers/cache-mcp-server/tests/run_e2e_tests.py
+mcp_servers/cache-mcp-server/tests/run_error_tests.py
+mcp_servers/cache-mcp-server/tests/run_integration_tests.py
+mcp_servers/cache-mcp-server/tests/run_performance_tests.py
+mcp_servers/cache-mcp-server/tests/run_stress_tests.py
+mcp_servers/cache-mcp-server/tests/run_unit_tests.py
+mcp_servers/cache-mcp-server/tests/stress/test_high_load.py
+mcp_servers/cache-mcp-server/tests/test_cache_layers.py
+mcp_servers/cache-mcp-server/tests/test_mcp_integration.py
+mcp_servers/cache-mcp-server/tests/unit/test_base_cache.py
+mcp_servers/cache-mcp-server/tests/unit/test_config.py
+mcp_servers/cache-mcp-server/tests/unit/test_global_cache.py
+mcp_servers/cache-mcp-server/tests/unit/test_predictive_cache.py
+mcp_servers/cache-mcp-server/tests/unit/test_semantic_cache.py
+mcp_servers/cache-mcp-server/tests/unit/test_utils.py
+mcp_servers/cache-mcp-server/tests/unit/test_vector_cache.py
+mcp_servers/cache-mcp-server/tests/unit/test_vector_diary.py
+mcp_servers/easyocr-mcp/README.md
+mcp_servers/easyocr-mcp/config/easyocr_mcp_config.json
+mcp_servers/easyocr-mcp/main.py
+mcp_servers/easyocr-mcp/requirements.txt
+mcp_servers/easyocr-mcp/scripts/deploy/deploy_easyocr_service.py
+mcp_servers/easyocr-mcp/scripts/integration/integrate_with_mcp_servers.py
+mcp_servers/easyocr-mcp/scripts/monitoring/monitoring_integration.py
+mcp_servers/easyocr-mcp/scripts/startup/windows_service_installer.py
+mcp_servers/easyocr-mcp/src/easyocr_mcp_server.py
+mcp_servers/easyocr-mcp/src/easyocr_processor.py
+mcp_servers/easyocr-mcp/test_implementation.py
+mcp_servers/easyocr-mcp/tests/integration/test_mcp_integration.py
+mcp_servers/everything-search-mcp/config/everything_search_mcp_config.json
+mcp_servers/everything-search-mcp/demo_search.py
+mcp_servers/everything-search-mcp/mcp_everything_search_fixed.py
+mcp_servers/everything-search-mcp/requirements.txt
+mcp_servers/everything-search-mcp/src/everything_search_mcp_server.py
+mcp_servers/everything-search-mcp/test_basic_integration.py
+mcp_servers/everything-search-mcp/test_integration.py
+mcp_servers/everything-search-mcp/tests/config/test_config.json
+mcp_servers/everything-search-mcp/tests/data/test_files.json
+mcp_servers/everything-search-mcp/tests/integration/test_mcp_communication.py
+mcp_servers/everything-search-mcp/tests/integration/test_server_discovery.py
+mcp_servers/everything-search-mcp/tests/performance/test_search_performance.py
+mcp_servers/everything-search-mcp/tests/pytest.ini
+mcp_servers/everything-search-mcp/tests/run_tests.py
+mcp_servers/everything-search-mcp/tests/test_simple_search.py
+mcp_servers/everything-search-mcp/tests/unit/test_error_handling.py
+mcp_servers/everything-search-mcp/tests/unit/test_filtering_and_sorting.py
+mcp_servers/everything-search-mcp/tests/unit/test_mcp_protocol_compliance.py
+mcp_servers/everything-search-mcp/tests/unit/test_search_functionality.py
+mcp_servers/install-mcp-complete.js
+mcp_servers/install-mcp-server.js
+mcp_servers/install-mcp-windows-service.js
+mcp_servers/install-snap-dependencies.ps1
+mcp_servers/logging-telemetry-mcp-server.js
+mcp_servers/logs/telemetry.log
+mcp_servers/manage-mcp-servers.js
+mcp_servers/mcp-compliance-server/README-TESTING.md
+mcp_servers/mcp-compliance-server/README.md
+mcp_servers/mcp-compliance-server/docs/testing-procedures.md
+mcp_servers/mcp-compliance-server/mock-server.js
+mcp_servers/mcp-compliance-server/package-lock.json
+mcp_servers/mcp-compliance-server/package.json
+mcp_servers/mcp-compliance-server/scripts/test-executor.js
+mcp_servers/mcp-compliance-server/src/alerting/alerting-system.ts
+mcp_servers/mcp-compliance-server/src/assessment/assessment-engine.ts
+mcp_servers/mcp-compliance-server/src/compliance/compliance-engine.ts
+mcp_servers/mcp-compliance-server/src/execution/execution-engine.ts
+mcp_servers/mcp-compliance-server/src/logger.ts
+mcp_servers/mcp-compliance-server/src/monitoring/continuous-monitoring.ts
+mcp_servers/mcp-compliance-server/src/remediation/remediation-engine.ts
+mcp_servers/mcp-compliance-server/src/remediation/remediation-proposal-engine.ts
+mcp_servers/mcp-compliance-server/src/reporting/compliance-reporting.ts
+mcp_servers/mcp-compliance-server/src/server.ts
+mcp_servers/mcp-compliance-server/src/testing/automated-testing.ts
+mcp_servers/mcp-compliance-server/src/types.ts
+mcp_servers/mcp-compliance-server/src/validation/validators.ts
+mcp_servers/mcp-compliance-server/test-server.js
+mcp_servers/mcp-compliance-server/tests/integration/compliance-validation.test.ts
+mcp_servers/mcp-compliance-server/tests/integration/server-communication.test.ts
+mcp_servers/mcp-compliance-server/tests/performance/load-testing.ts
+mcp_servers/mcp-compliance-server/tests/run-tests.ts
+mcp_servers/mcp-compliance-server/tests/setup.ts
+mcp_servers/mcp-compliance-server/tests/unit/testing-engine.test.ts
+mcp_servers/mcp-compliance-server/tests/unit/validation-engine.test.ts
+mcp_servers/mcp-compliance-server/tsconfig.json
+mcp_servers/mcp-compliance-server/vitest.config.ts
+mcp_servers/mcp-integration-coordinator/INTEGRATION_DOCUMENTATION.md
+mcp_servers/mcp-integration-coordinator/README.md
+mcp_servers/mcp-integration-coordinator/jest.config.js
+mcp_servers/mcp-integration-coordinator/package-lock.json
+mcp_servers/mcp-integration-coordinator/package.json
+mcp_servers/mcp-integration-coordinator/server.js
+mcp_servers/mcp-integration-coordinator/src/controllers/assessment-controller.js
+mcp_servers/mcp-integration-coordinator/src/controllers/assessment-controller.ts
+mcp_servers/mcp-integration-coordinator/src/controllers/auth-controller.ts
+mcp_servers/mcp-integration-coordinator/src/controllers/remediation-controller.js
+mcp_servers/mcp-integration-coordinator/src/controllers/remediation-controller.ts
+mcp_servers/mcp-integration-coordinator/src/logger.js
+mcp_servers/mcp-integration-coordinator/src/logger.ts
+mcp_servers/mcp-integration-coordinator/src/middleware/auth-middleware.ts
+mcp_servers/mcp-integration-coordinator/src/server.js
+mcp_servers/mcp-integration-coordinator/src/server.ts
+mcp_servers/mcp-integration-coordinator/src/services/assessment-processor.ts
+mcp_servers/mcp-integration-coordinator/src/services/assessment-store.ts
+mcp_servers/mcp-integration-coordinator/src/services/audit-service.js
+mcp_servers/mcp-integration-coordinator/src/services/audit-service.ts
+mcp_servers/mcp-integration-coordinator/src/services/auth-service.ts
+mcp_servers/mcp-integration-coordinator/src/services/database-service.js
+mcp_servers/mcp-integration-coordinator/src/services/database-service.ts
+mcp_servers/mcp-integration-coordinator/src/services/monitoring-service.ts
+mcp_servers/mcp-integration-coordinator/src/services/redis-service.ts
+mcp_servers/mcp-integration-coordinator/src/types.js
+mcp_servers/mcp-integration-coordinator/src/types.ts
+mcp_servers/mcp-integration-coordinator/src/web/app.html
+mcp_servers/mcp-integration-coordinator/test-event-handling.js
+mcp_servers/mcp-integration-coordinator/test-integration.js
+mcp_servers/mcp-integration-coordinator/test-simple-event.js
+mcp_servers/mcp-integration-coordinator/test/assessment-controller.test.js
+mcp_servers/mcp-integration-coordinator/test/assessment-controller.test.ts
+mcp_servers/mcp-integration-coordinator/test/assessment-processor.test.ts
+mcp_servers/mcp-integration-coordinator/tests/integration.test.ts
+mcp_servers/mcp-integration-coordinator/tests/oversight-validation.test.ts
+mcp_servers/mcp-integration-coordinator/tsconfig.json
+mcp_servers/mcp-memory-service/.claude/settings.local.json
+mcp_servers/mcp-memory-service/.github/FUNDING.yml
+mcp_servers/mcp-memory-service/.github/workflows/docker-publish.yml
+mcp_servers/mcp-memory-service/.github/workflows/main.yml
+mcp_servers/mcp-memory-service/.github/workflows/publish-and-test.yml
+mcp_servers/mcp-memory-service/.github/workflows/release.yml
+mcp_servers/mcp-memory-service/.gitignore
+mcp_servers/mcp-memory-service/.mcp.json.backup
+mcp_servers/mcp-memory-service/.mcp.json.template
+mcp_servers/mcp-memory-service/.uv/config.toml
+mcp_servers/mcp-memory-service/CHANGELOG.md
+mcp_servers/mcp-memory-service/CLAUDE.md
+mcp_servers/mcp-memory-service/CLAUDE_CODE_COMPATIBILITY.md
+mcp_servers/mcp-memory-service/COMPLETE_SETUP_GUIDE.md
+mcp_servers/mcp-memory-service/DUAL_SERVICE_DEPLOYMENT.md
+mcp_servers/mcp-memory-service/FIXES_SQLITE_VEC_EMBEDDINGS.md
+mcp_servers/mcp-memory-service/LICENSE
+mcp_servers/mcp-memory-service/MIGRATION_LOG.md
+mcp_servers/mcp-memory-service/NOTICE
+mcp_servers/mcp-memory-service/README.md
+mcp_servers/mcp-memory-service/README_PRODUCTION.md
+mcp_servers/mcp-memory-service/ROADMAP.md
+mcp_servers/mcp-memory-service/SPONSORS.md
+mcp_servers/mcp-memory-service/TEST_RESULTS.md
+mcp_servers/mcp-memory-service/archive/deployment/deploy_fastmcp_fixed.sh
+mcp_servers/mcp-memory-service/archive/deployment/deploy_http_with_mcp.sh
+mcp_servers/mcp-memory-service/archive/deployment/deploy_mcp_v4.sh
+mcp_servers/mcp-memory-service/archive/development/test_fastmcp.py
+mcp_servers/mcp-memory-service/archive/setup-development/README.md
+mcp_servers/mcp-memory-service/archive/setup-development/STARTUP_SETUP_GUIDE.md
+mcp_servers/mcp-memory-service/archive/setup-development/setup_consolidation_mdns.sh
+mcp_servers/mcp-memory-service/archive/setup-development/test_service.sh
+mcp_servers/mcp-memory-service/claude_commands/README.md
+mcp_servers/mcp-memory-service/claude_commands/memory-context.md
+mcp_servers/mcp-memory-service/claude_commands/memory-health.md
+mcp_servers/mcp-memory-service/claude_commands/memory-recall.md
+mcp_servers/mcp-memory-service/claude_commands/memory-search.md
+mcp_servers/mcp-memory-service/claude_commands/memory-store.md
+mcp_servers/mcp-memory-service/debug_distances.py
+mcp_servers/mcp-memory-service/debug_embeddings.py
+mcp_servers/mcp-memory-service/deploy_dual_services.sh
+mcp_servers/mcp-memory-service/docs/DOCUMENTATION_AUDIT.md
+mcp_servers/mcp-memory-service/docs/IMPLEMENTATION_PLAN_HTTP_SSE.md
+mcp_servers/mcp-memory-service/docs/README.md
+mcp_servers/mcp-memory-service/docs/api/memory-metadata-api.md
+mcp_servers/mcp-memory-service/docs/api/tag-standardization.md
+mcp_servers/mcp-memory-service/docs/assets/images/README.md
+mcp_servers/mcp-memory-service/docs/assets/images/dashboard-v3.3.0-preview.png
+mcp_servers/mcp-memory-service/docs/assets/images/project-infographic.svg
+mcp_servers/mcp-memory-service/docs/deployment/docker.md
+mcp_servers/mcp-memory-service/docs/deployment/multi-client-server.md
+mcp_servers/mcp-memory-service/docs/development/CLEANUP_PLAN.md
+mcp_servers/mcp-memory-service/docs/development/CLEANUP_README.md
+mcp_servers/mcp-memory-service/docs/development/CLEANUP_SUMMARY.md
+mcp_servers/mcp-memory-service/docs/development/TIMESTAMP_FIX_SUMMARY.md
+mcp_servers/mcp-memory-service/docs/development/autonomous-memory-consolidation.md
+mcp_servers/mcp-memory-service/docs/development/dream-inspired-memory-consolidation.md
+mcp_servers/mcp-memory-service/docs/development/hybrid-slm-memory-consolidation.md
+mcp_servers/mcp-memory-service/docs/development/multi-client-architecture.md
+mcp_servers/mcp-memory-service/docs/examples/analysis-scripts.js
+mcp_servers/mcp-memory-service/docs/examples/maintenance-session-example.md
+mcp_servers/mcp-memory-service/docs/examples/memory-distribution-chart.jsx
+mcp_servers/mcp-memory-service/docs/examples/tag-schema.json
+mcp_servers/mcp-memory-service/docs/glama-deployment.md
+mcp_servers/mcp-memory-service/docs/guides/STORAGE_BACKENDS.md
+mcp_servers/mcp-memory-service/docs/guides/UBUNTU_SETUP.md
+mcp_servers/mcp-memory-service/docs/guides/advanced-command-examples.md
+mcp_servers/mcp-memory-service/docs/guides/authentication.md
+mcp_servers/mcp-memory-service/docs/guides/claude-code-integration.md
+mcp_servers/mcp-memory-service/docs/guides/claude-code-quickstart.md
+mcp_servers/mcp-memory-service/docs/guides/claude_integration.md
+mcp_servers/mcp-memory-service/docs/guides/commands-vs-mcp-server.md
+mcp_servers/mcp-memory-service/docs/guides/invocation_guide.md
+mcp_servers/mcp-memory-service/docs/guides/mdns-service-discovery.md
+mcp_servers/mcp-memory-service/docs/guides/migration.md
+mcp_servers/mcp-memory-service/docs/guides/scripts.md
+mcp_servers/mcp-memory-service/docs/guides/service-installation.md
+mcp_servers/mcp-memory-service/docs/guides/windows-setup.md
+mcp_servers/mcp-memory-service/docs/ide-compatability.md
+mcp_servers/mcp-memory-service/docs/images/dashboard-placeholder.md
+mcp_servers/mcp-memory-service/docs/implementation/health_checks.md
+mcp_servers/mcp-memory-service/docs/implementation/performance.md
+mcp_servers/mcp-memory-service/docs/installation/master-guide.md
+mcp_servers/mcp-memory-service/docs/integration/homebrew.md
+mcp_servers/mcp-memory-service/docs/integration/multi-client.md
+mcp_servers/mcp-memory-service/docs/integrations.md
+mcp_servers/mcp-memory-service/docs/maintenance/memory-maintenance.md
+mcp_servers/mcp-memory-service/docs/platforms/macos-intel.md
+mcp_servers/mcp-memory-service/docs/platforms/ubuntu.md
+mcp_servers/mcp-memory-service/docs/platforms/windows.md
+mcp_servers/mcp-memory-service/docs/sqlite-vec-backend.md
+mcp_servers/mcp-memory-service/docs/technical/development.md
+mcp_servers/mcp-memory-service/docs/technical/memory-migration.md
+mcp_servers/mcp-memory-service/docs/technical/tag-storage.md
+mcp_servers/mcp-memory-service/docs/troubleshooting/general.md
+mcp_servers/mcp-memory-service/docs/tutorials/advanced-techniques.md
+mcp_servers/mcp-memory-service/docs/tutorials/data-analysis.md
+mcp_servers/mcp-memory-service/docs/tutorials/demo-session-walkthrough.md
+mcp_servers/mcp-memory-service/docs/wiki/Claude-Code-Commands-Wiki.md
+mcp_servers/mcp-memory-service/examples/README.md
+mcp_servers/mcp-memory-service/examples/claude-desktop-http-config.json
+mcp_servers/mcp-memory-service/examples/claude_desktop_config_template.json
+mcp_servers/mcp-memory-service/examples/config/claude_desktop_config.json
+mcp_servers/mcp-memory-service/examples/http-mcp-bridge.js
+mcp_servers/mcp-memory-service/examples/setup/setup_multi_client_complete.py
+mcp_servers/mcp-memory-service/fix_mdns.sh
+mcp_servers/mcp-memory-service/install.py
+mcp_servers/mcp-memory-service/install_service.py
+mcp_servers/mcp-memory-service/install_service.sh
+mcp_servers/mcp-memory-service/mcp-memory.service
+mcp_servers/mcp-memory-service/pyproject.toml
+mcp_servers/mcp-memory-service/pytest.ini
+mcp_servers/mcp-memory-service/scripts/README.md
+mcp_servers/mcp-memory-service/scripts/analyze_sqlite_vec_db.py
+mcp_servers/mcp-memory-service/scripts/backup_memories.py
+mcp_servers/mcp-memory-service/scripts/check_documentation_links.py
+mcp_servers/mcp-memory-service/scripts/check_server_health.py
+mcp_servers/mcp-memory-service/scripts/check_sqlite_vec_status.py
+mcp_servers/mcp-memory-service/scripts/claude_commands_utils.py
+mcp_servers/mcp-memory-service/scripts/cleanup_memories.py
+mcp_servers/mcp-memory-service/scripts/cleanup_organize.py
+mcp_servers/mcp-memory-service/scripts/database/db_health_check.py
+mcp_servers/mcp-memory-service/scripts/find_orphaned_files.py
+mcp_servers/mcp-memory-service/scripts/fix_sitecustomize.py
+mcp_servers/mcp-memory-service/scripts/install_linux_service.py
+mcp_servers/mcp-memory-service/scripts/install_macos_service.py
+mcp_servers/mcp-memory-service/scripts/install_uv.py
+mcp_servers/mcp-memory-service/scripts/install_windows_service.py
+mcp_servers/mcp-memory-service/scripts/installation/install.py
+mcp_servers/mcp-memory-service/scripts/installation/setup_claude_mcp.sh
+mcp_servers/mcp-memory-service/scripts/list-collections.py
+mcp_servers/mcp-memory-service/scripts/mcp-migration.py
+mcp_servers/mcp-memory-service/scripts/migrate_chroma_to_sqlite.py
+mcp_servers/mcp-memory-service/scripts/migrate_sqlite_vec_embeddings.py
+mcp_servers/mcp-memory-service/scripts/migrate_storage.py
+mcp_servers/mcp-memory-service/scripts/migrate_tags.py
+mcp_servers/mcp-memory-service/scripts/migrate_timestamps.py
+mcp_servers/mcp-memory-service/scripts/migration/migrate_to_sqlite_vec.py
+mcp_servers/mcp-memory-service/scripts/migrations/TIMESTAMP_CLEANUP_README.md
+mcp_servers/mcp-memory-service/scripts/migrations/cleanup_mcp_timestamps.py
+mcp_servers/mcp-memory-service/scripts/migrations/verify_mcp_timestamps.py
+mcp_servers/mcp-memory-service/scripts/repair_memories.py
+mcp_servers/mcp-memory-service/scripts/repair_sqlite_vec_embeddings.py
+mcp_servers/mcp-memory-service/scripts/repair_zero_embeddings.py
+mcp_servers/mcp-memory-service/scripts/restore_memories.py
+mcp_servers/mcp-memory-service/scripts/run/run-with-uv.sh
+mcp_servers/mcp-memory-service/scripts/run/run_mcp_memory.sh
+mcp_servers/mcp-memory-service/scripts/run/start_sqlite_vec.sh
+mcp_servers/mcp-memory-service/scripts/run_complete_test.py
+mcp_servers/mcp-memory-service/scripts/run_http_server.py
+mcp_servers/mcp-memory-service/scripts/run_memory_server.py
+mcp_servers/mcp-memory-service/scripts/service_utils.py
+mcp_servers/mcp-memory-service/scripts/test-connection.py
+mcp_servers/mcp-memory-service/scripts/test_docker_functionality.py
+mcp_servers/mcp-memory-service/scripts/test_installation.py
+mcp_servers/mcp-memory-service/scripts/test_mdns.py
+mcp_servers/mcp-memory-service/scripts/test_memory_api.py
+mcp_servers/mcp-memory-service/scripts/test_memory_simple.py
+mcp_servers/mcp-memory-service/scripts/test_migration.py
+mcp_servers/mcp-memory-service/scripts/test_search_api.py
+mcp_servers/mcp-memory-service/scripts/test_sqlite_vec_embeddings.py
+mcp_servers/mcp-memory-service/scripts/test_sse_events.py
+mcp_servers/mcp-memory-service/scripts/testing/run_memory_test.sh
+mcp_servers/mcp-memory-service/scripts/testing/simple_test.py
+mcp_servers/mcp-memory-service/scripts/utils/memory_wrapper_uv.py
+mcp_servers/mcp-memory-service/scripts/utils/smithery_wrapper.py
+mcp_servers/mcp-memory-service/scripts/utils/uv_wrapper.py
+mcp_servers/mcp-memory-service/scripts/validate_memories.py
+mcp_servers/mcp-memory-service/scripts/verify_environment.py
+mcp_servers/mcp-memory-service/scripts/verify_pytorch_windows.py
+mcp_servers/mcp-memory-service/scripts/verify_torch.py
+mcp_servers/mcp-memory-service/service_control.sh
+mcp_servers/mcp-memory-service/smithery.yaml
+mcp_servers/mcp-memory-service/src/mcp_memory_service/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/config.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/associations.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/base.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/clustering.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/compression.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/consolidator.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/decay.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/forgetting.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/health.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/consolidation/scheduler.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/discovery/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/discovery/client.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/discovery/mdns_service.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/mcp_server.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/models/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/models/memory.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/server.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/base.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/chroma.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/chroma_enhanced.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/http_client.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/storage/sqlite_vec.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/db_utils.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/debug.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/hashing.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/http_server_manager.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/port_detection.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/system_detection.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/utils/time_parser.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/__init__.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/events.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/health.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/mcp.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/memories.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/api/search.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/app.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/dependencies.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/sse.py
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/static/README.md
+mcp_servers/mcp-memory-service/src/mcp_memory_service/web/static/sse_test.html
+mcp_servers/mcp-memory-service/tests/README.md
+mcp_servers/mcp-memory-service/tests/__init__.py
+mcp_servers/mcp-memory-service/tests/chromadb/test_chromadb_types.py
+mcp_servers/mcp-memory-service/tests/conftest.py
+mcp_servers/mcp-memory-service/tests/consolidation/__init__.py
+mcp_servers/mcp-memory-service/tests/consolidation/conftest.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_associations.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_clustering.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_compression.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_consolidator.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_decay.py
+mcp_servers/mcp-memory-service/tests/consolidation/test_forgetting.py
+mcp_servers/mcp-memory-service/tests/integration/test_concurrent_clients.py
+mcp_servers/mcp-memory-service/tests/integration/test_mdns_integration.py
+mcp_servers/mcp-memory-service/tests/integration/test_storage.py
+mcp_servers/mcp-memory-service/tests/integration/test_store_memory.py
+mcp_servers/mcp-memory-service/tests/performance/test_caching.py
+mcp_servers/mcp-memory-service/tests/smithery/test_smithery.py
+mcp_servers/mcp-memory-service/tests/sqlite/simple_sqlite_vec_test.py
+mcp_servers/mcp-memory-service/tests/test_client.py
+mcp_servers/mcp-memory-service/tests/test_database.py
+mcp_servers/mcp-memory-service/tests/test_memory_ops.py
+mcp_servers/mcp-memory-service/tests/test_semantic_search.py
+mcp_servers/mcp-memory-service/tests/test_sqlite_vec_storage.py
+mcp_servers/mcp-memory-service/tests/test_tag_storage.py
+mcp_servers/mcp-memory-service/tests/test_time_parser.py
+mcp_servers/mcp-memory-service/tests/test_timestamp_recall.py
+mcp_servers/mcp-memory-service/tests/timestamp/test_timestamp_issue.py
+mcp_servers/mcp-memory-service/tests/timestamp/test_timestamp_simple.py
+mcp_servers/mcp-memory-service/tests/unit/test_chroma.py
+mcp_servers/mcp-memory-service/tests/unit/test_import.py
+mcp_servers/mcp-memory-service/tests/unit/test_mdns.py
+mcp_servers/mcp-memory-service/tests/unit/test_mdns_simple.py
+mcp_servers/mcp-memory-service/tests/unit/test_memory.py
+mcp_servers/mcp-memory-service/tests/unit/test_tags.py
+mcp_servers/mcp-memory-service/tools/README.md
+mcp_servers/mcp-memory-service/tools/docker/Dockerfile
+mcp_servers/mcp-memory-service/tools/docker/Dockerfile.glama
+mcp_servers/mcp-memory-service/tools/docker/docker-compose.pythonpath.yml
+mcp_servers/mcp-memory-service/tools/docker/docker-compose.standalone.yml
+mcp_servers/mcp-memory-service/tools/docker/docker-compose.uv.yml
+mcp_servers/mcp-memory-service/tools/docker/docker-compose.yml
+mcp_servers/mcp-memory-service/tools/docker/docker-entrypoint-persistent.sh
+mcp_servers/mcp-memory-service/tools/docker/docker-entrypoint.sh
+mcp_servers/mcp-memory-service/update_service.sh
+mcp_servers/mcp-memory-service/uv.lock
+mcp_servers/mcp-memory-service/uv.toml
+mcp_servers/mcp-scheduler-server.js
+mcp_servers/mcp-server-status.md
+mcp_servers/mcp-servers-config.json
+mcp_servers/metrics/metrics.json
+mcp_servers/package-lock.json
+mcp_servers/package.json
+mcp_servers/pgvector-mcp-server.js
+mcp_servers/rag-mcp-server-lite.js
+mcp_servers/rag-mcp-server.js
+mcp_servers/setup-mcp-installer.bat
+mcp_servers/setup-mcp-installer.ps1
+mcp_servers/snap-mcp-server.js
+mcp_servers/start-mcp-servers.bat
+mcp_servers/start-mcp-servers.ps1
+mcp_servers_config.yaml
+mcp_servers_config_lite.yaml
+memorybank/activeContext.md
+memorybank/projectbrief.md
+memorybank/systemPatterns.md
+migrate.py
+node_rag_output.log
+node_rag_output_v2.log
+node_rag_output_v3.log
+ocr_results/extracted_text.txt
+ocr_results/test_results.json
+ocr_test_results/test_results.json
+ocr_test_results/test_results.md
+ocr_to_markdown_converter.py
+package-lock.json
+package.json
+packages/kilocode-mcp-installer/.kilocode/mcp.json
+packages/kilocode-mcp-installer/README.md
+packages/kilocode-mcp-installer/package-lock.json
+packages/kilocode-mcp-installer/package.json
+packages/kilocode-mcp-installer/src/config-generator.ts
+packages/kilocode-mcp-installer/src/index.ts
+packages/kilocode-mcp-installer/src/logger.ts
+packages/kilocode-mcp-installer/src/mcp-installer.ts
+packages/kilocode-mcp-installer/src/types.ts
+packages/kilocode-mcp-installer/tsconfig.json
+pm2_process_check.txt
+pm2_where_check.txt
+png_to_markdown_test.log
+podman-compose.yml
+push_to_branch_with_lfs.ps1
+push_to_main_with_lfs.ps1
+pyproject.toml
+requirements-vault.txt
+requirements.txt
+restore-guide.md
+run_comprehensive_tests.bat
+run_mcp_everything_search.py
+run_quick_test.bat
+rustup-init.exe
+scripts/coverage_report.py
+scripts/database_integration.py
+scripts/deploy/assessment-store-database-setup.bat
+scripts/deploy/assessment-store-database-setup.sh
+scripts/deploy_cache_integration.py
+scripts/health_check.py
+scripts/integration_test.py
+scripts/integration_testing.py
+scripts/memory_bank_sync.py
+scripts/monitor_token_usage.py
+scripts/monitoring.py
+scripts/reset_quotas.py
+scripts/run_tests.py
+scripts/setup_token_integration.py
+search_specific_file.py
+setup.py
+setup_python_env.bat
+simba/.cursorignore
+simba/.dockerignore
+simba/.env.example
+simba/.flake8
+simba/.gitchangelog.rc
+simba/.github/PULL_REQUEST_TEMPLATE.md
+simba/.github/workflows/ci_cd.yml
+simba/.github/workflows/release-please.yml
+simba/.gitignore
+simba/.python-version
+simba/CHANGELOG.md
+simba/LICENSE.md
+simba/MANIFEST.in
+simba/Makefile
+simba/README.md
+simba/assets/demo.gif
+simba/assets/logo.png
+simba/celerybeat-schedule.db
+simba/config.yaml
+simba/docker/Dockerfile
+simba/docker/README
+simba/docker/docker-compose.yml
+simba/docker/docker-entrypoint.sh
+simba/docs/.gitignore
+simba/docs/ORGANIZATION_SETUP.md
+simba/docs/README.md
+simba/docs/README_ROLES.md
+simba/docs/ROLES_SETUP.md
+simba/docs/api-reference/overview.mdx
+simba/docs/assets/demo.gif
+simba/docs/assets/logo.png
+simba/docs/configuration.mdx
+simba/docs/core-concepts/rag-systems.mdx
+simba/docs/examples/chainlit-app.mdx
+simba/docs/examples/notebook-example.mdx
+simba/docs/examples/react-frontend.mdx
+simba/docs/examples/streamlit-app.mdx
+simba/docs/favicon.png
+simba/docs/getting-started.mdx
+simba/docs/iam.md
+simba/docs/logo/logo.png
+simba/docs/mint.json
+simba/docs/overview.mdx
+simba/docs/quickstart.mdx
+simba/docs/quickstart/cloud.mdx
+simba/docs/quickstart/self-hosted.mdx
+simba/docs/sdk/overview.mdx
+simba/examples/notebook_rag/sample_boarding_pass.pdf
+simba/frontend/.dockerignore
+simba/frontend/.env.production
+simba/frontend/.gitignore
+simba/frontend/Dockerfile
+simba/frontend/README.md
+simba/frontend/components.json
+simba/frontend/docker-compose.yml
+simba/frontend/eslint.config.js
+simba/frontend/index.html
+simba/frontend/migi.html
+simba/frontend/package-lock.json
+simba/frontend/package.json
+simba/frontend/postcss.config.js
+simba/frontend/public/chatbot-icon.svg
+simba/frontend/public/pdf-worker/pdf.worker.min.js
+simba/frontend/public/pdf.worker.min.js
+simba/frontend/public/pdfjs/pdf.worker.min.js
+simba/frontend/public/thinking.webp
+simba/frontend/public/vite.svg
+simba/frontend/src/App.css
+simba/frontend/src/App.tsx
+simba/frontend/src/MainLayout.tsx
+simba/frontend/src/assets/chatbot-icon.svg
+simba/frontend/src/assets/react.svg
+simba/frontend/src/components/ChatFrame.tsx
+simba/frontend/src/components/ChatMessage.tsx
+simba/frontend/src/components/DocumentManagement/CollectionTabs.tsx
+simba/frontend/src/components/DocumentManagement/CreateFolderDialog.tsx
+simba/frontend/src/components/DocumentManagement/DocumentList.tsx
+simba/frontend/src/components/DocumentManagement/DocumentManagementHeader.tsx
+simba/frontend/src/components/DocumentManagement/DocumentStats.tsx
+simba/frontend/src/components/DocumentManagement/FileUploadModal.tsx
+simba/frontend/src/components/DocumentManagement/ParserConfigModal.tsx
+simba/frontend/src/components/DocumentManagement/ParsingStatusBox.tsx
+simba/frontend/src/components/DocumentManagement/PreviewModal.tsx
+simba/frontend/src/components/FollowUpQuestions.tsx
+simba/frontend/src/components/SourcePanel.tsx
+simba/frontend/src/components/Sources.tsx
+simba/frontend/src/components/Thinking.tsx
+simba/frontend/src/components/layout/Navbar.tsx
+simba/frontend/src/components/layout/Sidebar.tsx
+simba/frontend/src/components/ui/alert-dialog.tsx
+simba/frontend/src/components/ui/alert.tsx
+simba/frontend/src/components/ui/avatar.tsx
+simba/frontend/src/components/ui/badge.tsx
+simba/frontend/src/components/ui/button.tsx
+simba/frontend/src/components/ui/card.tsx
+simba/frontend/src/components/ui/checkbox.tsx
+simba/frontend/src/components/ui/dialog.tsx
+simba/frontend/src/components/ui/dropdown-menu.tsx
+simba/frontend/src/components/ui/hover-card.tsx
+simba/frontend/src/components/ui/input.tsx
+simba/frontend/src/components/ui/label.tsx
+simba/frontend/src/components/ui/popover.tsx
+simba/frontend/src/components/ui/progress.tsx
+simba/frontend/src/components/ui/scroll-area.tsx
+simba/frontend/src/components/ui/select.tsx
+simba/frontend/src/components/ui/separator.tsx
+simba/frontend/src/components/ui/switch.tsx
+simba/frontend/src/components/ui/table.tsx
+simba/frontend/src/components/ui/tabs.tsx
+simba/frontend/src/components/ui/toast.tsx
+simba/frontend/src/components/ui/toaster.tsx
+simba/frontend/src/components/ui/tooltip.tsx
+simba/frontend/src/components/ui/use-toast.tsx
+simba/frontend/src/config/index.ts
+simba/frontend/src/context/AuthContext.tsx
+simba/frontend/src/hooks/use-toast.ts
+simba/frontend/src/hooks/useDocumentManagement.ts
+simba/frontend/src/index.css
+simba/frontend/src/lib/api.ts
+simba/frontend/src/lib/api_key_service.ts
+simba/frontend/src/lib/api_services.ts
+simba/frontend/src/lib/axiosConfig.ts
+simba/frontend/src/lib/embedding_api.ts
+simba/frontend/src/lib/http/client.ts
+simba/frontend/src/lib/ingestion_api.ts
+simba/frontend/src/lib/organization_api.ts
+simba/frontend/src/lib/parsing_api.ts
+simba/frontend/src/lib/preview_api.ts
+simba/frontend/src/lib/supabase.ts
+simba/frontend/src/lib/utils.ts
+simba/frontend/src/main.tsx
+simba/frontend/src/pages/ApiKeysPage.tsx
+simba/frontend/src/pages/ChatApp.tsx
+simba/frontend/src/pages/DocumentManagementApp.tsx
+simba/frontend/src/pages/KnowledgeConfigPage.tsx
+simba/frontend/src/pages/OrganizationPage.tsx
+simba/frontend/src/pages/RolesPage.tsx
+simba/frontend/src/pages/SettingsPage.tsx
+simba/frontend/src/pages/auth/Login.tsx
+simba/frontend/src/pages/auth/ResetPassword.tsx
+simba/frontend/src/pages/auth/Signup.tsx
+simba/frontend/src/pages/settings/GeneralSettings.tsx
+simba/frontend/src/pages/settings/MembersSettings.tsx
+simba/frontend/src/pages/settings/OrganizationsSettings.tsx
+simba/frontend/src/types/auth.ts
+simba/frontend/src/types/chat.ts
+simba/frontend/src/types/document.ts
+simba/frontend/src/types/env.d.ts
+simba/frontend/src/vite-env.d.ts
+simba/frontend/tailwind.config.js
+simba/frontend/tsconfig.app.json
+simba/frontend/tsconfig.json
+simba/frontend/tsconfig.node.json
+simba/frontend/vite.config.ts
+simba/noxfile.py
+simba/poetry.lock
+simba/pyproject.toml
+simba/sample.txt
+simba/scripts/install_llm.sh
+simba/scripts/migrate_local.sh
+simba/simba/.gitignore
+simba/simba/README.md
+simba/simba/__init__.py
+simba/simba/__main__.py
+simba/simba/api/api_key_routes.py
+simba/simba/api/auth_routes.py
+simba/simba/api/chat_routes.py
+simba/simba/api/config_routes.py
+simba/simba/api/database_routes.py
+simba/simba/api/dto/retriever_dto.py
+simba/simba/api/embedding_routes.py
+simba/simba/api/ingestion_routes.py
+simba/simba/api/middleware/__init__.py
+simba/simba/api/middleware/auth.py
+simba/simba/api/organization_routes.py
+simba/simba/api/parsing_routes.py
+simba/simba/api/retriever_routes.py
+simba/simba/api/role_routes.py
+simba/simba/api/summarize_routes.py
+simba/simba/auth/__init__.py
+simba/simba/auth/api_key_service.py
+simba/simba/auth/auth_service.py
+simba/simba/auth/models.py
+simba/simba/auth/organization_service.py
+simba/simba/auth/role_service.py
+simba/simba/auth/supabase_client.py
+simba/simba/chatbot/demo/__init__.py
+simba/simba/chatbot/demo/chains/__init__.py
+simba/simba/chatbot/demo/chains/answer_chain.py
+simba/simba/chatbot/demo/chains/correctness_chain.py
+simba/simba/chatbot/demo/chains/cot_chain.py
+simba/simba/chatbot/demo/chains/generate_chain.py
+simba/simba/chatbot/demo/chains/grade_chain.py
+simba/simba/chatbot/demo/chains/hallucination_chain.py
+simba/simba/chatbot/demo/chains/hyde_chain.py
+simba/simba/chatbot/demo/chains/routing_chain.py
+simba/simba/chatbot/demo/chains/transform_query_chain.py
+simba/simba/chatbot/demo/graph.py
+simba/simba/chatbot/demo/nodes/README.md
+simba/simba/chatbot/demo/nodes/__init__.py
+simba/simba/chatbot/demo/nodes/compress_node.py
+simba/simba/chatbot/demo/nodes/cot_node.py
+simba/simba/chatbot/demo/nodes/fallback_node.py
+simba/simba/chatbot/demo/nodes/generate_node.py
+simba/simba/chatbot/demo/nodes/grade_node.py
+simba/simba/chatbot/demo/nodes/hallucination_node.py
+simba/simba/chatbot/demo/nodes/hyde_node.py
+simba/simba/chatbot/demo/nodes/rerank_node.py
+simba/simba/chatbot/demo/nodes/retrieve_node.py
+simba/simba/chatbot/demo/nodes/routing_node.py
+simba/simba/chatbot/demo/nodes/transform_query_node.py
+simba/simba/chatbot/demo/self-reflective-rag.png
+simba/simba/chatbot/demo/state.py
+simba/simba/cli.py
+simba/simba/core/.README.md
+simba/simba/core/celery_config.py
+simba/simba/core/config.py
+simba/simba/core/factories/database_factory.py
+simba/simba/core/factories/embeddings_factory.py
+simba/simba/core/factories/llm_factory.py
+simba/simba/core/factories/storage_factory.py
+simba/simba/core/factories/vector_store_factory.py
+simba/simba/core/utils/logger.py
+simba/simba/database/__init__.py
+simba/simba/database/base.py
+simba/simba/database/litedb_service.py
+simba/simba/database/postgres.py
+simba/simba/database/token_models.py
+simba/simba/embeddings/__init__.py
+simba/simba/embeddings/embedding_service.py
+simba/simba/embeddings/utils.py
+simba/simba/ingestion/__init__.py
+simba/simba/ingestion/document_ingestion.py
+simba/simba/ingestion/file_handling.py
+simba/simba/ingestion/loader.py
+simba/simba/ingestion/summary.py
+simba/simba/ingestion/utils.py
+simba/simba/models/api_key.py
+simba/simba/models/organization.py
+simba/simba/models/role.py
+simba/simba/models/simbadoc.py
+simba/simba/models/user.py
+simba/simba/organizations/organization_service.py
+simba/simba/parsing/__init__.py
+simba/simba/parsing/base.py
+simba/simba/parsing/docling_parser.py
+simba/simba/parsing/markitdown_parser.py
+simba/simba/parsing/mistral_ocr.py
+simba/simba/retrieval/__init__.py
+simba/simba/retrieval/base.py
+simba/simba/retrieval/default.py
+simba/simba/retrieval/ensemble.py
+simba/simba/retrieval/factory.py
+simba/simba/retrieval/hybrid.py
+simba/simba/retrieval/keyword.py
+simba/simba/retrieval/retriever.py
+simba/simba/retrieval/semantic.py
+simba/simba/scripts/__init__.py
+simba/simba/splitting/__init__.py
+simba/simba/splitting/splitter.py
+simba/simba/storage/base.py
+simba/simba/storage/local.py
+simba/simba/storage/minio.py
+simba/simba/storage/supabase_storage.py
+simba/simba/supabase/.gitignore
+simba/simba/supabase/README.md
+simba/simba/supabase/config.toml
+simba/simba/supabase/migrations/001_extensions_global_functions.sql
+simba/simba/supabase/migrations/002_roles_permissions.sql
+simba/simba/supabase/migrations/003_organizations.sql
+simba/simba/supabase/migrations/004_documents.sql
+simba/simba/supabase/migrations/005_chunks_embeddings.sql
+simba/simba/supabase/migrations/006_api_keys.sql
+simba/simba/supabase/migrations/007_final_grants.sql
+simba/simba/supabase/migrations/008_add_service_role_grants.sql
+simba/simba/supabase/migrations/009_organization_rls_policies.sql
+simba/simba/supabase/migrations/010_fix_schema_permissions.sql
+simba/simba/supabase/migrations/011_fix_recursive_policies.sql
+simba/simba/supabase/migrations/012_fix_recursion_properly.sql
+simba/simba/supabase/migrations/013_add_tenant_id_to_api_keys.sql
+simba/simba/supabase/migrations/014_storage_bucket.sql
+simba/simba/supabase/migrations/015_add_collections.sql
+simba/simba/supabase/migrations/016_organization_scoped_roles.sql
+simba/simba/supabase/migrations/017_postgres_audit_trigger.sql
+simba/simba/supabase/migrations/018_fix_audit_trigger.sql
+simba/simba/tasks/__init__.py
+simba/simba/tasks/generate_summary.py
+simba/simba/tasks/ingestion_tasks.py
+simba/simba/tasks/parsing_tasks.py
+simba/simba/tests/conftest.py
+simba/simba/tests/e2e/test_postgres.py
+simba/simba/tests/e2e/test_supabase_connection.py
+simba/simba/tests/unit/test_auth_routes.py
+simba/simba/tests/unit/test_ingestion.py
+simba/simba/vector_store/__init__.py
+simba/simba/vector_store/base.py
+simba/simba/vector_store/pgvector.py
+simba/simba/vector_store/vector_store_service.py
+simba/simba_config.yaml
+simba/simba_sdk/.gitignore
+simba/simba_sdk/README.md
+simba/simba_sdk/__init__.py
+simba/simba_sdk/docs/api_reference.md
+simba/simba_sdk/docs/embeddings.md
+simba/simba_sdk/docs/index.md
+simba/simba_sdk/docs/installation.md
+simba/simba_sdk/docs/migration.md
+simba/simba_sdk/docs/parsing.md
+simba/simba_sdk/docs/quickstart.md
+simba/simba_sdk/docs/synchronous_parsing.md
+simba/simba_sdk/docs/troubleshooting.md
+simba/simba_sdk/examples/quick_start.ipynb
+simba/simba_sdk/examples/retrieve_test.py
+simba/simba_sdk/examples/sample_boarding_pass.pdf
+simba/simba_sdk/pyproject.toml
+simba/simba_sdk/pytest.ini
+simba/simba_sdk/setup.py
+simba/simba_sdk/simba_sdk/__init__.py
+simba/simba_sdk/simba_sdk/chat.py
+simba/simba_sdk/simba_sdk/client.py
+simba/simba_sdk/simba_sdk/document.py
+simba/simba_sdk/simba_sdk/embed.py
+simba/simba_sdk/simba_sdk/parser.py
+simba/simba_sdk/simba_sdk/retrieve.py
+simba/simba_sdk/tests/__init__.py
+simba/simba_sdk/tests/test_chat.py
+simba/simba_sdk/tests/test_client.py
+simba/simba_sdk/tests/test_document.py
+simba/simba_sdk/tests/test_embed.py
+simba/simba_sdk/tests/test_parser.py
+simba/simba_sdk/tests/test_retrieve.py
+simba/tests/parsing/test_mistral_ocr.py
+simba/tests/sdk/test_sdk.py
+simple_ocr_converter.py
+src/credential_rotation.py
+src/database/migrations/001_create_assessment_states.sql
+src/database/migrations/001_enable_pg_tiktoken.sql
+src/database/migrations/002_create_assessment_audit_trail.sql
+src/database/migrations/002_create_token_management_tables.sql
+src/database/migrations/003_add_token_usage_indexes.sql
+src/database/migrations/004_add_quota_reset_functions.sql
+src/database/migrations/005_add_security_tables.sql
+src/database/migrations/006_add_monitoring_views.sql
+src/database/migrations/007_add_integration_tables.sql
+src/environment_validator.py
+src/external_api_token_integration.py
+src/kilocode_token_integration.py
+src/mcp_token_integration.py
+src/memory_token_integration.py
+src/orchestration/COMPLETE_SETUP_GUIDE.md
+src/orchestration/COMPLETE_SETUP_README.md
+src/orchestration/README.md
+src/orchestration/README_LITE.md
+src/orchestration/TESTING_GUIDE.md
+src/orchestration/ag2_orchestrator.py
+src/orchestration/ag2_pure.py
+src/orchestration/cline_integration_example.py
+src/orchestration/complete_setup.bat
+src/orchestration/complete_setup.py
+src/orchestration/logs/ag2_pure.log
+src/orchestration/mcp_scheduler.db
+src/orchestration/mcp_servers_config.yaml
+src/orchestration/mcp_servers_config_lite.yaml
+src/orchestration/mock_memory/sample_memory.json
+src/orchestration/mock_rag_data/ag2_docs.json
+src/orchestration/mock_rag_data/sample_data.json
+src/orchestration/requirements.txt
+src/orchestration/run_lite.py
+src/orchestration/run_pure.py
+src/orchestration/run_test.py
+src/orchestration/setup_and_test.bat
+src/orchestration/setup_and_test.sh
+src/orchestration/setup_lite.bat
+src/orchestration/setup_lite.py
+src/orchestration/test_ag2_system.py
+src/orchestration/test_lite.py
+src/orchestration/test_mcp_scheduler.py
+src/orchestration/test_mcp_scheduler_direct.py
+src/orchestration/test_mcp_servers.py
+src/orchestration/test_output.txt
+src/quota_reset_cron.py
+src/quota_reset_scheduler.py
+src/sensitive_content_filter.py
+src/services/assessment-store-dao.ts
+src/services/connection-pool.ts
+src/services/transaction-manager.ts
+src/token_alerting.py
+src/token_analytics.py
+src/token_dashboard.py
+src/token_management/__init__.py
+src/token_management/allocation_strategies.py
+src/token_management/decorators.py
+src/token_management/lock_manager.py
+src/token_management/middleware.py
+src/token_management/rate_limiter.py
+src/token_management/token_counter.py
+src/token_monitoring.py
+src/token_revocation_service.py
+src/token_security_manager.py
+src/token_usage_analytics.py
+src/token_usage_batch_processor.py
+src/token_usage_logger.py
+src/vault_client.py
+src/vault_token_storage.py
+technical_review_report.md
+test-rag-system.js
+test/assessment-store-dao.test.ts
+test/assessment-store-integration.test.ts
+test/integration/api-endpoint-integration.test.ts
+test/integration/database-integration.test.ts
+test/integration/state-management-integration.test.ts
+test/mocks/compliance-server-mock.ts
+test/mocks/database-mock.ts
+test/performance/concurrent-processing.test.ts
+test/setup/test-setup.ts
+test/unit/assessment-controller.test.ts
+test/unit/assessment-processor.test.ts
+test/unit/assessment-store.test.ts
+test/utils/test-helpers.ts
+test_everything_sdk.py
+test_local_search.py
+test_output.log
+test_search_file.py
+testing-validation-system/.dockerignore
+testing-validation-system/.github/workflows/test.yml
+testing-validation-system/Dockerfile
+testing-validation-system/Dockerfile.test
+testing-validation-system/README.md
+testing-validation-system/docker-compose.podman.yml
+testing-validation-system/docker-compose.yml
+testing-validation-system/install.sh
+testing-validation-system/package-lock.json
+testing-validation-system/package.json
+testing-validation-system/podman-compose.yml
+testing-validation-system/reports/installation-verification.json
+testing-validation-system/scripts/generate-report.js
+testing-validation-system/scripts/setup-podman.bat
+testing-validation-system/scripts/setup-podman.sh
+testing-validation-system/sql/init-test-db.sql
+testing-validation-system/src/mcp/test-mcp-server.js
+testing-validation-system/src/tests/integration.test.js
+testing-validation-system/src/tests/system.test.js
+testing-validation-system/src/tests/test-runner.js
+testing-validation-system/test-system.js
+testing-validation-system/verify-installation.js
+tests/conftest.py
+tests/fixtures/mock_responses.py
+tests/fixtures/test_data.json
+tests/test_encoding_utils.py
+tests/test_environment.py
+tests/test_mcp_kilocode_integration.py
+tests/test_pg_tiktoken_integration.py
+tests/test_quota_reset_scheduler.py
+tests/test_rate_limiter.py
+tests/test_token_counter.py
+tests/test_token_integration.py
+tests/test_token_management_complete.py
+tests/test_token_monitoring.py
+tests/test_token_security.py
+tests/test_token_usage_logger.py
+tests/test_vault_integration.py
+"this name for\357\200\277"
+utils/encoding_utils.py
+utils/environment.py
+utils/environment_manager.py
+utils/file_utils.py
+utils/image_utils.py
+utils/logging_utils.py
+utils/text_utils.py
+vault-config.hcl
+vault-policies.hcl
+vscode-profile/Readme.md
+vscode-profile/extensions.txt
+vscode-profile/keybindings.json
+vscode-profile/profile.code-profile
+vscode-profile/scripts/backup-restore.py
+vscode-profile/scripts/pin-dependencies.py
+vscode-profile/scripts/post-recovery-validation.py
+vscode-profile/scripts/preflight-checks.py
+vscode-profile/scripts/test-catastrophic-recovery.py
+vscode-profile/scripts/test-cross-platform.py
+vscode-profile/scripts/test-extensions.py
+vscode-profile/scripts/validate-environment.py
+vscode-profile/settings.json

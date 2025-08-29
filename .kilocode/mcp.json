@@ -133,4 +133,191 @@
       "env": {
         "NODE_ENV": "production",
         "KILOCODE_ENV": "development",
-        "KILOCODE_PR_
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "brave-search": {
+      "command": "node",
+      "args": [
+        "./brave-search-integration/braveSearchManager.js"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "BSAk3We2xKQFoOgoQJVObWmYGrCd-J0",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "compliance-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-compliance"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "easyocr": {
+      "command": "python",
+      "args": [
+        "mcp_servers/easyocr-mcp/src/easyocr_mcp_server.py"
+      ],
+      "env": {
+        "EASYOCR_MODEL_STORAGE": "C:/easyocr_models",
+        "EASYOCR_CONFIDENCE_THRESHOLD": "30",
+        "EASYOCR_MAX_IMAGE_SIZE": "1024",
+        "EASYOCR_GPU_ENABLED": "false",
+        "EASYOCR_BATCH_SIZE": "5",
+        "EASYOCR_MEMORY_LIMIT": "512MB",
+        "EASYOCR_THREAD_POOL_SIZE": "2",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "fastmcp_local": {
+      "command": "python",
+      "args": [
+        "mcp_servers/fastmcp_server.py"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "file-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        ".",
+        "/tmp"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "mcp-installer": {
+      "command": "npx",
+      "args": [
+        "@anaisbetts/mcp-installer"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "kilocode-installer": {
+      "command": "node",
+      "args": [
+        "mcp_servers/install-mcp-server.js"
+      ],
+      "env": {
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "env": {
+        "PLAYWRIGHT_BROWSER": "chromium",
+        "PLAYWRIGHT_HEADLESS": "false",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      },
+      "alwaysAllow": [
+        "browser_navigate",
+        "browser_snapshot",
+        "browser_click",
+        "browser_type",
+        "browser_take_screenshot",
+        "browser_tab_list",
+        "browser_tab_new",
+        "browser_pdf_save"
+      ]
+    },
+    "podman": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "podman-mcp-server@latest"
+      ],
+      "env": {
+        "PODMAN_MCP_HOST": "localhost",
+        "PODMAN_MCP_TIMEOUT": "30",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "pytest": {
+      "command": "mcp-pytest-server",
+      "args": [],
+      "env": {
+        "MCP_PYTEST_SERVER_URL": "http://localhost:8080",
+        "MCP_PYTEST_LOG_LEVEL": "info",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      },
+      "alwaysAllow": [
+        "register_failure",
+        "analyze_failure",
+        "generate_debug_prompt",
+        "clear_failures"
+      ]
+    },
+    "snap-windows": {
+      "command": "node",
+      "args": [
+        "mcp_servers/snap-mcp-server.js"
+      ],
+      "env": {
+        "SNAP_LAYOUTS_DIR": "%USERPROFILE%\\.snap-layouts",
+        "SNAP_DEFAULT_LAYOUT": "2x2",
+        "SNAP_WINDOW_TIMEOUT": "5000",
+        "SNAP_LOG_LEVEL": "info",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    },
+    "testing-validation": {
+      "command": "node",
+      "args": [
+        "testing-validation-system/src/mcp/test-mcp-server.js"
+      ],
+      "env": {
+        "DATABASE_URL": "postgresql://postgres:2001@localhost:5432/postgres",
+        "NODE_ENV": "production",
+        "KILOCODE_ENV": "development",
+        "KILOCODE_PROJECT_PATH": "c:\\_1mybizz\\paddle-plugin",
+        "KILOCODE_PROJECT_NAME": "paddle-plugin"
+      }
+    }
+  }
+}
